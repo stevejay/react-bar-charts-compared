@@ -1,28 +1,78 @@
-.App {
-  text-align: center;
+body {
+    min-height: 100vh;
+    background-color: #252830;
+    color: #CFD2DA;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1c22;
+    padding: 10px 30px;
 }
 
-.App-title {
-  font-size: 1.5em;
+footer button {
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: normal;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    text-shadow: none;
+    color: #1997c6;
+    border-color: #1997c6;
 }
 
-.App-intro {
-  font-size: large;
+footer button:hover {
+    color: #fff;
+    background-color: #1997c6;
+    box-shadow: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+article {
+    background-color: #353944;
+    margin: 30px;
+    padding: 15px;
+}
+
+article:not(:last-of-type) {
+    margin-bottom: 0;
+}
+
+article h2 {
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+article section {
+    margin-top: 15px;
 }
