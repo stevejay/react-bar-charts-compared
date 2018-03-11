@@ -63,7 +63,7 @@ footer button:hover {
 
 article {
     background-color: #353944;
-    margin: 30px;
+    margin: 30px 30px 80px 30px;
     padding: 15px;
 }
 
@@ -84,10 +84,16 @@ article section {
     margin-top: 25px;
 }
 
-.recharts-wrapper {
+.recharts-wrapper,
+.rv-xy-plot {
     font-size: 12px;
 }
 
 .recharts-bar-rectangle .recharts-rectangle:hover {
     fill: #1EE3A1 !important;
+}
+
+.rv-xy-plot .first-series rect:hover {
+    fill: #1EE3A1 !important;
+    stroke: #1EE3A1 !important;
 }

@@ -12,8 +12,8 @@ import {
 
 import ExampleContainer from '../example-container'
 
-const RechartExample = ({ data }) => (
-  <ExampleContainer title='Rechart BarChart'>
+const RechartsExample = ({ data }) => (
+  <ExampleContainer title='Recharts BarChart'>
     <ResponsiveContainer width='100%' height={300}>
       <BarChart data={data}>
         <CartesianGrid stroke='#6f7890' opacity={0.5} />
@@ -26,4 +26,6 @@ const RechartExample = ({ data }) => (
   </ExampleContainer>
 )
 
-export default connect(state => ({ data: state.data.barChart }))(RechartExample)
+export default connect(state => ({ data: state.data.barChart }))(
+  RechartsExample
+)

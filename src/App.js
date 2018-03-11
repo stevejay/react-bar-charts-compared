@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import { updateBarChartData } from './actions/data'
 // import ExampleContainer from './components/example-container'
 import UpdateButtons from './components/update-buttons'
-import RechartExample from './components/examples/rechart'
+import RechartsExample from './components/examples/recharts'
+import ReactVisExample from './components/examples/react-vis'
 import './App.css'
 
 class App extends Component {
@@ -15,7 +16,8 @@ class App extends Component {
   render () {
     return (
       <main>
-        <RechartExample />
+        <RechartsExample />
+        <ReactVisExample />
         {/* <ExampleContainer title='Some Library'>
           The bar chart
         </ExampleContainer>

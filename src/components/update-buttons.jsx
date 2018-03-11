@@ -23,7 +23,7 @@ class UpdateButtons extends React.Component {
       <React.Fragment>
         <button onClick={this.handleChangeValuesClick}>Change Values</button>
         <button onClick={this.handleChangeCategoriesClick}>
-          Change Categories
+          Change Values and Categories
         </button>
       </React.Fragment>
     )
