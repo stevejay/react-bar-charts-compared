@@ -8,11 +8,12 @@ import {
   HorizontalGridLines,
   VerticalGridLines,
   VerticalBarSeries,
-  FlexibleWidthXYPlot,
+  XYPlot,
   Hint
 } from 'react-vis'
 
 import ExampleContainer from '../example-container'
+import AutosizeContainer from '../autosize-container'
 
 const GRID_LINE_STYLE = { stroke: '#6f7890', opacity: 0.5 }
 
@@ -44,30 +45,36 @@ class ReactVisExample extends React.PureComponent {
     const { hoveredCell } = this.state
     const yMax = _.maxBy(data, 'value')
 
-    // https://github.com/uber/react-vis/issues/518
+    // hint problem: https://github.com/uber/react-vis/issues/518
+
+    // Note: you could use react-vis's FlexibleWidthXYPlot instead of
+    // AutosizeContainer.
 
     return (
-      <ExampleContainer title='React Vis BarChart'>
-        <FlexibleWidthXYPlot
-          height={300}
-          xType='ordinal'
-          yType='linear'
-          yDomain={[0, yMax.value * 1.05]}
-          getX={X_ACCESSOR}
-          getY={Y_ACCESSOR}
-          animation
-        >
-          <HorizontalGridLines style={GRID_LINE_STYLE} />
-          <VerticalGridLines style={GRID_LINE_STYLE} />
-          <XAxis style={AXIS_STYLE} />
-          <YAxis style={AXIS_STYLE} />
-          <VerticalBarSeries
-            className='first-series'
-            color='#CFD2DA'
-            data={data}
-          />
-          {hoveredCell && <Hint value={hoveredCell} />}
-        </FlexibleWidthXYPlot>
+      <ExampleContainer title='React Vis'>
+        <AutosizeContainer>
+          <XYPlot
+            width={0} // stops a props warning when using AutosizeContainer
+            height={0} // stops a props warning when using AutosizeContainer
+            xType='ordinal'
+            yType='linear'
+            yDomain={[0, yMax.value * 1.05]}
+            getX={X_ACCESSOR}
+            getY={Y_ACCESSOR}
+            animation
+          >
+            <HorizontalGridLines style={GRID_LINE_STYLE} />
+            <VerticalGridLines style={GRID_LINE_STYLE} />
+            <XAxis style={AXIS_STYLE} />
+            <YAxis style={AXIS_STYLE} />
+            <VerticalBarSeries
+              className='first-series'
+              color='#CFD2DA'
+              data={data}
+            />
+            {hoveredCell && <Hint value={hoveredCell} />}
+          </XYPlot>
+        </AutosizeContainer>
       </ExampleContainer>
     )
   }

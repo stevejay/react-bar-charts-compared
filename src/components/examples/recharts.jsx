@@ -13,14 +13,18 @@ import {
 
 import ExampleContainer from '../example-container'
 
+const renderTooltip = d => (
+  <div className='recharts-tooltip'><p>{d.label}</p></div>
+)
+
 const RechartsExample = ({ data }) => (
-  <ExampleContainer title='Recharts BarChart'>
-    <ResponsiveContainer width='100%' height={300}>
+  <ExampleContainer title='Recharts'>
+    <ResponsiveContainer width='100%' height='100%'>
       <BarChart data={data}>
         <CartesianGrid stroke='#6f7890' opacity={0.5} />
         <XAxis dataKey='key' stroke='#CFD2DA' tickLine={false} />
         <YAxis dataKey='value' stroke='#CFD2DA' />
-        <Tooltip cursor={false} />
+        <Tooltip cursor={false} content={renderTooltip} />
         <Bar dataKey='value' fill='#CFD2DA' />
       </BarChart>
     </ResponsiveContainer>

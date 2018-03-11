@@ -6,6 +6,7 @@ import { updateBarChartData } from './actions/data'
 import UpdateButtons from './components/update-buttons'
 import RechartsExample from './components/examples/recharts'
 import ReactVisExample from './components/examples/react-vis'
+import VictoryExample from './components/examples/victory'
 import '../node_modules/react-vis/dist/style.css'
 import './App.css'
 
@@ -22,6 +23,11 @@ class App extends Component {
           </div>
           <div className='column'>
             <ReactVisExample />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='column'>
+            <VictoryExample />
           </div>
         </div>
         <footer>
