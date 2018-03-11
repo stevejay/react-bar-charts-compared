@@ -5,10 +5,17 @@ import { connect } from 'react-redux'
 import { updateBarChartData } from '../actions/data'
 
 class UpdateButtons extends React.Component {
-  handleChangeValuesClick = () => {
+  constructor (props) {
+    super(props)
+    this.handleChangeValuesClick = this.handleChangeValuesClick.bind(this)
+    this.handleChangeCategoriesClick = this.handleChangeCategoriesClick.bind(
+      this
+    )
+  }
+  handleChangeValuesClick () {
     this.props.updateBarChartData('values')
   }
-  handleChangeCategoriesClick = () => {
+  handleChangeCategoriesClick () {
     this.props.updateBarChartData('categories')
   }
   render () {
