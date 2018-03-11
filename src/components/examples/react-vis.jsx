@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import {
-  XYPlot,
   XAxis,
   YAxis,
   HorizontalGridLines,
   VerticalGridLines,
   VerticalBarSeries,
-  FlexibleWidthXYPlot
+  FlexibleWidthXYPlot,
+  Hint
 } from 'react-vis'
 
 import ExampleContainer from '../example-container'
@@ -23,32 +24,57 @@ const AXIS_STYLE = {
 const X_ACCESSOR = d => d.key
 const Y_ACCESSOR = d => d.value
 
-const ReactVisExample = ({ data }) => {
-  const yMax = _.maxBy(data, 'value')
+class ReactVisExample extends React.PureComponent {
+  constructor (props) {
+    super(props)
+    this.state = { hoveredCell: false }
+    this.handleValueMouseOver = this.handleValueMouseOver.bind(this)
+    this.handleValueMouseOut = this.handleValueMouseOut.bind(this)
+  }
+  handleValueMouseOver (d) {
+    console.log('mouse over')
+    this.setState({ hoveredCell: d })
+  }
+  handleValueMouseOut (d) {
+    console.log('mouse out')
+    this.setState({ hoveredCell: null })
+  }
+  render () {
+    const { data } = this.props
+    const { hoveredCell } = this.state
+    const yMax = _.maxBy(data, 'value')
 
-  return (
-    <ExampleContainer title='React Vis BarChart'>
-      <FlexibleWidthXYPlot
-        height={300}
-        xType='ordinal'
-        yType='linear'
-        yDomain={[0, yMax.value * 1.05]}
-        getX={X_ACCESSOR}
-        getY={Y_ACCESSOR}
-      >
-        <HorizontalGridLines style={GRID_LINE_STYLE} animation />
-        <VerticalGridLines style={GRID_LINE_STYLE} animation />
-        <XAxis style={AXIS_STYLE} animation />
-        <YAxis style={AXIS_STYLE} animation />
-        <VerticalBarSeries
+    // https://github.com/uber/react-vis/issues/518
+
+    return (
+      <ExampleContainer title='React Vis BarChart'>
+        <FlexibleWidthXYPlot
+          height={300}
+          xType='ordinal'
+          yType='linear'
+          yDomain={[0, yMax.value * 1.05]}
+          getX={X_ACCESSOR}
+          getY={Y_ACCESSOR}
           animation
-          className='first-series'
-          color='#CFD2DA'
-          data={data}
-        />
-      </FlexibleWidthXYPlot>
-    </ExampleContainer>
-  )
+        >
+          <HorizontalGridLines style={GRID_LINE_STYLE} />
+          <VerticalGridLines style={GRID_LINE_STYLE} />
+          <XAxis style={AXIS_STYLE} />
+          <YAxis style={AXIS_STYLE} />
+          <VerticalBarSeries
+            className='first-series'
+            color='#CFD2DA'
+            data={data}
+          />
+          {hoveredCell && <Hint value={hoveredCell} />}
+        </FlexibleWidthXYPlot>
+      </ExampleContainer>
+    )
+  }
+}
+
+ReactVisExample.propTypes = {
+  data: PropTypes.array.isRequired
 }
 
 export default connect(state => ({ data: state.data.barChart }))(

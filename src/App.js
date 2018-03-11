@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { updateBarChartData } from './actions/data'
-// import ExampleContainer from './components/example-container'
 import UpdateButtons from './components/update-buttons'
 import RechartsExample from './components/examples/recharts'
 import ReactVisExample from './components/examples/react-vis'
+import '../node_modules/react-vis/dist/style.css'
 import './App.css'
 
 class App extends Component {
@@ -16,14 +16,14 @@ class App extends Component {
   render () {
     return (
       <main>
-        <RechartsExample />
-        <ReactVisExample />
-        {/* <ExampleContainer title='Some Library'>
-          The bar chart
-        </ExampleContainer>
-        <ExampleContainer title='Another Library'>
-          The other bar chart
-        </ExampleContainer> */}
+        <div className='row'>
+          <div className='column'>
+            <RechartsExample />
+          </div>
+          <div className='column'>
+            <ReactVisExample />
+          </div>
+        </div>
         <footer>
           <UpdateButtons />
         </footer>

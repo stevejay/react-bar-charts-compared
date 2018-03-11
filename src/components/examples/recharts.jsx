@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
   ResponsiveContainer,
@@ -25,6 +26,10 @@ const RechartsExample = ({ data }) => (
     </ResponsiveContainer>
   </ExampleContainer>
 )
+
+RechartsExample.propTypes = {
+  data: PropTypes.array.isRequired
+}
 
 export default connect(state => ({ data: state.data.barChart }))(
   RechartsExample

@@ -9,28 +9,25 @@ export const barChartDataUpdated = createAction(types.BAR_CHART_DATA_UPDATED)
 
 const PEOPLE = ['Arthur', 'Bob', 'Charlie', 'Dave', 'Elsie', 'Fred', 'Grant']
 
-export function updateBarChartData (updateType) {
-  return (dispatch, getState) =>
-    new Promise(resolve => {
-      const barChartData = getState().data.barChart
-      let people = null
+export const updateBarChartData = updateType => (dispatch, getState) =>
+  new Promise(resolve => {
+    const barChartData = getState().data.barChart
+    const maxRandomValue = _.random(1) === 0 ? 50 : 100
 
-      if (updateType === 'values' && !_.isEmpty(barChartData)) {
-        people = barChartData.map(datum => ({
-          ...datum,
-          value: getRandomValue()
-        }))
-      } else {
-        people = _.take(_.shuffle(PEOPLE), 5).map(name => ({
-          key: name,
-          value: _.random(50) === 0 ? 0 : _.random(100)
-        }))
-      }
+    let people = null
 
-      dispatch(barChartDataUpdated({ data: people }))
-    })
-}
+    if (updateType === 'values' && !_.isEmpty(barChartData)) {
+      people = barChartData.map(datum => ({
+        ...datum,
+        value: _.random(maxRandomValue)
+      }))
+    } else {
+      people = _.take(_.shuffle(PEOPLE), 5).map(name => ({
+        key: name,
+        value: _.random(maxRandomValue)
+      }))
+    }
 
-function getRandomValue () {
-  return _.random(50) === 0 ? 0 : _.random(100)
-}
+    dispatch(barChartDataUpdated({ data: people }))
+    resolve()
+  })
