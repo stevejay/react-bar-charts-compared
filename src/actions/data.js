@@ -9,16 +9,28 @@ export const barChartDataUpdated = createAction(types.BAR_CHART_DATA_UPDATED)
 
 const PEOPLE = ['Arthur', 'Bob', 'Charlie', 'Dave', 'Elsie', 'Fred', 'Grant']
 
-export function updateBarChartData () {
-  return dispatch =>
+export function updateBarChartData (updateType) {
+  return (dispatch, getState) =>
     new Promise(resolve => {
-      const people = _.take(_.shuffle(PEOPLE), 5).map(name => ({
-        key: name,
-        value: _.random(50) === 0 ? 0 : _.random(100)
-      }))
+      const barChartData = getState().data.barChart
+      let people = null
 
-      //   console.log('people', JSON.stringify(people))
+      if (updateType === 'values' && !_.isEmpty(barChartData)) {
+        people = barChartData.map(datum => ({
+          ...datum,
+          value: getRandomValue()
+        }))
+      } else {
+        people = _.take(_.shuffle(PEOPLE), 5).map(name => ({
+          key: name,
+          value: _.random(50) === 0 ? 0 : _.random(100)
+        }))
+      }
 
       dispatch(barChartDataUpdated({ data: people }))
     })
+}
+
+function getRandomValue () {
+  return _.random(50) === 0 ? 0 : _.random(100)
 }

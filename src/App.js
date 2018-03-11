@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
+import { updateBarChartData } from './actions/data'
 import ExampleContainer from './components/example-container'
-import UpdateButton from './components/update-button'
+import UpdateButtons from './components/update-buttons'
+import RechartExample from './components/examples/rechart'
 import './App.css'
 
 class App extends Component {
+  componentWillMount () {
+    this.props.updateBarChartData()
+  }
   render () {
     return (
       <main>
+        <RechartExample />
         <ExampleContainer title='Some Library'>
           The bar chart
         </ExampleContainer>
@@ -15,11 +23,17 @@ class App extends Component {
           The other bar chart
         </ExampleContainer>
         <footer>
-          <UpdateButton />
+          <UpdateButtons />
         </footer>
       </main>
     )
   }
 }
 
-export default App
+App.propTypes = {
+  updateBarChartData: PropTypes.func.isRequired
+}
+
+export default connect(null, {
+  updateBarChartData
+})(App)

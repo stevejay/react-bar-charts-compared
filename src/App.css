@@ -48,6 +48,11 @@ footer button {
     text-shadow: none;
     color: #1997c6;
     border-color: #1997c6;
+    margin-right: 15px;
+}
+
+footer button:last-of-type {
+    margin-right: 0;
 }
 
 footer button:hover {
@@ -68,11 +73,21 @@ article:not(:last-of-type) {
 
 article h2 {
     font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
     width: 100%;
     border-bottom: 1px solid;
     padding-bottom: 5px;
 }
 
 article section {
-    margin-top: 15px;
+    margin-top: 25px;
+}
+
+.recharts-wrapper {
+    font-size: 12px;
+}
+
+.recharts-bar-rectangle .recharts-rectangle:hover {
+    fill: #1EE3A1 !important;
 }
