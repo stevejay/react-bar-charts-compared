@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chartist": "^0.11.0",
+    "deep-equal": "^1.0.1",
     "global": "^4.3.2",
     "lodash": "^4.17.5",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
+    "react-c3js": "^0.1.20",
+    "react-chartist": "^0.13.1",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
@@ -18,6 +22,7 @@
     "redux-thunk": "^2.2.0",
     "sanitize.css": "^5.0.0",
     "semantic-ui-css": "^2.3.0",
+    "taucharts": "^2.0.3",
     "victory": "^0.25.6"
   },
   "homepage": "https://stevejay.github.io/react-bar-charts-compared",

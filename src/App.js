@@ -7,7 +7,13 @@ import UpdateButtons from './components/update-buttons'
 import RechartsExample from './components/examples/recharts'
 import ReactVisExample from './components/examples/react-vis'
 import VictoryExample from './components/examples/victory'
+import TauchartsExample from './components/examples/taucharts'
+import C3Example from './components/examples/c3'
+import ChartistExample from './components/examples/chartist'
 import '../node_modules/react-vis/dist/style.css'
+import '../node_modules/taucharts/dist/taucharts.dark.css'
+import '../node_modules/c3/c3.css'
+import '../node_modules/chartist/dist/chartist.css'
 import './App.css'
 
 class App extends Component {
@@ -28,6 +34,17 @@ class App extends Component {
         <div className='row'>
           <div className='column'>
             <VictoryExample />
+          </div>
+          <div className='column'>
+            <C3Example />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='column'>
+            <ChartistExample />
+          </div>
+          <div className='column'>
+            <TauchartsExample />
           </div>
         </div>
         <footer>

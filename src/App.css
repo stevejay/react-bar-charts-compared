@@ -101,7 +101,8 @@ article section {
 }
 
 .recharts-wrapper,
-.rv-xy-plot {
+.rv-xy-plot,
+.c3 {
     font-size: 12px;
 }
 
@@ -123,4 +124,41 @@ article section {
 .rv-xy-plot .first-series rect:hover {
     fill: #1EE3A1 !important;
     stroke: #1EE3A1 !important;
+}
+
+
+/* TODO fix this hack */
+
+.tau-chart__layout,
+.tau-chart__layout__container,
+.tau-chart__layout__content {
+    overflow: visible !important;
+}
+
+.c3 .c3-axis path,
+.c3 .tick line {
+    stroke: #CFD2DA
+}
+
+.c3 .tick text {
+    font-size: 12px;
+    fill: #CFD2DA;
+}
+
+.c3 .c3-bar {
+    fill: #CFD2DA !important;
+}
+
+.ct-chart .ct-bar {
+    stroke: #CFD2DA !important;
+    stroke-width: 30px;
+}
+
+.ct-chart .ct-label {
+    font-size: 12px;
+    color: #CFD2DA;
+}
+
+.ct-grids line {
+    stroke: #6f7890;
 }

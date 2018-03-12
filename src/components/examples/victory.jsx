@@ -17,8 +17,6 @@ const Svg = ({ width, height, children }) => (
   </svg>
 )
 const VictoryExample = ({ data }) => {
-  console.log('data', JSON.stringify(data))
-
   const mappedData = data.map(datum => ({
     x: datum.key, // can specify this mapping using the x prop on VictoryBar
     y: datum.value, // can specify this mapping using the y prop on VictoryBar
