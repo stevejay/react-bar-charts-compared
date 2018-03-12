@@ -16,9 +16,6 @@ const TauchartsExample = ({ data }) => (
           x: 'key',
           y: 'value',
           color: 'priority'
-          // settings: {
-          //   fitModel: 'entire-view'
-          // }
         }}
       />
     </AutosizeContainer>

@@ -162,3 +162,17 @@ article section {
 .ct-grids line {
     stroke: #6f7890;
 }
+
+.bb .bb-axis path,
+.bb .tick line {
+    stroke: #CFD2DA
+}
+
+.bb .tick text {
+    font-size: 12px;
+    fill: #CFD2DA;
+}
+
+.bb .bb-bar {
+    fill: #CFD2DA !important;
+}
