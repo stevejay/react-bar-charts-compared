@@ -176,3 +176,10 @@ article section {
 .bb .bb-bar {
     fill: #CFD2DA !important;
 }
+
+
+/* weird required override because of semantic ui */
+
+svg:not(:root) {
+    overflow: visible !important;
+}
