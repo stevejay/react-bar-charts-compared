@@ -5,7 +5,6 @@ import * as d3 from 'd3'
 import * as fc from 'd3fc'
 
 import ExampleContainer from '../example-container'
-import AutosizeContainer from '../autosize-container'
 
 class D3FCChart extends React.Component {
   constructor (props) {
@@ -29,7 +28,7 @@ class D3FCChart extends React.Component {
   _update (props) {
     // const { width, height, data } = props
     const { data } = props
-    const dataDomain = d3.extent(data, d => d.value)
+    const gridlines = fc.annotationSvgGridline()
 
     const yExtent = fc
       .extentLinear()
@@ -51,7 +50,10 @@ class D3FCChart extends React.Component {
       .crossValue(d => d.key)
       .mainValue(d => d.value)
 
-    chart.plotArea(series)
+    const multi = fc.seriesSvgMulti().series([gridlines, series])
+
+    chart.plotArea(multi)
+
     d3.select(this._chart).datum(data).transition().duration(500).call(chart)
 
     // console.log('updating')

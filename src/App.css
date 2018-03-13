@@ -183,3 +183,26 @@ article section {
 svg:not(:root) {
     overflow: visible !important;
 }
+
+.cartesian-chart .y-axis path,
+.cartesian-chart .x-axis path {
+    stroke: #CFD2DA;
+}
+
+.cartesian-chart .y-axis text,
+.cartesian-chart .x-axis text {
+    fill: #CFD2DA;
+    font-size: 12px;
+}
+
+.cartesian-chart .plot-area .bar {
+    fill: #CFD2DA;
+}
+
+.cartesian-chart .gridline-y {
+    opacity: 0 !important;
+}
+
+.cartesian-chart .gridline-x {
+    opacity: .3 !important;
+}
