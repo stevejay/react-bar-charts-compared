@@ -77,14 +77,8 @@ footer button:hover {
 
 article {
     background-color: #353944;
-    /* margin: 30px 30px 80px 30px; */
     padding: 15px;
 }
-
-
-/* article:not(:last-of-type) {
-    margin-bottom: 0;
-} */
 
 article h2 {
     font-weight: bold;
@@ -227,4 +221,12 @@ svg:not(:root) {
 
 .cartesian-chart .gridline-x {
     opacity: .3 !important;
+}
+
+.nivo rect {
+    transition: fill .15s ease-in-out;
+}
+
+.nivo rect:hover {
+    fill: #1EE3A1 !important;
 }

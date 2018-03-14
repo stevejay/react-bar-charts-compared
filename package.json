@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/bar": "^0.33.0",
     "chartist": "^0.11.0",
     "d3": "^4.13.0",
     "d3fc": "^13.1.1",

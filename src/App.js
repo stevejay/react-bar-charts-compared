@@ -7,11 +7,12 @@ import UpdateButtons from './components/update-buttons'
 import RechartsExample from './components/examples/recharts'
 import ReactVisExample from './components/examples/react-vis'
 import VictoryExample from './components/examples/victory'
-import TauchartsExample from './components/examples/taucharts'
+// import TauchartsExample from './components/examples/taucharts'
 // import C3Example from './components/examples/c3'
 import BillboardExample from './components/examples/billboard'
 import ChartistExample from './components/examples/chartist'
-import D3FCExample from './components/examples/d3fc'
+// import D3FCExample from './components/examples/d3fc'
+import NivoExample from './components/examples/nivo'
 import '../node_modules/react-vis/dist/style.css'
 import '../node_modules/taucharts/dist/taucharts.dark.css'
 // import '../node_modules/c3/c3.css'
@@ -50,13 +51,14 @@ class App extends Component {
             <ChartistExample />
           </div>
           <div className='column'>
-            <TauchartsExample />
+            <NivoExample />
           </div>
-        </div>
-        <div className='row'>
-          <div className='column'>
+          {/* <div className='column'>
             <D3FCExample />
-          </div>
+          </div> */}
+          {/* <div className='column'>
+            <TauchartsExample />
+          </div> */}
         </div>
         <footer>
           <UpdateButtons />

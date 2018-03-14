@@ -59,7 +59,7 @@ class ReactTaucharts extends React.Component {
         className={this.props.className}
         style={{
           width: '100%',
-          height: '100%',
+          height: 300,
           margin: 0,
           padding: 0
         }}
