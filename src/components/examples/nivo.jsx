@@ -9,7 +9,7 @@ const defaultTheme = {
   axis: {
     textColor: '#CFD2DA',
     fontSize: '12px',
-    tickColor: '#CFD2DA',
+    tickColor: '#6f7890',
     legendColor: '#000',
     legendFontSize: '11px'
   },

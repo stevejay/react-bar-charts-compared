@@ -20,3 +20,8 @@ https://github.com/twitter/d3kit
 https://github.com/kristw/react-d3kit
 
 https://github.com/gka/d3-jetpack
+
+general update pattern:
+- http://animateddata.co.uk/articles/d3/enterexit/
+     exit, enter, merge
+     

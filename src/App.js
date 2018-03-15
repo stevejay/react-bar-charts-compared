@@ -13,6 +13,7 @@ import BillboardExample from './components/examples/billboard'
 import ChartistExample from './components/examples/chartist'
 // import D3FCExample from './components/examples/d3fc'
 import NivoExample from './components/examples/nivo'
+import HighchartsExample from './components/examples/highcharts'
 import '../node_modules/react-vis/dist/style.css'
 import '../node_modules/taucharts/dist/taucharts.dark.css'
 // import '../node_modules/c3/c3.css'
@@ -59,6 +60,11 @@ class App extends Component {
           {/* <div className='column'>
             <TauchartsExample />
           </div> */}
+        </div>
+        <div className='row'>
+          <div className='column'>
+            <HighchartsExample />
+          </div>
         </div>
         <footer>
           <UpdateButtons />
