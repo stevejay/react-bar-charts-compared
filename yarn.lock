@@ -2072,7 +2072,7 @@ d3-scale@1.0.6:
     d3-time "1"
     d3-time-format "2"
 
-d3-scale@1.0.7, d3-scale@^1.0.0, d3-scale@^1.0.1, d3-scale@^1.0.3, d3-scale@^1.0.5, d3-scale@^1.0.6:
+d3-scale@1.0.7, d3-scale@^1.0.0, d3-scale@^1.0.1, d3-scale@^1.0.3, d3-scale@^1.0.5, d3-scale@^1.0.6, d3-scale@^1.0.7:
   version "1.0.7"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-scale/-/d3-scale-1.0.7.tgz#fa90324b3ea8a776422bd0472afab0b252a0945d"
   dependencies:
@@ -2133,7 +2133,7 @@ d3-zoom@1.7.1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^4.10.0, d3@^4.13.0:
+d3@^4.10.0, d3@^4.13.0, d3@^4.2.1:
   version "4.13.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3/-/d3-4.13.0.tgz#ab236ff8cf0cfc27a81e69bf2fb7518bc9b4f33d"
   dependencies:
@@ -2364,6 +2364,19 @@ d3fc@^13.1.1:
     d3fc-series "3.1.1"
     d3fc-shape "4.0.1"
     d3fc-technical-indicator "6.1.1"
+
+d3kit@^3.2.0:
+  version "3.2.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3kit/-/d3kit-3.2.0.tgz#db40503252a6bb02baafa9deb7193165ae16a464"
+  dependencies:
+    d3-dispatch "^1.0.1"
+    d3-selection "^1.0.2"
+
+d3scription@^1.0.1:
+  version "1.0.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3scription/-/d3scription-1.0.1.tgz#b110fb898a8180f76c2bf6c5010def5b2e5edc36"
+  dependencies:
+    d3 "^4.2.1"
 
 d@1:
   version "1.0.0"
@@ -6294,6 +6307,15 @@ react-chartist@^0.13.1:
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-chartist/-/react-chartist-0.13.1.tgz#79cee44891dfd7008d555a7a5a623ab09c0b59d1"
   dependencies:
     prop-types "^15.5.8"
+
+react-d3kit@^2.0.0:
+  version "2.0.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-d3kit/-/react-d3kit-2.0.0.tgz#4c5632317ee6d5f2ab04844028648cbae2a1efaf"
+  dependencies:
+    d3-array "^1.2.1"
+    d3-axis "^1.0.8"
+    d3-scale "^1.0.7"
+    prop-types "^15.6.0"
 
 react-dev-utils@^5.0.0:
   version "5.0.0"

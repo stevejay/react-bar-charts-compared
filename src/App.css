@@ -255,3 +255,40 @@ svg:not(:root) {
     fill: #1EE3A1;
     stroke: #1EE3A1;
 }
+
+.d3scription-tip {
+    font-size: 11px;
+    color: white;
+    background: #283645;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    border-radius: 3px;
+    padding: 5px 10px;
+    /* min-width: 190px; */
+}
+
+.d3kit-chart-root .content-layer .bar {
+    fill: #CFD2DA;
+    transition: fill .15s ease-in-out;
+}
+
+.d3kit-chart-root .content-layer .bar:hover {
+    fill: #1EE3A1;
+}
+
+.d3kit-chart-root g[class*="axis-layer"] .domain,
+.d3kit-chart-root g[class*="axis-layer"] .tick line {
+    stroke: #CFD2DA;
+}
+
+.d3kit-chart-root g[class*="axis-layer"] .tick text {
+    fill: #CFD2DA;
+    font-size: 12px;
+}
+
+.d3kit-chart-root .grid-layer .tick line {
+    stroke: #6f7890;
+}
+
+.d3kit-chart-root .grid-layer .domain {
+    opacity: 0;
+}

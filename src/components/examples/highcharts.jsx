@@ -5,13 +5,8 @@ import {
   withHighcharts,
   HighchartsChart,
   Chart,
-  Title,
-  Subtitle,
-  Legend,
   XAxis,
   YAxis,
-  LineSeries,
-  BarSeries,
   ColumnSeries,
   Tooltip
 } from 'react-jsx-highcharts'

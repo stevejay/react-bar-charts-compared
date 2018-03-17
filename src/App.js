@@ -14,6 +14,7 @@ import ChartistExample from './components/examples/chartist'
 // import D3FCExample from './components/examples/d3fc'
 import NivoExample from './components/examples/nivo'
 import HighchartsExample from './components/examples/highcharts'
+import D3KitExample from './components/examples/d3kit'
 import '../node_modules/react-vis/dist/style.css'
 import '../node_modules/taucharts/dist/taucharts.dark.css'
 // import '../node_modules/c3/c3.css'
@@ -64,6 +65,9 @@ class App extends Component {
         <div className='row'>
           <div className='column'>
             <HighchartsExample />
+          </div>
+          <div className='column'>
+            <D3KitExample />
           </div>
         </div>
         <footer>
