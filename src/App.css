@@ -1,146 +1,147 @@
 body {
-    min-height: 100vh;
-    background-color: #252830;
-    color: #CFD2DA;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #252830;
+  color: #CFD2DA;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .row {
-    display: flex;
-    margin: 30px 15px 80px;
+  display: flex;
+  margin: 30px 15px 80px;
 }
 
 .row:not(:last-of-type) {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .column {
-    width: 50%;
-    padding: 0 15px;
+  width: 50%;
+  padding: 0 15px;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #1a1c22;
-    padding: 10px 30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1c22;
+  padding: 10px 30px;
 }
 
 footer button {
-    text-decoration: none;
-    margin: 0;
-    font-size: 14px;
-    text-transform: none;
-    letter-spacing: normal;
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.5;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    -webkit-tap-highlight-color: transparent;
-    text-shadow: none;
-    color: #1997c6;
-    border-color: #1997c6;
-    margin-right: 15px;
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: normal;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  text-shadow: none;
+  color: #1997c6;
+  border-color: #1997c6;
+  margin-right: 15px;
 }
 
 footer button:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 footer button:hover {
-    color: #fff;
-    background-color: #1997c6;
-    box-shadow: none;
+  color: #fff;
+  background-color: #1997c6;
+  box-shadow: none;
 }
 
 article {
-    background-color: #353944;
-    padding: 15px;
+  background-color: #353944;
+  padding: 15px;
 }
 
 article h2 {
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-    width: 100%;
-    border-bottom: 1px solid;
-    padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
 }
 
 article section {
-    margin-top: 25px;
-    height: 300px;
+  margin-top: 25px;
+  height: 300px;
 }
 
 .recharts-wrapper,
 .rv-xy-plot,
 .c3 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .recharts-bar-rectangle .recharts-rectangle {
-    transition: fill .15s ease-in-out;
+  transition: fill .15s ease-in-out;
 }
 
 .recharts-bar-rectangle .recharts-rectangle:hover {
-    fill: #1EE3A1 !important;
+  fill: #1EE3A1 !important;
 }
 
 .recharts-tooltip {
-    background-color: #252830;
-    padding: 3px 8px;
-    border-radius: 4px;
-    text-align: right;
+  background-color: #252830;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-align: right;
 }
 
 .recharts-tooltip p {
-    font-size: 12px;
-    color: #CFD2DA;
+  font-size: 12px;
+  color: #CFD2DA;
 }
 
 .rv-xy-plot .first-series rect {
-    transition: fill .15s ease-in-out, stroke .15s ease-in-out;
+  transition: fill .15s ease-in-out, stroke .15s ease-in-out;
 }
 
 .rv-xy-plot .first-series rect:hover {
-    fill: #1EE3A1 !important;
-    stroke: #1EE3A1 !important;
+  fill: #1EE3A1 !important;
+  stroke: #1EE3A1 !important;
 }
 
 .rv-hint aside {
-    background-color: #252830;
-    padding: 4px 8px;
-    border-radius: 4px;
-    text-align: right;
+  background-color: #252830;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: right;
 }
 
 .rv-hint aside p {
-    color: #CFD2DA;
-    font-size: 12px;
-    margin-bottom: 0;
+  color: #CFD2DA;
+  font-size: 12px;
+  margin-bottom: 0;
 }
+
 
 
 /* TODO fix this hack */
@@ -148,147 +149,165 @@ article section {
 .tau-chart__layout,
 .tau-chart__layout__container,
 .tau-chart__layout__content {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 .c3 .c3-axis path,
 .c3 .tick line {
-    stroke: #CFD2DA
+  stroke: #CFD2DA
 }
 
 .c3 .tick text {
-    font-size: 12px;
-    fill: #CFD2DA;
+  font-size: 12px;
+  fill: #CFD2DA;
 }
 
 .c3 .c3-bar {
-    fill: #CFD2DA !important;
+  fill: #CFD2DA !important;
 }
 
 .ct-chart .ct-bar {
-    stroke: #CFD2DA !important;
-    stroke-width: 30px;
+  stroke: #CFD2DA !important;
+  stroke-width: 30px;
 }
 
 .ct-chart .ct-label {
-    font-size: 12px;
-    color: #CFD2DA;
+  font-size: 12px;
+  color: #CFD2DA;
 }
 
 .ct-grids line {
-    stroke: #6f7890;
+  stroke: #6f7890;
 }
 
 .bb .bb-axis path,
 .bb .tick line {
-    stroke: #CFD2DA
+  stroke: #CFD2DA
 }
 
 .bb .tick text {
-    font-size: 12px;
-    fill: #CFD2DA;
+  font-size: 12px;
+  fill: #CFD2DA;
 }
 
 .bb .bb-bar {
-    fill: #CFD2DA !important;
+  fill: #CFD2DA !important;
 }
+
 
 
 /* weird required override because of semantic ui */
 
 svg:not(:root) {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 .cartesian-chart .y-axis path,
 .cartesian-chart .x-axis path {
-    stroke: #CFD2DA;
+  stroke: #CFD2DA;
 }
 
 .cartesian-chart .y-axis text,
 .cartesian-chart .x-axis text {
-    fill: #CFD2DA;
-    font-size: 12px;
+  fill: #CFD2DA;
+  font-size: 12px;
 }
 
 .cartesian-chart .plot-area .bar {
-    fill: #CFD2DA;
+  fill: #CFD2DA;
 }
 
 .cartesian-chart .gridline-y {
-    opacity: 0 !important;
+  opacity: 0 !important;
 }
 
 .cartesian-chart .gridline-x {
-    opacity: .3 !important;
+  opacity: .3 !important;
 }
 
 .nivo rect {
-    transition: fill .15s ease-in-out;
+  transition: fill .15s ease-in-out;
 }
 
 .nivo rect:hover {
-    fill: #1EE3A1 !important;
+  fill: #1EE3A1 !important;
 }
 
 .highcharts-background {
-    fill: transparent;
+  fill: transparent;
 }
 
 .highcharts-axis-labels text {
-    font-size: 12px !important;
-    fill: #CFD2DA !important;
-    color: #CFD2DA !important;
+  font-size: 12px !important;
+  fill: #CFD2DA !important;
+  color: #CFD2DA !important;
 }
 
 .highcharts-yaxis-grid {
-    stroke: #6f7890;
-    opacity: 0.5;
+  stroke: #6f7890;
+  opacity: 0.5;
 }
 
 .highcharts-column-series rect {
-    fill: #CFD2DA;
-    stroke: #CFD2DA;
+  fill: #CFD2DA;
+  stroke: #CFD2DA;
 }
 
 .highcharts-column-series rect.highcharts-point-hover {
-    fill: #1EE3A1;
-    stroke: #1EE3A1;
+  fill: #1EE3A1;
+  stroke: #1EE3A1;
 }
 
 .d3scription-tip {
-    font-size: 11px;
-    color: white;
-    background: #283645;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
-    border-radius: 3px;
-    padding: 5px 10px;
-    /* min-width: 190px; */
+  font-size: 11px;
+  color: white;
+  background: #283645;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+  border-radius: 3px;
+  padding: 5px 10px;
+  /* min-width: 190px; */
+}
+
+.d3kit-chart-root {
+  overflow: hidden;
 }
 
 .d3kit-chart-root .content-layer .bar {
-    fill: #CFD2DA;
-    transition: fill .15s ease-in-out;
+  fill: #CFD2DA;
+  transition: fill .15s ease-in-out;
 }
 
 .d3kit-chart-root .content-layer .bar:hover {
-    fill: #1EE3A1;
+  fill: #1EE3A1;
 }
 
 .d3kit-chart-root g[class*="axis-layer"] .domain,
 .d3kit-chart-root g[class*="axis-layer"] .tick line {
-    stroke: #CFD2DA;
+  stroke: #CFD2DA;
 }
 
 .d3kit-chart-root g[class*="axis-layer"] .tick text {
-    fill: #CFD2DA;
-    font-size: 12px;
+  fill: #CFD2DA;
+  font-size: 12px;
 }
 
 .d3kit-chart-root .grid-layer .tick line {
-    stroke: #6f7890;
+  stroke: #6f7890;
 }
 
 .d3kit-chart-root .grid-layer .domain {
-    opacity: 0;
+  opacity: 0;
+}
+
+.d3kit-chart-root text {
+  line-height: 1.4;
+}
+
+.d3-tip {
+  pointer-events: none !important;
+  line-height: 1;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #CFD2DA;
+  border-radius: 2px;
 }

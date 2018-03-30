@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import './polyfills'
 
 import { updateBarChartData } from './actions/data'
 import UpdateButtons from './components/update-buttons'
@@ -15,6 +16,8 @@ import ChartistExample from './components/examples/chartist'
 import NivoExample from './components/examples/nivo'
 import HighchartsExample from './components/examples/highcharts'
 import D3KitExample from './components/examples/d3kit'
+// import D3KitTransformExample from './components/examples/d3kit-transform'
+// import D3KitHybridExample from './components/examples/d3kit-hybrid'
 import '../node_modules/react-vis/dist/style.css'
 import '../node_modules/taucharts/dist/taucharts.dark.css'
 // import '../node_modules/c3/c3.css'
@@ -31,6 +34,17 @@ class App extends Component {
       <main>
         <div className='row'>
           <div className='column'>
+            <HighchartsExample />
+          </div>
+          <div className='column'>
+            <D3KitExample />
+          </div>
+          {/* <div className='column'>
+            <D3KitHybridExample />
+          </div> */}
+        </div>
+        <div className='row'>
+          <div className='column'>
             <RechartsExample />
           </div>
           <div className='column'>
@@ -44,9 +58,6 @@ class App extends Component {
           <div className='column'>
             <BillboardExample />
           </div>
-          {/* <div className='column'>
-            <C3Example />
-          </div> */}
         </div>
         <div className='row'>
           <div className='column'>
@@ -54,20 +65,6 @@ class App extends Component {
           </div>
           <div className='column'>
             <NivoExample />
-          </div>
-          {/* <div className='column'>
-            <D3FCExample />
-          </div> */}
-          {/* <div className='column'>
-            <TauchartsExample />
-          </div> */}
-        </div>
-        <div className='row'>
-          <div className='column'>
-            <HighchartsExample />
-          </div>
-          <div className='column'>
-            <D3KitExample />
           </div>
         </div>
         <footer>

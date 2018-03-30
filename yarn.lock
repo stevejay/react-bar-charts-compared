@@ -2108,6 +2108,12 @@ d3-timer@1, d3-timer@1.0.7, d3-timer@^1.0.0:
   version "1.0.7"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-timer/-/d3-timer-1.0.7.tgz#df9650ca587f6c96607ff4e60cc38229e8dd8531"
 
+d3-tip@^0.7.1:
+  version "0.7.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-tip/-/d3-tip-0.7.1.tgz#78cbf554f67b720a70e3b0f191e14cffe68cdd79"
+  dependencies:
+    d3 "^4.2"
+
 d3-transition@1, d3-transition@1.1.1, d3-transition@^1.0.0, d3-transition@^1.1.0:
   version "1.1.1"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-transition/-/d3-transition-1.1.1.tgz#d8ef89c3b848735b060e54a39b32aaebaa421039"
@@ -2133,7 +2139,7 @@ d3-zoom@1.7.1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^4.10.0, d3@^4.13.0, d3@^4.2.1:
+d3@^4.10.0, d3@^4.13.0, d3@^4.2:
   version "4.13.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3/-/d3-4.13.0.tgz#ab236ff8cf0cfc27a81e69bf2fb7518bc9b4f33d"
   dependencies:
@@ -2371,12 +2377,6 @@ d3kit@^3.2.0:
   dependencies:
     d3-dispatch "^1.0.1"
     d3-selection "^1.0.2"
-
-d3scription@^1.0.1:
-  version "1.0.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3scription/-/d3scription-1.0.1.tgz#b110fb898a8180f76c2bf6c5010def5b2e5edc36"
-  dependencies:
-    d3 "^4.2.1"
 
 d@1:
   version "1.0.0"

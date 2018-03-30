@@ -4,19 +4,16 @@ import { connect } from 'react-redux'
 import { SvgChart } from 'd3kit'
 import { createComponent } from 'react-d3kit'
 import * as d3 from 'd3'
-import d3scription from 'd3scription'
-
-// https://github.com/GlobalWebIndex/d3scription
+import d3Tip from 'd3-tip'
+import * as fc from 'd3fc' // use d3fc-extent instead
 
 import ExampleContainer from '../example-container'
-
-window.d3 = d3
 
 class BarChart extends SvgChart {
   constructor (selector, options) {
     super(selector, options)
-    this.layers.create(['grid', 'content', 'x-axis', 'y-axis'])
 
+    this.layers.create(['grid', 'content', 'x-axis', 'y-axis'])
     this.grid = this.layers.get('grid')
     this.content = this.layers.get('content')
     this.xAxis = this.layers.get('x-axis')
@@ -24,7 +21,13 @@ class BarChart extends SvgChart {
 
     this.x = d3.scaleBand().padding(0.2)
     this.y = d3.scaleLinear()
-    this.y.ticks(5) // TODO why isn't this working?
+
+    this.tip = d3Tip()
+      .attr('class', 'd3-tip')
+      .offset([10, 0])
+      .html(d => d.value)
+
+    this.content.call(this.tip)
 
     this.on('resize.default', this.visualize)
     this.on('data.default', this.visualize)
@@ -37,23 +40,26 @@ class BarChart extends SvgChart {
     const data = this.data()
     const transition = this.svg.transition().duration(500)
 
-    const tipFactory = d3scription(d => d.value)
-    const tip = tipFactory().element(this.content)
-
     this.x.range([0, this.getInnerWidth()])
     this.y.range([this.getInnerHeight(), 0])
 
+    const yExtent = fc
+      .extentLinear()
+      .accessors([d => d.value])
+      .pad([0, 0.1])
+      .include([0])
+
     this.x.domain(data.map(d => d.key))
-    this.y.domain([0, d3.max(data, d => d.value)])
+    this.y.domain(yExtent(data))
 
     this.grid
       .transition(transition)
       .call(
         d3
           .axisLeft(this.y)
+          .ticks(5)
           .tickSize(-this.getInnerWidth())
           .tickFormat('')
-          .ticks(5)
       )
       .select('.domain')
       .remove()
@@ -77,8 +83,8 @@ class BarChart extends SvgChart {
       .attr('y', this.getInnerHeight())
       .attr('height', 0)
       .style('opacity', 0)
-      .on('mouseover', tip.show)
-      .on('mouseout', tip.hide)
+      .on('mouseover', this.tip.show)
+      .on('mouseout', this.tip.hide)
       .merge(selection)
       .transition(transition)
       .style('opacity', 1)
@@ -92,7 +98,7 @@ class BarChart extends SvgChart {
       .transition(transition)
       .call(d3.axisBottom(this.x))
 
-    this.yAxis.transition(transition).call(d3.axisLeft(this.y))
+    this.yAxis.transition(transition).call(d3.axisLeft(this.y).ticks(5))
   }
 }
 

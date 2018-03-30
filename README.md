@@ -24,4 +24,10 @@ https://github.com/gka/d3-jetpack
 general update pattern:
 - http://animateddata.co.uk/articles/d3/enterexit/
      exit, enter, merge
-     
+
+-----
+https://www.amcharts.com/demos/
+https://plot.ly/javascript/
+https://www.fusioncharts.com/charts/line-area-charts/
+https://github.com/zingchart/awesome-charting
+https://www.metricsgraphicsjs.org/
