@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import './polyfills'
+import 'babel-polyfill'
 
 import { updateBarChartData } from './actions/data'
 import UpdateButtons from './components/update-buttons'
