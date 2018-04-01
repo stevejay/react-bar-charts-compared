@@ -17,10 +17,11 @@ import NivoExample from './components/examples/nivo'
 import HighchartsExample from './components/examples/highcharts'
 import D3KitExample from './components/examples/d3kit'
 // import D3KitTransformExample from './components/examples/d3kit-transform'
-// import D3KitHybridExample from './components/examples/d3kit-hybrid'
+import D3KitHybridExample from './components/examples/d3kit-hybrid'
 import '../node_modules/react-vis/dist/style.css'
 import '../node_modules/taucharts/dist/taucharts.dark.css'
 // import '../node_modules/c3/c3.css'
+import Carousel from './components/carousel'
 import '../node_modules/chartist/dist/chartist.css'
 import 'react-billboardjs/lib/billboard.css'
 import './App.css'
@@ -28,10 +29,24 @@ import './App.css'
 class App extends Component {
   componentWillMount () {
     this.props.updateBarChartData()
+    this.renderSlide = this.renderSlide.bind(this)
+  }
+  renderSlide (index) {
+    switch (index) {
+      case 0:
+        return <div className='slide'>Zero<br />Zero</div>
+      case 1:
+        return <div className='slide'>One<br />One<br />One<br />One</div>
+      case 2:
+        return <div className='slide'>Two</div>
+      default:
+        return <div className='slide' />
+    }
   }
   render () {
     return (
       <main>
+        <Carousel total={3} renderSlide={this.renderSlide} />
         <div className='row'>
           <div className='column'>
             <HighchartsExample />
@@ -39,8 +54,13 @@ class App extends Component {
           <div className='column'>
             <D3KitExample />
           </div>
-          {/* <div className='column'>
+        </div>
+        <div className='row'>
+          <div className='column'>
             <D3KitHybridExample />
+          </div>
+          {/* <div className='column'>
+            <D3KitTransformExample />
           </div> */}
         </div>
         <div className='row'>

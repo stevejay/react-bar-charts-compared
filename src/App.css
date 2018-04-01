@@ -144,6 +144,26 @@ article section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* TODO fix this hack */
 
 .tau-chart__layout,
@@ -193,6 +213,26 @@ article section {
 .bb .bb-bar {
   fill: #CFD2DA !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -310,4 +350,79 @@ svg:not(:root) {
   background: rgba(0, 0, 0, 0.8);
   color: #CFD2DA;
   border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------- */
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-content-container {
+  flex-grow: 1;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  transition: height 500ms ease-out;
+}
+
+.carousel-button {
+  width: 100px;
+}
+
+.slide {
+  /* position: relative; */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; */
+}
+
+.fade-enter {
+  opacity: 0.01;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-enter-done {
+  position: relative;
+}
+
+.fade-exit {
+  /* opacity: 1; */
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
 }

@@ -9,6 +9,10 @@ import * as fc from 'd3fc' // use d3fc-extent instead
 
 import ExampleContainer from '../example-container'
 
+// This approach is pointless as SVG rendering in browsers is not
+// optimised to use compositing when only transform and/or opacity
+// is being animated.
+
 class BarChartTransform extends SvgChart {
   constructor (selector, options) {
     super(selector, options)
