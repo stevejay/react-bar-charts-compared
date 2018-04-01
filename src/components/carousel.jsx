@@ -7,7 +7,7 @@ class Carousel extends React.PureComponent {
   constructor (props) {
     super(props)
     this._mounted = true
-    // this._rafHandle = null
+    this._rafHandle = null
     this.state = { currentIndex: 0, style: null }
     this.handlePreviousButtonClick = this.handlePreviousButtonClick.bind(this)
     this.handleNextButtonClick = this.handleNextButtonClick.bind(this)
@@ -72,13 +72,17 @@ class Carousel extends React.PureComponent {
     // })
   }
   handleSlideEntered (node) {
-    this._mounted && this.setState({ style: { height: 'auto' } })
+    // this._mounted && this.setState({ style: { height: null } })
 
     // if (this._rafHandle) {
     //   window.cancelAnimationFrame(this._rafHandle)
     // }
 
-    // // could set height to null.
+    window.setTimeout(() => {
+      this.setState({ style: { height: null } })
+    }, 0)
+
+    // could set height to null.
 
     // this._rafHandle = window.requestAnimationFrame(() => {
     //   this._mounted && this.setState({ style: { height: 'auto' } })
