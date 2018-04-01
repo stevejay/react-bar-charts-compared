@@ -62,6 +62,16 @@ class Carousel extends React.PureComponent {
     const finalHeight = node.scrollHeight
     this._mounted && this.setState({ style: { height: finalHeight } })
 
+    // const self = this
+    // node.addEventListener(
+    //   'transitionend',
+    //   function transitionEnd (event) {
+    //     node.removeEventListener('transitionend', transitionEnd, false)
+    //     self._mounted && self.setState({ style: { height: null } })
+    //   },
+    //   false
+    // )
+
     // if (this._rafHandle) {
     //   window.cancelAnimationFrame(this._rafHandle)
     // }
@@ -73,17 +83,14 @@ class Carousel extends React.PureComponent {
   }
   handleSlideEntered (node) {
     // this._mounted && this.setState({ style: { height: null } })
-
     // if (this._rafHandle) {
     //   window.cancelAnimationFrame(this._rafHandle)
     // }
-
+    // This works:
     window.setTimeout(() => {
       this.setState({ style: { height: null } })
     }, 0)
-
     // could set height to null.
-
     // this._rafHandle = window.requestAnimationFrame(() => {
     //   this._mounted && this.setState({ style: { height: 'auto' } })
     //   this._rafHandle = null
