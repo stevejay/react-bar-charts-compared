@@ -6,7 +6,8 @@ import window from 'global/window'
 class Carousel extends React.PureComponent {
   constructor (props) {
     super(props)
-    this.mounted = true
+    this._mounted = true
+    // this._rafHandle = null
     this.state = { currentIndex: 0, style: null }
     this.handlePreviousButtonClick = this.handlePreviousButtonClick.bind(this)
     this.handleNextButtonClick = this.handleNextButtonClick.bind(this)
@@ -31,7 +32,7 @@ class Carousel extends React.PureComponent {
   //   this.setState({ style })
   // }
   componentWillUnmount () {
-    this.mounted = false
+    this._mounted = false
   }
   handlePreviousButtonClick () {
     let newIndex = this.state.currentIndex - 1
@@ -40,7 +41,10 @@ class Carousel extends React.PureComponent {
       newIndex = this.props.total - 1
     }
 
-    this.setState({ currentIndex: newIndex })
+    this.setState({
+      currentIndex: newIndex,
+      style: { height: this._contentContainer.scrollHeight }
+    })
   }
   handleNextButtonClick () {
     let newIndex = this.state.currentIndex + 1
@@ -49,38 +53,37 @@ class Carousel extends React.PureComponent {
       newIndex = 0
     }
 
-    this.setState({ currentIndex: newIndex })
+    this.setState({
+      currentIndex: newIndex,
+      style: { height: this._contentContainer.scrollHeight }
+    })
   }
   handleSlideEnter (node) {
-    const startingHeight = this._contentContainer.scrollHeight
     const finalHeight = node.scrollHeight
+    this._mounted && this.setState({ style: { height: finalHeight } })
 
-    console.log('from/to', startingHeight, finalHeight)
+    // if (this._rafHandle) {
+    //   window.cancelAnimationFrame(this._rafHandle)
+    // }
 
-    // const style = { height: node.scrollHeight } // scrollHeight???
-
-    window.requestAnimationFrame(() => {
-      this.mounted && this.setState({ style: { height: startingHeight } })
-
-      window.requestAnimationFrame(() => {
-        this.mounted && this.setState({ style: { height: finalHeight } })
-      })
-    })
-
-    // this._contentContainer.addEventListener('transitionend', () => {
-    //   this._contentContainer.removeEventListener(
-    //     'transitionend',
-    //     arguments.callee
-    //   )
-
-    //   this._contentContainer.style.height = null
+    // this._rafHandle = window.requestAnimationFrame(() => {
+    //   this._mounted && this.setState({ style: { height: finalHeight } })
+    //   this._rafHandle = null
     // })
   }
   handleSlideEntered (node) {
-    window.requestAnimationFrame(() => {
-      this.mounted && this.setState({ style: { height: 'auto' } })
-    })
-    // this._contentContainer.style.height = null
+    this._mounted && this.setState({ style: { height: 'auto' } })
+
+    // if (this._rafHandle) {
+    //   window.cancelAnimationFrame(this._rafHandle)
+    // }
+
+    // // could set height to null.
+
+    // this._rafHandle = window.requestAnimationFrame(() => {
+    //   this._mounted && this.setState({ style: { height: 'auto' } })
+    //   this._rafHandle = null
+    // })
   }
   render () {
     const { currentIndex, style } = this.state

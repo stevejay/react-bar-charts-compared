@@ -39,6 +39,8 @@ class App extends Component {
         return <div className='slide'>One<br />One<br />One<br />One</div>
       case 2:
         return <div className='slide'>Two</div>
+      case 3:
+        return <div className='slide'>Three</div>
       default:
         return <div className='slide' />
     }
@@ -46,7 +48,7 @@ class App extends Component {
   render () {
     return (
       <main>
-        <Carousel total={3} renderSlide={this.renderSlide} />
+        <Carousel total={4} renderSlide={this.renderSlide} />
         <div className='row'>
           <div className='column'>
             <HighchartsExample />

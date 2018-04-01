@@ -164,6 +164,7 @@ article section {
 
 
 
+
 /* TODO fix this hack */
 
 .tau-chart__layout,
@@ -213,6 +214,7 @@ article section {
 .bb .bb-bar {
   fill: #CFD2DA !important;
 }
+
 
 
 
@@ -372,6 +374,7 @@ svg:not(:root) {
 
 
 
+
 /* --------------------- */
 
 .carousel-container {
@@ -382,6 +385,7 @@ svg:not(:root) {
 
 .carousel-content-container {
   flex-grow: 1;
+  align-self: flex-start;
   position: relative;
   height: auto;
   overflow: hidden;
