@@ -7,6 +7,7 @@ import * as d3 from 'd3'
 import d3Tip from 'd3-tip'
 import * as fc from 'd3fc' // use d3fc-extent instead
 
+import AutosizeContainer from '../autosize-container'
 import ExampleContainer from '../example-container'
 
 class BarChart extends SvgChart {
@@ -104,21 +105,16 @@ class BarChart extends SvgChart {
 
 const ReactBarChart = createComponent(BarChart)
 
-const FIT_OPTIONS = { width: '100%', height: 300 }
-
 const OPTIONS = {
-  margin: { top: 10, right: 10, bottom: 30, left: 40 },
+  margin: { top: 20, right: 20, bottom: 30, left: 40 },
   offset: { x: 0.5, y: 0.5 } // add little offset for sharp-edge rendering
 }
 
 const D3KitExampleWrapper = ({ data }) => (
   <ExampleContainer title='D3Kit'>
-    <ReactBarChart
-      data={data}
-      options={OPTIONS}
-      fitOptions={FIT_OPTIONS}
-      watch
-    />
+    <AutosizeContainer>
+      <ReactBarChart data={data} options={OPTIONS} watch={false} />
+    </AutosizeContainer>
   </ExampleContainer>
 )
 

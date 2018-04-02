@@ -10,6 +10,13 @@ main {
   flex-direction: column;
 }
 
+main>header {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0 30px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .row {
   display: flex;
   margin: 30px 15px 80px;
@@ -31,6 +38,7 @@ footer {
   bottom: 0;
   background-color: #1a1c22;
   padding: 10px 30px;
+  text-align: center;
 }
 
 footer button {
@@ -85,13 +93,17 @@ article h2 {
   font-size: 16px;
   text-transform: uppercase;
   width: 100%;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 5px;
 }
 
 article section {
   margin-top: 25px;
   height: 300px;
+  position: relative;
+  overflow: hidden;
+
+  /* width: 500px; */
 }
 
 .recharts-wrapper,
@@ -141,6 +153,61 @@ article section {
   font-size: 12px;
   margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -238,6 +305,61 @@ article section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* weird required override because of semantic ui */
 
 svg:not(:root) {
@@ -311,7 +433,7 @@ svg:not(:root) {
 }
 
 .d3kit-chart-root {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .d3kit-chart-root .content-layer .bar {
@@ -354,6 +476,65 @@ svg:not(:root) {
   border-radius: 2px;
 }
 
+.d3kit-chart-root svg {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,6 +562,7 @@ svg:not(:root) {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 90px;
 }
 
 .carousel-content-container {
@@ -390,10 +572,32 @@ svg:not(:root) {
   height: auto;
   overflow: hidden;
   transition: height 500ms ease-out;
+
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.carousel-button-container {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-button {
-  width: 100px;
+  appearance: none;
+  border-radius: 0px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: white;
+  opacity: 0.75;
+  will-change: all;
+  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+  transform: scale(1.075);
 }
 
 .slide {

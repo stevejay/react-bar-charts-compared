@@ -7,6 +7,7 @@ import * as d3 from 'd3'
 // import d3Tip from 'd3-tip'
 import * as fc from 'd3fc' // use d3fc-extent instead
 
+import AutosizeContainer from '../autosize-container'
 import ExampleContainer from '../example-container'
 
 class HybridBarChart extends HybridChart {
@@ -114,21 +115,17 @@ class HybridBarChart extends HybridChart {
 
 const ReactHybridBarChart = createComponent(HybridBarChart)
 
-const FIT_OPTIONS = { width: '100%', height: 300 }
-
 const OPTIONS = {
   margin: { top: 10, right: 10, bottom: 30, left: 40 },
+  // initialHeight: 300,
   offset: { x: 0.5, y: 0.5 } // add little offset for sharp-edge rendering
 }
 
 const D3KitHybridExampleWrapper = ({ data }) => (
   <ExampleContainer title='D3Kit Hybrid'>
-    <ReactHybridBarChart
-      data={data}
-      options={OPTIONS}
-      fitOptions={FIT_OPTIONS}
-      watch
-    />
+    <AutosizeContainer>
+      <ReactHybridBarChart data={data} options={OPTIONS} watch={false} />
+    </AutosizeContainer>
   </ExampleContainer>
 )
 

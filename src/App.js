@@ -26,69 +26,40 @@ import '../node_modules/chartist/dist/chartist.css'
 import 'react-billboardjs/lib/billboard.css'
 import './App.css'
 
+const CHART_EXAMPLE_COMPONENTS = [
+  HighchartsExample,
+  D3KitExample,
+  D3KitHybridExample,
+  RechartsExample,
+  ReactVisExample,
+  VictoryExample,
+  BillboardExample,
+  ChartistExample,
+  NivoExample
+]
+
 class App extends Component {
   componentWillMount () {
     this.props.updateBarChartData()
     this.renderSlide = this.renderSlide.bind(this)
   }
   renderSlide (index) {
-    switch (index) {
-      case 0:
-        return <div className='slide'>Zero<br />Zero</div>
-      case 1:
-        return <div className='slide'>One<br />One<br />One<br />One</div>
-      case 2:
-        return <div className='slide'>Two</div>
-      case 3:
-        return <div className='slide'>Three</div>
-      default:
-        return <div className='slide' />
-    }
+    return (
+      <div className='slide'>
+        {React.createElement(CHART_EXAMPLE_COMPONENTS[index])}
+      </div>
+    )
   }
   render () {
     return (
       <main>
-        <Carousel total={4} renderSlide={this.renderSlide} />
-        <div className='row'>
-          <div className='column'>
-            <HighchartsExample />
-          </div>
-          <div className='column'>
-            <D3KitExample />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='column'>
-            <D3KitHybridExample />
-          </div>
-          {/* <div className='column'>
-            <D3KitTransformExample />
-          </div> */}
-        </div>
-        <div className='row'>
-          <div className='column'>
-            <RechartsExample />
-          </div>
-          <div className='column'>
-            <ReactVisExample />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='column'>
-            <VictoryExample />
-          </div>
-          <div className='column'>
-            <BillboardExample />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='column'>
-            <ChartistExample />
-          </div>
-          <div className='column'>
-            <NivoExample />
-          </div>
-        </div>
+        <header>
+          <h1>React Bar Charts Compared</h1>
+        </header>
+        <Carousel
+          total={CHART_EXAMPLE_COMPONENTS.length}
+          renderSlide={this.renderSlide}
+        />
         <footer>
           <UpdateButtons />
         </footer>
