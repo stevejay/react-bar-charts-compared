@@ -7,7 +7,9 @@ const ExampleContainer = ({ title, children, className, style }) => (
       <h2>{title}</h2>
     </header>
     <section style={style}>
-      {children}
+      <div className='chart-wrapper'>
+        {children}
+      </div>
     </section>
   </article>
 )

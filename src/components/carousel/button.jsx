@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AngleLeftIcon from 'react-icons/lib/fa/angle-left'
-import AngleRightIcon from 'react-icons/lib/fa/angle-right'
+import PreviousIcon from 'react-icons/lib/fa/arrow-left'
+import NextIcon from 'react-icons/lib/fa/arrow-right'
 
-const ICON_SIZE = 90
+const ICON_SIZE = 40
 
 const CarouselButton = ({ type, ariaLabel, onClick }) => (
   <div className='carousel-button-container'>
@@ -13,8 +13,8 @@ const CarouselButton = ({ type, ariaLabel, onClick }) => (
       onClick={onClick}
     >
       {type === 'previous'
-        ? <AngleLeftIcon size={ICON_SIZE} />
-        : <AngleRightIcon size={ICON_SIZE} />}
+        ? <PreviousIcon size={ICON_SIZE} />
+        : <NextIcon size={ICON_SIZE} />}
     </button>
   </div>
 )

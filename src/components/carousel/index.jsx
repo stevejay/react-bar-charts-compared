@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import window from 'global/window'
 
 import CarouselButton from './button'
+import CarouselPaging from './paging'
 
 class Carousel extends React.PureComponent {
   constructor (props) {
@@ -65,15 +66,11 @@ class Carousel extends React.PureComponent {
     // this._mounted && this.props.onShowSlide && this.props.onShowSlide(newIndex)
   }
   render () {
+    const { total } = this.props
     const { currentIndex, style, ariaLabelledby } = this.state
 
     return (
       <section className='carousel-container' aria-labelledby={ariaLabelledby}>
-        <CarouselButton
-          type='previous'
-          ariaLabel='previous'
-          onClick={this.handlePreviousButtonClick}
-        />
         <div
           className='carousel-content-container'
           ref={this.handleContainerMounted}
@@ -91,11 +88,19 @@ class Carousel extends React.PureComponent {
             </CSSTransition>
           </TransitionGroup>
         </div>
-        <CarouselButton
-          type='next'
-          ariaLabel='next'
-          onClick={this.handleNextButtonClick}
-        />
+        <div className='carousel-controls-container'>
+          <CarouselButton
+            type='previous'
+            ariaLabel='previous'
+            onClick={this.handlePreviousButtonClick}
+          />
+          <CarouselPaging total={total} currentIndex={currentIndex} />
+          <CarouselButton
+            type='next'
+            ariaLabel='next'
+            onClick={this.handleNextButtonClick}
+          />
+        </div>
       </section>
     )
   }

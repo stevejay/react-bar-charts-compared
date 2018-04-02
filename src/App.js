@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 import 'babel-polyfill'
 
+import Page from './components/page'
+import PageHeader from './components/page/header'
+import PageBody from './components/page/body'
 import { updateBarChartData } from './actions/data'
 import UpdateButtons from './components/update-buttons'
 import RechartsExample from './components/examples/recharts'
@@ -38,6 +42,10 @@ const CHART_EXAMPLE_COMPONENTS = [
   NivoExample
 ]
 
+const THEME = {
+  gutter: '30px'
+}
+
 class App extends Component {
   componentWillMount () {
     this.props.updateBarChartData()
@@ -52,18 +60,20 @@ class App extends Component {
   }
   render () {
     return (
-      <main>
-        <header>
-          <h1>React Bar Charts Compared</h1>
-        </header>
-        <Carousel
-          total={CHART_EXAMPLE_COMPONENTS.length}
-          renderSlide={this.renderSlide}
-        />
-        <footer>
-          <UpdateButtons />
-        </footer>
-      </main>
+      <ThemeProvider theme={THEME}>
+        <Page>
+          <PageHeader>React Bar Charts Compared</PageHeader>
+          <PageBody>
+            <Carousel
+              total={CHART_EXAMPLE_COMPONENTS.length}
+              renderSlide={this.renderSlide}
+            />
+          </PageBody>
+          <footer>
+            <UpdateButtons />
+          </footer>
+        </Page>
+      </ThemeProvider>
     )
   }
 }

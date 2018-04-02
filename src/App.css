@@ -5,32 +5,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
-main>header {
-  text-align: center;
-  padding: 20px 0;
-  margin: 0 30px 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.row {
-  display: flex;
-  margin: 30px 15px 80px;
-}
-
-.row:not(:last-of-type) {
-  margin-bottom: 0;
-}
-
-.column {
-  width: 50%;
-  padding: 0 15px;
-}
-
 footer {
   position: fixed;
   left: 0;
@@ -41,10 +15,11 @@ footer {
   text-align: center;
 }
 
-footer button {
+button.update {
   text-decoration: none;
   margin: 0;
   font-size: 14px;
+  min-width: 180px;
   text-transform: none;
   letter-spacing: normal;
   display: inline-block;
@@ -85,25 +60,40 @@ footer button:hover {
 
 article {
   background-color: #353944;
-  padding: 15px;
 }
+
+article header {
+  /* background-color: #252e46; */
+  background: linear-gradient(90deg, #1d2439, #252e46);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* #1d2439 */
 
 article h2 {
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding-bottom: 5px;
+  padding: 15px;
 }
 
 article section {
-  margin-top: 25px;
+  padding: 15px;
+}
+
+article section .chart-wrapper {
   height: 300px;
   position: relative;
   overflow: hidden;
-
-  /* width: 500px; */
 }
 
 .recharts-wrapper,
@@ -232,6 +222,34 @@ article section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* TODO fix this hack */
 
 .tau-chart__layout,
@@ -281,6 +299,34 @@ article section {
 .bb .bb-bar {
   fill: #CFD2DA !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -556,31 +602,91 @@ svg:not(:root) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------- */
 
 .carousel-container {
   width: 100%;
   display: flex;
-  align-items: center;
-  margin-bottom: 90px;
+  flex-direction: column;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-content-container {
-  flex-grow: 1;
-  align-self: flex-start;
+  /* flex-grow: 1; */
+  /* align-self: flex-start; */
   position: relative;
+  width: 100%;
   height: auto;
   overflow: hidden;
   transition: height 500ms ease-out;
+  margin-bottom: 30px;
 
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.carousel-button-container {
-  width: 25%;
+.carousel-controls-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel-controls-container .carousel-button-container:first-of-type {
+  margin-right: auto;
+} */
+
+.carousel-button-container {
+  /* width: 25%; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .carousel-button {
@@ -590,7 +696,7 @@ svg:not(:root) {
   background-color: transparent;
   padding: 0;
   color: white;
-  opacity: 0.75;
+  opacity: 0.66;
   will-change: all;
   transition: opacity .15s ease-in-out, transform .15s ease-in-out;
 }
