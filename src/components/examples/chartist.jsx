@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import ChartistGraph from 'react-chartist'
 
 import ExampleContainer from '../example-container'
-import AutosizeContainer from '../autosize-container'
+import AutoSizerContainer from '../auto-sizer-container'
 
 const ChartistSizingShim = ({ width, height, data }) => {
   const dataFoo = {
@@ -23,9 +23,9 @@ const ChartistSizingShim = ({ width, height, data }) => {
 const ChartistExample = ({ data }) => {
   return (
     <ExampleContainer title='Chartist'>
-      <AutosizeContainer>
+      <AutoSizerContainer>
         <ChartistSizingShim data={data} />
-      </AutosizeContainer>
+      </AutoSizerContainer>
     </ExampleContainer>
   )
 }

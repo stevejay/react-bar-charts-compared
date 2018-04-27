@@ -2,21 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Header = styled.header`
+const H1 = styled.h1`
   text-align: center;
-  padding-bottom: ${props => props.theme.gutter};
-  margin-bottom: ${props => props.theme.gutter};
+  margin-top: 0;
+  padding-bottom: .5em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `
 
-const PageHeader = ({ children }) => (
-  <Header>
-    <h1>{children}</h1>
-  </Header>
+const Header = ({ children }) => (
+  <header>
+    <H1>{children}</H1>
+  </header>
 )
 
-PageHeader.propTypes = {
-  children: PropTypes.any.isRequired
+Header.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
-export default PageHeader
+export default Header

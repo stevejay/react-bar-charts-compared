@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import BillboardChart from 'react-billboardjs'
 
 import ExampleContainer from '../example-container'
-import AutosizeContainer from '../autosize-container'
+import AutoSizerContainer from '../auto-sizer-container'
 
 class BillboardExample extends React.Component {
   constructor (props) {
@@ -53,7 +53,7 @@ class BillboardExample extends React.Component {
 
     return (
       <ExampleContainer title='Billboard'>
-        <AutosizeContainer>
+        <AutoSizerContainer>
           <BillboardChart
             isPure
             ref={this.handleChartMounted}
@@ -69,7 +69,7 @@ class BillboardExample extends React.Component {
               left: 60
             }}
           />
-        </AutosizeContainer>
+        </AutoSizerContainer>
       </ExampleContainer>
     )
   }

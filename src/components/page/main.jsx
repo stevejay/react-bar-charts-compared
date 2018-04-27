@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
-const PageBody = styled.section`
-  flex-grow: 1;
+const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `
 
-export default PageBody
+export default Main

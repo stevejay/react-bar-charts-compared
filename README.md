@@ -31,3 +31,5 @@ https://plot.ly/javascript/
 https://www.fusioncharts.com/charts/line-area-charts/
 https://github.com/zingchart/awesome-charting
 https://www.metricsgraphicsjs.org/
+
+Try this: http://www.pixijs.com/

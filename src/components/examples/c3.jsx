@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import C3Chart from 'react-c3js'
 
 import ExampleContainer from '../example-container'
-import AutosizeContainer from '../autosize-container'
+import AutoSizerContainer from '../auto-sizer-container'
 
 const C3Example = ({ data }) => {
   const axis = {
@@ -24,7 +24,7 @@ const C3Example = ({ data }) => {
 
   return (
     <ExampleContainer title='C3'>
-      <AutosizeContainer>
+      <AutoSizerContainer>
         <C3Chart
           data={c3Data}
           bar={{ width: { ratio: 0.8 } }}
@@ -39,7 +39,7 @@ const C3Example = ({ data }) => {
             left: 60
           }}
         />
-      </AutosizeContainer>
+      </AutoSizerContainer>
     </ExampleContainer>
   )
 }

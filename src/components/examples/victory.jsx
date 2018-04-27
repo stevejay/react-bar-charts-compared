@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { VictoryBar, VictoryChart, VictoryTooltip, VictoryAxis } from 'victory'
 
 import ExampleContainer from '../example-container'
-import AutosizeContainer from '../autosize-container'
+import AutoSizerContainer from '../auto-sizer-container'
 
 // Seems harder than it should to create a chart with a fixed height and
 // responsive width, and even with the 'standalone={false}' approach,
@@ -92,9 +92,9 @@ const ConnectedVictoryBarChart = connect(state => ({
 const VictoryExample = () => {
   return (
     <ExampleContainer title='Victory'>
-      <AutosizeContainer>
+      <AutoSizerContainer>
         <ConnectedVictoryBarChart />
-      </AutosizeContainer>
+      </AutoSizerContainer>
     </ExampleContainer>
   )
 }

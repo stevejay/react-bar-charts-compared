@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 
 import ExampleContainer from '../example-container'
 import ReactTaucharts from '../react-taucharts'
-import AutosizeContainer from '../autosize-container'
+import AutoSizerContainer from '../auto-sizer-container'
 
 const TauchartsExample = ({ data }) => (
   <ExampleContainer title='Taucharts'>
-    <AutosizeContainer>
+    <AutoSizerContainer>
       <ReactTaucharts
         data={data}
         options={{
@@ -18,7 +18,7 @@ const TauchartsExample = ({ data }) => (
           color: 'priority'
         }}
       />
-    </AutosizeContainer>
+    </AutoSizerContainer>
   </ExampleContainer>
 )
 

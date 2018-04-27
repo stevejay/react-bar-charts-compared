@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
-const Page = styled.main`
+import Header from './header'
+import Main from './main'
+
+const Page = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: ${props => props.theme.gutter};
-  padding-bottom: 60px;
 `
+
+Page.Header = Header
+Page.Main = Main
 
 export default Page
