@@ -10,34 +10,15 @@ import 'chartist/dist/chartist.css'
 import 'react-billboardjs/lib/billboard.css'
 
 import Page from './components/page'
+import Card from './components/card'
 import Carousel from './components/carousel'
 import Toolbar from './components/toolbar'
 import SlideIndicator from './components/slide-indicator'
-import RechartsExample from './components/examples/recharts'
-import ReactVisExample from './components/examples/react-vis'
-import VictoryExample from './components/examples/victory'
-import BillboardExample from './components/examples/billboard'
-import ChartistExample from './components/examples/chartist'
-import NivoExample from './components/examples/nivo'
-import HighchartsExample from './components/examples/highcharts'
-import D3KitExample from './components/examples/d3kit'
-import D3KitHybridExample from './components/examples/d3kit-hybrid'
 import { updateBarChartData } from './actions/data'
 import theme from './theme'
+import examples from './examples'
 import * as styledUtil from './utils/styled'
 import './app.css'
-
-const CHART_EXAMPLE_COMPONENTS = [
-  HighchartsExample,
-  D3KitExample,
-  D3KitHybridExample,
-  RechartsExample,
-  ReactVisExample,
-  VictoryExample,
-  BillboardExample,
-  ChartistExample,
-  NivoExample
-]
 
 injectGlobal`
   body {
@@ -56,18 +37,26 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = { currentSlideIndex: 0 }
-    this.props.updateBarChartData()
+    this.props.updateData()
   }
-  renderSlide = index => (
-    <Carousel.SlideContainer>
-      {React.createElement(CHART_EXAMPLE_COMPONENTS[index])}
-    </Carousel.SlideContainer>
-  )
+  // renderSlide = index => (
+  //   <div>
+  //     <Card {...examples[index]}>
+  //       {React.createElement(examples[index].component, {
+  //         data: this.props.data
+  //       })}
+  //     </Card>
+  //   </div>
+  // )
+  renderSlide = index =>
+    React.createElement(examples[index].component, {
+      data: this.props.data
+    })
   updateSlideIndex = index => {
     this.setState({ currentSlideIndex: index })
   }
   render () {
-    const { updateBarChartData } = this.props
+    const { updateData } = this.props
     const { currentSlideIndex } = this.state
 
     return (
@@ -80,13 +69,13 @@ class App extends Component {
               renderSlide={this.renderSlide}
             />
             <SlideIndicator
-              totalSlides={CHART_EXAMPLE_COMPONENTS.length}
+              totalSlides={examples.length}
               currentSlideIndex={currentSlideIndex}
             />
             <Toolbar
-              totalSlides={CHART_EXAMPLE_COMPONENTS.length}
+              totalSlides={examples.length}
               currentSlideIndex={currentSlideIndex}
-              updateBarChartData={updateBarChartData}
+              updateData={updateData}
               updateSlideIndex={this.updateSlideIndex}
             />
           </Page.Main>
@@ -97,9 +86,10 @@ class App extends Component {
 }
 
 App.propTypes = {
-  updateBarChartData: PropTypes.func.isRequired
+  data: PropTypes.array.isRequired,
+  updateData: PropTypes.func.isRequired
 }
 
-export default connect(null, {
-  updateBarChartData
+export default connect(state => ({ data: state.data.barChart }), {
+  updateData: updateBarChartData
 })(App)

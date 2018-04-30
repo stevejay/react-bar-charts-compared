@@ -10,10 +10,10 @@ class Toolbar extends React.Component {
     return false
   }
   handleNewValuesClick = () => {
-    this.props.updateBarChartData('values')
+    this.props.updateData('values')
   }
   handleNewCategoriesClick = () => {
-    this.props.updateBarChartData('categories')
+    this.props.updateData('categories')
   }
   handlePreviousSlideSelected = () => {
     let index = this.props.currentSlideIndex - 1
@@ -51,7 +51,7 @@ class Toolbar extends React.Component {
 Toolbar.propTypes = {
   totalSlides: PropTypes.number.isRequired,
   currentSlideIndex: PropTypes.number.isRequired,
-  updateBarChartData: PropTypes.func.isRequired,
+  updateData: PropTypes.func.isRequired,
   updateSlideIndex: PropTypes.func.isRequired
 }
 

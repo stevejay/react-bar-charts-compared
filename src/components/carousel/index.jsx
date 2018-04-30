@@ -5,9 +5,8 @@ import { injectGlobal } from 'styled-components'
 import window from 'global/window'
 
 import Container from './container'
-import SlideContainer from './slide-container'
 
-const FADE_TIMEOUT_MS = 500
+const FADE_TIMEOUT_MS = 400
 
 // TODO find a solution for this:
 injectGlobal`
@@ -39,9 +38,18 @@ class Carousel extends React.PureComponent {
     super(props)
     this._mounted = true
     this.state = { style: null }
+    // this._height = null
   }
   handleContainerMounted = ref => {
     this._contentContainer = ref
+  }
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.currentSlideIndex !== this.props.currentSlideIndex) {
+      this._contentContainer.style.height =
+        this._contentContainer.scrollHeight + 'px'
+
+      // might need here to flush the above change to the DOM
+    }
   }
   componentWillUnmount () {
     this._mounted = false
@@ -60,7 +68,11 @@ class Carousel extends React.PureComponent {
     const { style } = this.state
 
     return (
-      <Container innerRef={this.handleContainerMounted} style={style}>
+      <Container
+        innerRef={this.handleContainerMounted}
+        style={style}
+        animationMs={FADE_TIMEOUT_MS}
+      >
         <TransitionGroup component={null}>
           <CSSTransition
             key={currentSlideIndex}
@@ -81,7 +93,5 @@ Carousel.propTypes = {
   currentSlideIndex: PropTypes.number.isRequired,
   renderSlide: PropTypes.func.isRequired
 }
-
-Carousel.SlideContainer = SlideContainer
 
 export default Carousel

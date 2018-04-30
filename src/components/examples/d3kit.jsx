@@ -8,7 +8,7 @@ import d3Tip from 'd3-tip'
 import * as fc from 'd3fc' // use d3fc-extent instead
 
 import AutoSizerContainer from '../auto-sizer-container'
-import ExampleContainer from '../example-container'
+import Card from './card'
 
 class BarChart extends SvgChart {
   constructor (selector, options) {
@@ -111,11 +111,14 @@ const OPTIONS = {
 }
 
 const D3KitExampleWrapper = ({ data }) => (
-  <ExampleContainer title='D3Kit'>
+  <Card
+    title='Foo'
+    description='A mature charting solution with a React adaptor.'
+  >
     <AutoSizerContainer>
       <ReactBarChart data={data} options={OPTIONS} watch={false} />
     </AutoSizerContainer>
-  </ExampleContainer>
+  </Card>
 )
 
 D3KitExampleWrapper.propTypes = {

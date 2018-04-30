@@ -12,11 +12,11 @@ import {
 } from 'react-jsx-highcharts'
 import Highcharts from 'highcharts'
 
-import ExampleContainer from '../example-container'
+import Card from './card'
 
 let HighchartsWrapper = ({ data, width }) => (
   <HighchartsChart>
-    <Chart width={width} height={300} />
+    <Chart width={width} height={320} />
     <XAxis categories={data.map(datum => datum.key)} type='category' />
     <YAxis id='number'>
       <ColumnSeries id='installation' data={data.map(datum => datum.value)} />
@@ -28,9 +28,12 @@ let HighchartsWrapper = ({ data, width }) => (
 HighchartsWrapper = withHighcharts(HighchartsWrapper, Highcharts)
 
 const HighchartsExample = ({ data }) => (
-  <ExampleContainer title='Highcharts'>
+  <Card
+    title='Foo'
+    description='A mature charting solution with a React adaptor. Not free for commercial use. Makes great use of the available screen space.'
+  >
     <HighchartsWrapper data={data} />
-  </ExampleContainer>
+  </Card>
 )
 
 HighchartsExample.propTypes = {

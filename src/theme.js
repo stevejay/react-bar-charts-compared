@@ -1,6 +1,7 @@
 export default {
   gutter: '30px',
   color: {
+    lightBackground: '#353944',
     background: '#252830',
     darkBackground: '#1A1C22',
     foreground: '#CFD2DA',
