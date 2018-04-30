@@ -48,8 +48,6 @@
 
 
 
-
-
 /* TODO fix this hack */
 
 .tau-chart__layout,
@@ -100,16 +98,11 @@
   fill: #CFD2DA !important;
 }
 
-
-
-
-
-
 /* weird required override because of semantic ui */
 
-svg:not(:root) {
+/* svg:not(:root) {
   overflow: visible !important;
-}
+} */
 
 .cartesian-chart .y-axis path,
 .cartesian-chart .x-axis path {
@@ -142,88 +135,11 @@ svg:not(:root) {
   fill: #1EE3A1 !important;
 }
 
-.highcharts-background {
-  fill: transparent;
-}
-
-.highcharts-axis-labels text {
-  font-size: 12px !important;
-  fill: #CFD2DA !important;
-  color: #CFD2DA !important;
-}
-
-.highcharts-yaxis-grid {
-  stroke: #6f7890;
-  opacity: 0.5;
-}
-
-.highcharts-column-series rect {
-  fill: #CFD2DA;
-  stroke: #CFD2DA;
-}
-
-.highcharts-column-series rect.highcharts-point-hover {
-  fill: #1EE3A1;
-  stroke: #1EE3A1;
-}
-
-.d3scription-tip {
+/* .d3scription-tip {
   font-size: 11px;
   color: white;
   background: #283645;
   box-shadow: 0 0 10px rgba(0, 0, 0, .7);
   border-radius: 3px;
   padding: 5px 10px;
-  /* min-width: 190px; */
-}
-
-.d3kit-chart-root {
-  overflow: hidden !important;
-}
-
-.d3kit-chart-root .content-layer .bar {
-  fill: #CFD2DA;
-  transition: fill .15s ease-in-out;
-}
-
-.d3kit-chart-root .content-layer .bar:hover {
-  fill: #1EE3A1;
-}
-
-.d3kit-chart-root g[class*="axis-layer"] .domain,
-.d3kit-chart-root g[class*="axis-layer"] .tick line {
-  stroke: #CFD2DA;
-}
-
-.d3kit-chart-root g[class*="axis-layer"] .tick text {
-  fill: #CFD2DA;
-  font-size: 12px;
-}
-
-.d3kit-chart-root .grid-layer .tick line {
-  stroke: #6f7890;
-}
-
-.d3kit-chart-root .grid-layer .domain {
-  opacity: 0;
-}
-
-.d3kit-chart-root text {
-  line-height: 1.4;
-}
-
-.d3-tip {
-  pointer-events: none !important;
-  line-height: 1;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #CFD2DA;
-  border-radius: 2px;
-}
-
-.d3kit-chart-root svg {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+} */

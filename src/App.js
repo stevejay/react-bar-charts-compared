@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 import 'normalize.css'
 import 'babel-polyfill'
+
+// TODO move these:
 import 'react-vis/dist/style.css'
 import 'taucharts/dist/taucharts.dark.css'
 import 'chartist/dist/chartist.css'
@@ -18,6 +20,8 @@ import { updateBarChartData } from './actions/data'
 import theme from './theme'
 import examples from './examples'
 import * as styledUtil from './utils/styled'
+
+// TODO remove this:
 import './app.css'
 
 injectGlobal`
@@ -39,19 +43,11 @@ class App extends Component {
     this.state = { currentSlideIndex: 0 }
     this.props.updateData()
   }
-  // renderSlide = index => (
-  //   <div>
-  //     <Card {...examples[index]}>
-  //       {React.createElement(examples[index].component, {
-  //         data: this.props.data
-  //       })}
-  //     </Card>
-  //   </div>
-  // )
-  renderSlide = index =>
-    React.createElement(examples[index].component, {
-      data: this.props.data
-    })
+  renderSlide = index => (
+    <Card {...examples[index]}>
+      {React.createElement(examples[index].component)}
+    </Card>
+  )
   updateSlideIndex = index => {
     this.setState({ currentSlideIndex: index })
   }
@@ -86,10 +82,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  data: PropTypes.array.isRequired,
   updateData: PropTypes.func.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }), {
-  updateData: updateBarChartData
-})(App)
+export default connect(null, { updateData: updateBarChartData })(App)

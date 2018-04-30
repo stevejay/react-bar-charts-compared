@@ -7,8 +7,8 @@ import * as d3 from 'd3'
 import d3Tip from 'd3-tip'
 import * as fc from 'd3fc' // use d3fc-extent instead
 
-import AutoSizerContainer from '../auto-sizer-container'
-import Card from './card'
+import AutoSizerContainer from '../../auto-sizer-container'
+import './css'
 
 class BarChart extends SvgChart {
   constructor (selector, options) {
@@ -103,28 +103,21 @@ class BarChart extends SvgChart {
   }
 }
 
-const ReactBarChart = createComponent(BarChart)
+const BarChartComponent = createComponent(BarChart)
 
-const OPTIONS = {
+const CHART_OPTIONS = {
   margin: { top: 20, right: 20, bottom: 30, left: 40 },
-  offset: { x: 0.5, y: 0.5 } // add little offset for sharp-edge rendering
+  offset: { x: 0.5, y: 0.5 }
 }
 
-const D3KitExampleWrapper = ({ data }) => (
-  <Card
-    title='Foo'
-    description='A mature charting solution with a React adaptor.'
-  >
-    <AutoSizerContainer>
-      <ReactBarChart data={data} options={OPTIONS} watch={false} />
-    </AutoSizerContainer>
-  </Card>
+const D3KitExample = ({ data }) => (
+  <AutoSizerContainer>
+    <BarChartComponent data={data} options={CHART_OPTIONS} watch={false} />
+  </AutoSizerContainer>
 )
 
-D3KitExampleWrapper.propTypes = {
+D3KitExample.propTypes = {
   data: PropTypes.array.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }))(
-  D3KitExampleWrapper
-)
+export default connect(state => ({ data: state.data.barChart }))(D3KitExample)

@@ -3,7 +3,7 @@ import { handleActions } from 'redux-actions'
 import { types as dataActionTypes } from '../actions/data'
 
 const initialState = {
-  barChart: {}
+  barChart: []
 }
 
 export default handleActions(

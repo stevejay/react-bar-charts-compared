@@ -7,10 +7,11 @@ import window from 'global/window'
 import Container from './container'
 
 const FADE_TIMEOUT_MS = 400
+const FADE_CLASSNAME = 'fade'
 
 // TODO find a solution for this:
 injectGlobal`
-  .fade-enter {
+  .${FADE_CLASSNAME}-enter {
     opacity: 0.01;
     position: absolute;
     top: 0;
@@ -18,16 +19,16 @@ injectGlobal`
     right: 0;
   }
 
-  .fade-enter-active {
+  .${FADE_CLASSNAME}-enter-active {
     opacity: 1;
     transition: opacity ${FADE_TIMEOUT_MS}ms ease-in-out;
   }
 
-  .fade-enter-done {
+  .${FADE_CLASSNAME}-enter-done {
     position: relative;
   }
 
-  .fade-exit-active {
+  .${FADE_CLASSNAME}-exit-active {
     opacity: 0.01;
     transition: opacity ${FADE_TIMEOUT_MS}ms ease-in-out;
   }
@@ -38,7 +39,6 @@ class Carousel extends React.PureComponent {
     super(props)
     this._mounted = true
     this.state = { style: null }
-    // this._height = null
   }
   handleContainerMounted = ref => {
     this._contentContainer = ref
@@ -48,7 +48,9 @@ class Carousel extends React.PureComponent {
       this._contentContainer.style.height =
         this._contentContainer.scrollHeight + 'px'
 
-      // might need here to flush the above change to the DOM
+      // flush the above change to the DOM:
+      // eslint-disable-next-line
+      this._contentContainer.scrollHeight
     }
   }
   componentWillUnmount () {
@@ -77,7 +79,7 @@ class Carousel extends React.PureComponent {
           <CSSTransition
             key={currentSlideIndex}
             timeout={FADE_TIMEOUT_MS}
-            classNames='fade'
+            classNames={FADE_CLASSNAME}
             onEnter={this.handleSlideEnter}
             onEntered={this.handleSlideEntered}
           >
