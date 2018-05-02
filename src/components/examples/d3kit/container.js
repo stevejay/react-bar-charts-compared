@@ -30,7 +30,7 @@ export default styled(AutoSizerContainer)`
 
   & .d3kit-chart-root g[class*="axis-layer"] .tick text {
     fill: ${props => props.theme.color.foreground};
-    font-size: 12px;
+    font-size: ${props => props.theme.font.chartLabelSize};
   }
 
   & .d3kit-chart-root .grid-layer .tick line {

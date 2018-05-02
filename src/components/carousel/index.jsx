@@ -7,9 +7,8 @@ import window from 'global/window'
 import Container from './container'
 
 const FADE_TIMEOUT_MS = 400
-const FADE_CLASSNAME = 'fade'
+const FADE_CLASSNAME = 'carousel-fade'
 
-// TODO find a solution for this:
 injectGlobal`
   .${FADE_CLASSNAME}-enter {
     opacity: 0.01;

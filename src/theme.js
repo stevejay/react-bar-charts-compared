@@ -13,6 +13,7 @@ export default {
     secondary: '#1EE3A1'
   },
   font: {
-    defaultFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif'
+    defaultFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    chartLabelSize: '12px'
   }
 }

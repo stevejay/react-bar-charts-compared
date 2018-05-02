@@ -6,7 +6,7 @@ export default styled.div`
   }
 
   & .highcharts-axis-labels text {
-    font-size: 12px !important;
+    font-size: ${props => props.theme.font.chartLabelSize} !important;
     fill: ${props => props.theme.color.foreground} !important;
     color: ${props => props.theme.color.foreground} !important;
   }

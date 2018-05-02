@@ -21,9 +21,6 @@ import theme from './theme'
 import examples from './examples'
 import * as styledUtil from './utils/styled'
 
-// TODO remove this:
-import './app.css'
-
 injectGlobal`
   body {
     box-sizing: border-box;
@@ -41,8 +38,8 @@ injectGlobal`
     line-height: 1;
     padding: 8px;
     background: rgba(0, 0, 0, 0.8);
-    color: #CFD2DA;
-    border-radius: 2px;
+    color: ${theme.color.foreground};
+    border-radius: .2em;
   }
 `
 
