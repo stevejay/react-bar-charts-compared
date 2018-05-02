@@ -3,10 +3,14 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "files.exclude": {
-        "build": true, "**/node_modules": true, "coverage": true
-    }
-    ,
+        "build": true,
+        "**/node_modules": true,
+        "coverage": true
+    },
     "beautify.options": {
-        "end_with_newline": true, "preserve_newlines": true, "indent_size": 2
-    }
+        "end_with_newline": true,
+        "preserve_newlines": true,
+        "indent_size": 2
+    },
+    "prettier.parser": "flow"
 }

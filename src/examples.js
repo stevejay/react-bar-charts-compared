@@ -1,3 +1,4 @@
+// @flow
 import HighchartsExample from './components/examples/highcharts'
 import D3KitExample from './components/examples/d3kit'
 import D3KitHybridExample from './components/examples/d3kit-hybrid'
