@@ -20,7 +20,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   opacity: 0.66;
   will-change: transform, opacity;
-  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+  transition: opacity ${props => props.theme.timing.hover} ease-in-out, transform ${props => props.theme.timing.hover} ease-in-out;
 
   &:hover {
     opacity: 1;

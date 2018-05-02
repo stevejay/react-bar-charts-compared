@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer'
 
-const AutoSizerContainer = ({ children }) => (
-  <AutoSizer>
+const AutoSizerContainer = ({ className, children }) => (
+  <AutoSizer className={className}>
     {({ width, height }) =>
       (!width || !height
         ? null
@@ -12,6 +12,7 @@ const AutoSizerContainer = ({ children }) => (
 )
 
 AutoSizerContainer.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node.isRequired
 }
 

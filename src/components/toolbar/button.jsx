@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   white-space: nowrap;
   padding: .25em .5em;
   line-height: 1.5;
-  border-radius: 4px;
+  border-radius: .25em;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -29,6 +29,7 @@ const StyledButton = styled.button`
   text-shadow: none;
   color: ${props => props.theme.color.primary};
   border-color: ${props => props.theme.color.primary};
+  transition: background-color ${props => props.theme.timing.hover}, color ${props => props.theme.timing.hover};
 
   &:last-of-type {
     margin-right: 0;

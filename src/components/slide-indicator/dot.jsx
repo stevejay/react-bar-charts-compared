@@ -11,7 +11,7 @@ const Dot = styled(CircleIcon)`
   margin: 0 3px;
   transform: scale(${props => (props.selected ? 1.15 : 1)});
   will-change: transform, opacity;
-  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+  transition: opacity ${props => props.theme.timing.hover} ease-in-out, transform ${props => props.theme.timing.hover} ease-in-out;
 `
 
 Dot.propTypes = {

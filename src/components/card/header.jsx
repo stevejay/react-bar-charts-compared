@@ -20,8 +20,8 @@ const H2 = styled.h2`
 
 const Link = styled.a`
   color: ${props => props.theme.color.foreground};
-  opacity: .5;
-  transition: opacity 150ms ease-in-out;
+  opacity: .66;
+  transition: opacity ${props => props.theme.timing.hover} ease-in-out;
 
   &:hover {
     opacity: 1;

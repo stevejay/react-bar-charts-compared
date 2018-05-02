@@ -35,6 +35,15 @@ injectGlobal`
     ${styledUtil.fluidAttr('font-size', '.875rem', '.5')}
     ${styledUtil.fluidAttr('padding', '.875rem', '1.75')}
   }
+
+  .d3-tip {
+    pointer-events: none !important;
+    line-height: 1;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #CFD2DA;
+    border-radius: 2px;
+  }
 `
 
 class App extends Component {
