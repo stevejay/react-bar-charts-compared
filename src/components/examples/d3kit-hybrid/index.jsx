@@ -43,7 +43,10 @@ class HybridBarChart extends HybridChart {
     this.x.range([0, this.getInnerWidth()])
     this.y.range([this.getInnerHeight(), 0])
 
-    const yExtent = extentLinear().accessors([d => d.value]).pad([0, 0.1])
+    const yExtent = extentLinear()
+      .accessors([d => d.value])
+      .pad([0, 0.1])
+      .include([0])
 
     this.x.domain(data.map(d => d.key))
     this.y.domain(yExtent(data))
