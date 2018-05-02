@@ -1,35 +1,25 @@
 # react-bar-charts-compared
-Comparing the bar charts from various React charting libraries
 
-## TODO
+Implementing a simple bar chart in various React charting solutions, or 
+JavaScript charting solutions that have React adaptors.
 
+## Rejected Charting Solutions
+
+- Taucharts
+- [C3](http://c3js.org/), as it is for d3 v3 and billboardjs can be used instead for d3 v4.
+
+## Charting Solutions Still To Look At
+
+- http://www.pixijs.com/
 - https://hackernoon.com/9-best-javascript-charting-libraries-46e7f4dc34e6
 - http://blog.scottlogic.com/2017/01/10/efficient-svg-layout-with-d3.html
-
 - https://davidwalsh.name/css-js-animation
-
-d3fc supports modern browsers. For pre-Edge versions of IE, you'll need a couple of polyfills in order to run d3fc code within the browser. The first is a polyfill for Symbol, such as es6-symbol, or the general babel-polyfill, and the second is a polyfill for CustomEvent, such as custom-event-polyfill.
-
-https://github.com/jamesleesaunders/d3-ez
-https://plot.ly/javascript/bar-charts/
-https://vega.github.io/vega/examples/
-
-http://nivo.rocks/#/
-
-https://github.com/twitter/d3kit
-https://github.com/kristw/react-d3kit
-
-https://github.com/gka/d3-jetpack
-
-general update pattern:
-- http://animateddata.co.uk/articles/d3/enterexit/
-     exit, enter, merge
-
------
-https://www.amcharts.com/demos/
-https://plot.ly/javascript/
-https://www.fusioncharts.com/charts/line-area-charts/
-https://github.com/zingchart/awesome-charting
-https://www.metricsgraphicsjs.org/
-
-Try this: http://www.pixijs.com/
+- https://github.com/jamesleesaunders/d3-ez
+- https://plot.ly/javascript/bar-charts/
+- https://vega.github.io/vega/examples/
+- https://github.com/gka/d3-jetpack
+- https://www.amcharts.com/demos/
+- https://plot.ly/javascript/
+- https://www.fusioncharts.com/charts/line-area-charts/
+- https://github.com/zingchart/awesome-charting
+- https://www.metricsgraphicsjs.org/

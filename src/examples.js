@@ -18,13 +18,13 @@ export default [
   {
     title: 'D3Kit',
     url: 'https://github.com/twitter/d3kit',
-    description: 'A lightweight wrapper from Twitter for D3 v4, used with a React adaptor. Reduces the boilerplate code needed to create a chart using D3. The bars animate to track category position changes.',
+    description: 'A lightweight wrapper from Twitter for d3 v4, used with a React adaptor. Reduces the boilerplate code needed to create a chart using d3. The bars animate to track category position changes.',
     component: D3KitExample
   },
   {
     title: 'Billboard',
     url: 'https://naver.github.io/billboard.js/',
-    description: 'A lightweight wrapper for D3 v4 with a React adaptor. An alternative to D3Kit.',
+    description: 'A lightweight wrapper for d3 v4, used with the react-billboardjs adaptor. An alternative to D3Kit.',
     component: BillboardExample
   },
   {
@@ -60,7 +60,7 @@ export default [
   {
     title: 'Nivo',
     url: 'http://nivo.rocks/#/',
-    description: 'Built using React and D3.',
+    description: 'Built using React and d3.',
     component: NivoExample
   }
 ]

@@ -288,7 +288,7 @@ arrify@^1.0.0, arrify@^1.0.1:
 
 asap@~2.0.3:
   version "2.0.6"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/asap/-/asap-2.0.6.tgz?dl=https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
 asn1.js@^4.0.0:
   version "4.10.1"
@@ -1071,11 +1071,11 @@ big.js@^3.1.3:
   version "3.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
 
-billboard.js@^1.2.0:
-  version "1.2.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/billboard.js/-/billboard.js-1.2.0.tgz#e7b1b4ed1152a020c0689f87a2333960ef03de17"
+billboard.js@^1.3.0:
+  version "1.4.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/billboard.js/-/billboard.js-1.4.1.tgz?dl=https://registry.yarnpkg.com/billboard.js/-/billboard.js-1.4.1.tgz#30f302685f65988b73d22e63a275e1d580f4b2f8"
   dependencies:
-    d3 "^4.10.0"
+    d3 "^5.0.0"
 
 binary-extensions@^1.0.0:
   version "1.11.0"
@@ -1608,9 +1608,9 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2, commander@^2.11.0:
-  version "2.15.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
+commander@2:
+  version "2.15.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/commander/-/commander-2.15.1.tgz?dl=https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
 commander@2.11.0:
   version "2.11.0"
@@ -1619,6 +1619,10 @@ commander@2.11.0:
 commander@2.14.x, commander@~2.14.1:
   version "2.14.1"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+
+commander@^2.11.0:
+  version "2.15.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -1729,7 +1733,7 @@ core-js@2.5.1:
 
 core-js@^1.0.0:
   version "1.2.7"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/core-js/-/core-js-1.2.7.tgz?dl=https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.3"
@@ -1783,14 +1787,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-create-react-class@^15.5.2:
-  version "15.6.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
 
 cross-spawn@5.1.0, cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
@@ -1954,15 +1950,15 @@ currently-unhandled@^0.4.1:
 
 d3-array@1, d3-array@1.2.1, d3-array@^1.0.0, d3-array@^1.1.1, d3-array@^1.2.0, d3-array@^1.2.1:
   version "1.2.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-array/-/d3-array-1.2.1.tgz#d1ca33de2f6ac31efadb8e050a021d7e2396d5dc"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-array/-/d3-array-1.2.1.tgz?dl=https://registry.yarnpkg.com/d3-array/-/d3-array-1.2.1.tgz#d1ca33de2f6ac31efadb8e050a021d7e2396d5dc"
 
-d3-axis@1.0.8, d3-axis@^1.0.8:
+d3-axis@1, d3-axis@1.0.8, d3-axis@^1.0.8:
   version "1.0.8"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-axis/-/d3-axis-1.0.8.tgz#31a705a0b535e65759de14173a31933137f18efa"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-axis/-/d3-axis-1.0.8.tgz?dl=https://registry.yarnpkg.com/d3-axis/-/d3-axis-1.0.8.tgz#31a705a0b535e65759de14173a31933137f18efa"
 
-d3-brush@1.0.4, d3-brush@^1.0.3, d3-brush@^1.0.4:
+d3-brush@1, d3-brush@1.0.4:
   version "1.0.4"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-brush/-/d3-brush-1.0.4.tgz#00c2f238019f24f6c0a194a26d41a1530ffe7bc4"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-brush/-/d3-brush-1.0.4.tgz?dl=https://registry.yarnpkg.com/d3-brush/-/d3-brush-1.0.4.tgz#00c2f238019f24f6c0a194a26d41a1530ffe7bc4"
   dependencies:
     d3-dispatch "1"
     d3-drag "1"
@@ -1970,41 +1966,45 @@ d3-brush@1.0.4, d3-brush@^1.0.3, d3-brush@^1.0.4:
     d3-selection "1"
     d3-transition "1"
 
-d3-chord@1.0.4:
+d3-chord@1, d3-chord@1.0.4:
   version "1.0.4"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-chord/-/d3-chord-1.0.4.tgz#7dec4f0ba886f713fe111c45f763414f6f74ca2c"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-chord/-/d3-chord-1.0.4.tgz?dl=https://registry.yarnpkg.com/d3-chord/-/d3-chord-1.0.4.tgz#7dec4f0ba886f713fe111c45f763414f6f74ca2c"
   dependencies:
     d3-array "1"
     d3-path "1"
 
 d3-collection@1, d3-collection@1.0.4, d3-collection@^1.0.3:
   version "1.0.4"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-collection/-/d3-collection-1.0.4.tgz#342dfd12837c90974f33f1cc0a785aea570dcdc2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-collection/-/d3-collection-1.0.4.tgz?dl=https://registry.yarnpkg.com/d3-collection/-/d3-collection-1.0.4.tgz#342dfd12837c90974f33f1cc0a785aea570dcdc2"
 
-d3-color@1, d3-color@1.0.3, d3-color@^1.0.3:
+d3-color@1:
+  version "1.1.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-color/-/d3-color-1.1.0.tgz?dl=https://registry.yarnpkg.com/d3-color/-/d3-color-1.1.0.tgz#73957299b63ca935bf19c6c9d835e90066028329"
+
+d3-color@1.0.3, d3-color@^1.0.3:
   version "1.0.3"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-color/-/d3-color-1.0.3.tgz#bc7643fca8e53a8347e2fbdaffa236796b58509b"
 
-d3-contour@^1.1.0:
+d3-contour@1, d3-contour@^1.1.0:
   version "1.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-contour/-/d3-contour-1.2.0.tgz#de3ea7991bbb652155ee2a803aeafd084be03b63"
   dependencies:
     d3-array "^1.1.1"
 
-d3-dispatch@1, d3-dispatch@1.0.3, d3-dispatch@^1.0.1, d3-dispatch@^1.0.2:
+d3-dispatch@1, d3-dispatch@1.0.3, d3-dispatch@^1.0.1:
   version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-dispatch/-/d3-dispatch-1.0.3.tgz#46e1491eaa9b58c358fce5be4e8bed626e7871f8"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-dispatch/-/d3-dispatch-1.0.3.tgz?dl=https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-1.0.3.tgz#46e1491eaa9b58c358fce5be4e8bed626e7871f8"
 
 d3-drag@1, d3-drag@1.2.1:
   version "1.2.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-drag/-/d3-drag-1.2.1.tgz#df8dd4c502fb490fc7462046a8ad98a5c479282d"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-drag/-/d3-drag-1.2.1.tgz?dl=https://registry.yarnpkg.com/d3-drag/-/d3-drag-1.2.1.tgz#df8dd4c502fb490fc7462046a8ad98a5c479282d"
   dependencies:
     d3-dispatch "1"
     d3-selection "1"
 
 d3-dsv@1, d3-dsv@1.0.8:
   version "1.0.8"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-dsv/-/d3-dsv-1.0.8.tgz#907e240d57b386618dc56468bacfe76bf19764ae"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-dsv/-/d3-dsv-1.0.8.tgz?dl=https://registry.yarnpkg.com/d3-dsv/-/d3-dsv-1.0.8.tgz#907e240d57b386618dc56468bacfe76bf19764ae"
   dependencies:
     commander "2"
     iconv-lite "0.4"
@@ -2012,11 +2012,17 @@ d3-dsv@1, d3-dsv@1.0.8:
 
 d3-ease@1, d3-ease@1.0.3, d3-ease@^1.0.0:
   version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-ease/-/d3-ease-1.0.3.tgz#68bfbc349338a380c44d8acc4fbc3304aa2d8c0e"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-ease/-/d3-ease-1.0.3.tgz?dl=https://registry.yarnpkg.com/d3-ease/-/d3-ease-1.0.3.tgz#68bfbc349338a380c44d8acc4fbc3304aa2d8c0e"
 
-d3-force@1.1.0:
+d3-fetch@1:
   version "1.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-force/-/d3-force-1.1.0.tgz#cebf3c694f1078fcc3d4daf8e567b2fbd70d4ea3"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-fetch/-/d3-fetch-1.1.0.tgz?dl=https://registry.yarnpkg.com/d3-fetch/-/d3-fetch-1.1.0.tgz#31cbcd506b21d6519ac6a120a079de8d0a57c00f"
+  dependencies:
+    d3-dsv "1"
+
+d3-force@1, d3-force@1.1.0:
+  version "1.1.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-force/-/d3-force-1.1.0.tgz?dl=https://registry.yarnpkg.com/d3-force/-/d3-force-1.1.0.tgz#cebf3c694f1078fcc3d4daf8e567b2fbd70d4ea3"
   dependencies:
     d3-collection "1"
     d3-dispatch "1"
@@ -2027,11 +2033,21 @@ d3-format@1, d3-format@1.2.2, d3-format@^1.2.0:
   version "1.2.2"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-format/-/d3-format-1.2.2.tgz#1a39c479c8a57fe5051b2e67a3bee27061a74e7a"
 
-d3-geo@1.9.1, d3-geo@^1.6.4, d3-geo@^1.9.0:
-  version "1.9.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-geo/-/d3-geo-1.9.1.tgz#157e3b0f917379d0f73bebfff3be537f49fa7356"
+d3-geo@1:
+  version "1.10.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-geo/-/d3-geo-1.10.0.tgz?dl=https://registry.yarnpkg.com/d3-geo/-/d3-geo-1.10.0.tgz#2972d18014f1e38fc1f8bb6d545377bdfb00c9ab"
   dependencies:
     d3-array "1"
+
+d3-geo@1.9.1, d3-geo@^1.6.4:
+  version "1.9.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-geo/-/d3-geo-1.9.1.tgz?dl=https://registry.yarnpkg.com/d3-geo/-/d3-geo-1.9.1.tgz#157e3b0f917379d0f73bebfff3be537f49fa7356"
+  dependencies:
+    d3-array "1"
+
+d3-hierarchy@1:
+  version "1.1.6"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-hierarchy/-/d3-hierarchy-1.1.6.tgz?dl=https://registry.yarnpkg.com/d3-hierarchy/-/d3-hierarchy-1.1.6.tgz#842c1372090f870b7ea013ebae5c0c8d9f56229c"
 
 d3-hierarchy@1.1.5, d3-hierarchy@^1.1.4, d3-hierarchy@^1.1.5:
   version "1.1.5"
@@ -2043,29 +2059,29 @@ d3-interpolate@1, d3-interpolate@1.1.6, d3-interpolate@^1.1.1, d3-interpolate@^1
   dependencies:
     d3-color "1"
 
-d3-path@1, d3-path@1.0.5, d3-path@^1.0.0:
+d3-path@1, d3-path@1.0.5:
   version "1.0.5"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-path/-/d3-path-1.0.5.tgz#241eb1849bd9e9e8021c0d0a799f8a0e8e441764"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-path/-/d3-path-1.0.5.tgz?dl=https://registry.yarnpkg.com/d3-path/-/d3-path-1.0.5.tgz#241eb1849bd9e9e8021c0d0a799f8a0e8e441764"
 
-d3-polygon@1.0.3:
+d3-polygon@1, d3-polygon@1.0.3:
   version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-polygon/-/d3-polygon-1.0.3.tgz#16888e9026460933f2b179652ad378224d382c62"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-polygon/-/d3-polygon-1.0.3.tgz?dl=https://registry.yarnpkg.com/d3-polygon/-/d3-polygon-1.0.3.tgz#16888e9026460933f2b179652ad378224d382c62"
 
-d3-quadtree@1, d3-quadtree@1.0.3, d3-quadtree@^1.0.3:
+d3-quadtree@1, d3-quadtree@1.0.3:
   version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-quadtree/-/d3-quadtree-1.0.3.tgz#ac7987e3e23fe805a990f28e1b50d38fcb822438"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-quadtree/-/d3-quadtree-1.0.3.tgz?dl=https://registry.yarnpkg.com/d3-quadtree/-/d3-quadtree-1.0.3.tgz#ac7987e3e23fe805a990f28e1b50d38fcb822438"
 
 d3-queue@3.0.7:
   version "3.0.7"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-queue/-/d3-queue-3.0.7.tgz#c93a2e54b417c0959129d7d73f6cf7d4292e7618"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-queue/-/d3-queue-3.0.7.tgz?dl=https://registry.yarnpkg.com/d3-queue/-/d3-queue-3.0.7.tgz#c93a2e54b417c0959129d7d73f6cf7d4292e7618"
 
-d3-random@1.1.0, d3-random@^1.0.0:
+d3-random@1, d3-random@1.1.0:
   version "1.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-random/-/d3-random-1.1.0.tgz#6642e506c6fa3a648595d2b2469788a8d12529d3"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-random/-/d3-random-1.1.0.tgz?dl=https://registry.yarnpkg.com/d3-random/-/d3-random-1.1.0.tgz#6642e506c6fa3a648595d2b2469788a8d12529d3"
 
-d3-request@1.0.6, d3-request@^1.0.1, d3-request@^1.0.6:
+d3-request@1.0.6:
   version "1.0.6"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-request/-/d3-request-1.0.6.tgz#a1044a9ef4ec28c824171c9379fae6d79474b19f"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-request/-/d3-request-1.0.6.tgz?dl=https://registry.yarnpkg.com/d3-request/-/d3-request-1.0.6.tgz#a1044a9ef4ec28c824171c9379fae6d79474b19f"
   dependencies:
     d3-collection "1"
     d3-dispatch "1"
@@ -2080,7 +2096,7 @@ d3-sankey@^0.7.1:
     d3-collection "1"
     d3-shape "^1.2.0"
 
-d3-scale-chromatic@^1.1.1:
+d3-scale-chromatic@1, d3-scale-chromatic@^1.1.1:
   version "1.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-scale-chromatic/-/d3-scale-chromatic-1.2.0.tgz#25820d059c0eccc33e85f77561f37382a817ab58"
   dependencies:
@@ -2099,7 +2115,7 @@ d3-scale@1.0.6:
     d3-time "1"
     d3-time-format "2"
 
-d3-scale@1.0.7, d3-scale@^1.0.0, d3-scale@^1.0.1, d3-scale@^1.0.3, d3-scale@^1.0.5, d3-scale@^1.0.6, d3-scale@^1.0.7:
+d3-scale@1.0.7, d3-scale@^1.0.0, d3-scale@^1.0.5, d3-scale@^1.0.6, d3-scale@^1.0.7:
   version "1.0.7"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-scale/-/d3-scale-1.0.7.tgz#fa90324b3ea8a776422bd0472afab0b252a0945d"
   dependencies:
@@ -2111,29 +2127,40 @@ d3-scale@1.0.7, d3-scale@^1.0.0, d3-scale@^1.0.1, d3-scale@^1.0.3, d3-scale@^1.0
     d3-time "1"
     d3-time-format "2"
 
-d3-selection@1, d3-selection@1.3.0, d3-selection@^1.0.0, d3-selection@^1.0.2, d3-selection@^1.1.0:
-  version "1.3.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-selection/-/d3-selection-1.3.0.tgz#d53772382d3dc4f7507bfb28bcd2d6aed2a0ad6d"
+d3-scale@2:
+  version "2.0.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-scale/-/d3-scale-2.0.0.tgz?dl=https://registry.yarnpkg.com/d3-scale/-/d3-scale-2.0.0.tgz#fd8ac78381bc2ed741d8c71770437a5e0549a5a5"
+  dependencies:
+    d3-array "^1.2.0"
+    d3-collection "1"
+    d3-format "1"
+    d3-interpolate "1"
+    d3-time "1"
+    d3-time-format "2"
 
-d3-shape@1.2.0, d3-shape@^1.0.0, d3-shape@^1.0.3, d3-shape@^1.1.0, d3-shape@^1.2.0:
+d3-selection@1, d3-selection@1.3.0, d3-selection@^1.0.2, d3-selection@^1.1.0:
+  version "1.3.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-selection/-/d3-selection-1.3.0.tgz?dl=https://registry.yarnpkg.com/d3-selection/-/d3-selection-1.3.0.tgz#d53772382d3dc4f7507bfb28bcd2d6aed2a0ad6d"
+
+d3-shape@1, d3-shape@1.2.0, d3-shape@^1.0.0, d3-shape@^1.1.0, d3-shape@^1.2.0:
   version "1.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-shape/-/d3-shape-1.2.0.tgz#45d01538f064bafd05ea3d6d2cb748fd8c41f777"
   dependencies:
     d3-path "1"
 
-d3-time-format@2, d3-time-format@2.1.1, d3-time-format@^2.1.0:
+d3-time-format@2, d3-time-format@2.1.1:
   version "2.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-time-format/-/d3-time-format-2.1.1.tgz#85b7cdfbc9ffca187f14d3c456ffda268081bb31"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-time-format/-/d3-time-format-2.1.1.tgz?dl=https://registry.yarnpkg.com/d3-time-format/-/d3-time-format-2.1.1.tgz#85b7cdfbc9ffca187f14d3c456ffda268081bb31"
   dependencies:
     d3-time "1"
 
-d3-time@1, d3-time@1.0.8, d3-time@^1.0.0, d3-time@^1.0.7:
+d3-time@1, d3-time@1.0.8:
   version "1.0.8"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-time/-/d3-time-1.0.8.tgz#dbd2d6007bf416fe67a76d17947b784bffea1e84"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-time/-/d3-time-1.0.8.tgz?dl=https://registry.yarnpkg.com/d3-time/-/d3-time-1.0.8.tgz#dbd2d6007bf416fe67a76d17947b784bffea1e84"
 
 d3-timer@1, d3-timer@1.0.7, d3-timer@^1.0.0:
   version "1.0.7"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-timer/-/d3-timer-1.0.7.tgz#df9650ca587f6c96607ff4e60cc38229e8dd8531"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-timer/-/d3-timer-1.0.7.tgz?dl=https://registry.yarnpkg.com/d3-timer/-/d3-timer-1.0.7.tgz#df9650ca587f6c96607ff4e60cc38229e8dd8531"
 
 d3-tip@^0.7.1:
   version "0.7.1"
@@ -2141,9 +2168,9 @@ d3-tip@^0.7.1:
   dependencies:
     d3 "^4.2"
 
-d3-transition@1, d3-transition@1.1.1, d3-transition@^1.0.0, d3-transition@^1.1.0:
+d3-transition@1, d3-transition@1.1.1:
   version "1.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-transition/-/d3-transition-1.1.1.tgz#d8ef89c3b848735b060e54a39b32aaebaa421039"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-transition/-/d3-transition-1.1.1.tgz?dl=https://registry.yarnpkg.com/d3-transition/-/d3-transition-1.1.1.tgz#d8ef89c3b848735b060e54a39b32aaebaa421039"
   dependencies:
     d3-color "1"
     d3-dispatch "1"
@@ -2152,13 +2179,13 @@ d3-transition@1, d3-transition@1.1.1, d3-transition@^1.0.0, d3-transition@^1.1.0
     d3-selection "^1.1.0"
     d3-timer "1"
 
-d3-voronoi@1.1.2, d3-voronoi@^1.1.2:
+d3-voronoi@1, d3-voronoi@1.1.2, d3-voronoi@^1.1.2:
   version "1.1.2"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-voronoi/-/d3-voronoi-1.1.2.tgz#1687667e8f13a2d158c80c1480c5a29cb0d8973c"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-voronoi/-/d3-voronoi-1.1.2.tgz?dl=https://registry.yarnpkg.com/d3-voronoi/-/d3-voronoi-1.1.2.tgz#1687667e8f13a2d158c80c1480c5a29cb0d8973c"
 
-d3-zoom@1.7.1:
+d3-zoom@1, d3-zoom@1.7.1:
   version "1.7.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-zoom/-/d3-zoom-1.7.1.tgz#02f43b3c3e2db54f364582d7e4a236ccc5506b63"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3-zoom/-/d3-zoom-1.7.1.tgz?dl=https://registry.yarnpkg.com/d3-zoom/-/d3-zoom-1.7.1.tgz#02f43b3c3e2db54f364582d7e4a236ccc5506b63"
   dependencies:
     d3-dispatch "1"
     d3-drag "1"
@@ -2166,7 +2193,7 @@ d3-zoom@1.7.1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^4.10.0, d3@^4.13.0, d3@^4.2:
+d3@^4.13.0, d3@^4.2:
   version "4.13.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3/-/d3-4.13.0.tgz#ab236ff8cf0cfc27a81e69bf2fb7518bc9b4f33d"
   dependencies:
@@ -2201,202 +2228,47 @@ d3@^4.10.0, d3@^4.13.0, d3@^4.2:
     d3-voronoi "1.1.2"
     d3-zoom "1.7.1"
 
-d3fc-annotation@1.1.0:
-  version "1.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-annotation/-/d3fc-annotation-1.1.0.tgz#546e8ccb7cb77575b440d84f7731388dc1b0aee0"
-  dependencies:
-    d3-scale "^1.0.1"
-    d3-selection "^1.0.2"
-    d3fc-data-join "^4.1.0"
-    d3fc-rebind "^4.0.1"
-    d3fc-series "^1.2.1"
-    d3fc-shape "^4.0.0"
-
-d3fc-axis@1.0.3, d3fc-axis@^1.0.2:
-  version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-axis/-/d3fc-axis-1.0.3.tgz#1978c23d8223297bbae0667e81cfda5d3732598e"
-  dependencies:
-    d3-scale "^1.0.3"
-    d3-selection "^1.0.2"
-    d3-shape "^1.0.3"
-    d3fc-data-join "^4.1.0"
-    d3fc-rebind "^4.1.0"
-
-d3fc-brush@1.0.1:
-  version "1.0.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-brush/-/d3fc-brush-1.0.1.tgz#ea646d9b698d3196ce4e0b45a082e3c6faeb26ce"
-  dependencies:
-    d3-brush "^1.0.3"
-    d3-dispatch "^1.0.2"
-    d3-scale "^1.0.3"
-    d3-selection "^1.0.2"
-    d3fc-data-join "^4.1.1"
-    d3fc-rebind "^4.1.0"
-
-d3fc-chart@1.4.1:
-  version "1.4.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-chart/-/d3fc-chart-1.4.1.tgz#baf4e880ce3ac2e2f01a91e8aea804b089eb6087"
-  dependencies:
-    d3-scale "^1.0.3"
-    d3-selection "^1.0.2"
-    d3fc-axis "^1.0.2"
-    d3fc-data-join "^4.1.1"
-    d3fc-element "^3.0.1"
-    d3fc-rebind "^4.1.0"
-    d3fc-series "^2.0.1"
-
-d3fc-data-join@4.1.1, d3fc-data-join@^4.1.0, d3fc-data-join@^4.1.1:
-  version "4.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-data-join/-/d3fc-data-join-4.1.1.tgz#dbf340d9fffca4b1713aeb51e4d7df98c45b2ad9"
-  dependencies:
-    d3-selection "^1.0.0"
-
-d3fc-data-join@^2.0.0:
-  version "2.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-data-join/-/d3fc-data-join-2.0.0.tgz#9cb79fbc35bbf0c5fee1f2d932efec2df54fccf1"
-  dependencies:
-    d3-selection "^1.0.0"
-    d3-transition "^1.0.0"
-
-d3fc-discontinuous-scale@2.0.5:
-  version "2.0.5"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-discontinuous-scale/-/d3fc-discontinuous-scale-2.0.5.tgz#2f191beb02d7f90399d76ded6f3e4b97a08db535"
-  dependencies:
-    d3-scale "^1.0.0"
-    d3-time "^1.0.0"
-    d3fc-rebind "^4.1.1"
-
-d3fc-element@3.0.1, d3fc-element@^3.0.1:
-  version "3.0.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-element/-/d3fc-element-3.0.1.tgz#d5049af395f24381dcc0a6175664aaa231aebaf2"
-  dependencies:
-    d3-selection "^1.0.2"
-    document-register-element "^1.0.10"
-
-d3fc-extent@2.2.1:
-  version "2.2.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-extent/-/d3fc-extent-2.2.1.tgz#ee995e31393b364257adb5de9f63e8a1b0f76413"
-  dependencies:
-    d3-array "^1.0.0"
-
-d3fc-financial-feed@3.0.0:
-  version "3.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-financial-feed/-/d3fc-financial-feed-3.0.0.tgz#cbfa91b5cdae1ee24fa079f48bdb5f73743d3f41"
-  dependencies:
-    d3-request "^1.0.1"
-
-d3fc-group@1.0.0:
-  version "1.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-group/-/d3fc-group-1.0.0.tgz#eefef22e4b1b80724c93020134fb34e04ce80b62"
-
-d3fc-label-layout@5.1.0:
+d3@^5.0.0:
   version "5.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-label-layout/-/d3fc-label-layout-5.1.0.tgz#93a673079c4504670881f11ae34b832099486165"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3/-/d3-5.1.0.tgz?dl=https://registry.yarnpkg.com/d3/-/d3-5.1.0.tgz#2506c4f070fe8a5a1e9a16308caacf96ae51f522"
+  dependencies:
+    d3-array "1"
+    d3-axis "1"
+    d3-brush "1"
+    d3-chord "1"
+    d3-collection "1"
+    d3-color "1"
+    d3-contour "1"
+    d3-dispatch "1"
+    d3-drag "1"
+    d3-dsv "1"
+    d3-ease "1"
+    d3-fetch "1"
+    d3-force "1"
+    d3-format "1"
+    d3-geo "1"
+    d3-hierarchy "1"
+    d3-interpolate "1"
+    d3-path "1"
+    d3-polygon "1"
+    d3-quadtree "1"
+    d3-random "1"
+    d3-scale "2"
+    d3-scale-chromatic "1"
+    d3-selection "1"
+    d3-shape "1"
+    d3-time "1"
+    d3-time-format "2"
+    d3-timer "1"
+    d3-transition "1"
+    d3-voronoi "1"
+    d3-zoom "1"
+
+d3fc-extent@^2.2.1:
+  version "2.2.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-extent/-/d3fc-extent-2.2.1.tgz?dl=https://registry.yarnpkg.com/d3fc-extent/-/d3fc-extent-2.2.1.tgz#ee995e31393b364257adb5de9f63e8a1b0f76413"
   dependencies:
     d3-array "^1.0.0"
-    d3-scale "^1.0.6"
-    d3-selection "^1.0.0"
-    d3fc-data-join "^2.0.0"
-    d3fc-rebind "^4.0.0"
-
-d3fc-pointer@1.0.3:
-  version "1.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-pointer/-/d3fc-pointer-1.0.3.tgz#223e631a602f3e34862fa7605f9d4b6027fa6827"
-  dependencies:
-    d3-dispatch "^1.0.1"
-    d3-selection "^1.0.2"
-    d3fc-rebind "^4.1.1"
-
-d3fc-random-data@1.1.0:
-  version "1.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-random-data/-/d3fc-random-data-1.1.0.tgz#68ca0aff3362ad5a2895bc7fab25d95f0cbf157f"
-  dependencies:
-    d3-random "^1.0.0"
-    d3-time "^1.0.0"
-    d3fc-rebind "^4.0.1"
-
-d3fc-rebind@4.1.1, d3fc-rebind@^4.0.0, d3fc-rebind@^4.0.1, d3fc-rebind@^4.1.0, d3fc-rebind@^4.1.1:
-  version "4.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-rebind/-/d3fc-rebind-4.1.1.tgz#70c8d6b63fee63dbb3cb577c68732ded535f9b32"
-
-d3fc-sample@3.0.4:
-  version "3.0.4"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-sample/-/d3fc-sample-3.0.4.tgz#3b5674cd6036ba5ecba444282869acac482e8c26"
-  dependencies:
-    d3-array "^1.0.0"
-    d3fc-rebind "^4.0.1"
-
-d3fc-series@3.1.1:
-  version "3.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-series/-/d3fc-series-3.1.1.tgz#507f495f922223ac8c25ab1d994e38603d98d56f"
-  dependencies:
-    d3-array "^1.0.0"
-    d3-scale "^1.0.1"
-    d3-selection "^1.0.0"
-    d3-shape "^1.0.0"
-    d3fc-data-join "^4.1.0"
-    d3fc-rebind "^4.0.1"
-    d3fc-shape "^4.0.0"
-
-d3fc-series@^1.2.1:
-  version "1.2.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-series/-/d3fc-series-1.2.3.tgz#bb10fe2c1c1ec52ee38e2a91b6d114526eafe537"
-  dependencies:
-    d3-array "^1.0.0"
-    d3-scale "^1.0.1"
-    d3-selection "^1.0.0"
-    d3-shape "^1.0.0"
-    d3fc-data-join "^4.1.0"
-    d3fc-rebind "^4.0.1"
-    d3fc-shape "^4.0.0"
-
-d3fc-series@^2.0.1:
-  version "2.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-series/-/d3fc-series-2.1.0.tgz#7104eed8149a0b24a1fc161b0feedbff85cb2b2f"
-  dependencies:
-    d3-array "^1.0.0"
-    d3-scale "^1.0.1"
-    d3-selection "^1.0.0"
-    d3-shape "^1.0.0"
-    d3fc-data-join "^4.1.0"
-    d3fc-rebind "^4.0.1"
-    d3fc-shape "^4.0.0"
-
-d3fc-shape@4.0.1, d3fc-shape@^4.0.0:
-  version "4.0.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-shape/-/d3fc-shape-4.0.1.tgz#9e64a28e4101f911a8a853d4f81ec975edce82ec"
-  dependencies:
-    d3-path "^1.0.0"
-
-d3fc-technical-indicator@6.1.1:
-  version "6.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc-technical-indicator/-/d3fc-technical-indicator-6.1.1.tgz#3a15e9e259ec17d33ed18235fa919ce39771bf04"
-  dependencies:
-    d3-array "^1.0.0"
-    d3fc-rebind "^4.0.1"
-
-d3fc@^13.1.1:
-  version "13.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/d3fc/-/d3fc-13.1.1.tgz#e891dd0c4e0dbde6a7af002d98876fdda0b2414e"
-  dependencies:
-    d3fc-annotation "1.1.0"
-    d3fc-axis "1.0.3"
-    d3fc-brush "1.0.1"
-    d3fc-chart "1.4.1"
-    d3fc-data-join "4.1.1"
-    d3fc-discontinuous-scale "2.0.5"
-    d3fc-element "3.0.1"
-    d3fc-extent "2.2.1"
-    d3fc-financial-feed "3.0.0"
-    d3fc-group "1.0.0"
-    d3fc-label-layout "5.1.0"
-    d3fc-pointer "1.0.3"
-    d3fc-random-data "1.1.0"
-    d3fc-rebind "4.1.1"
-    d3fc-sample "3.0.4"
-    d3fc-series "3.1.1"
-    d3fc-shape "4.0.1"
-    d3fc-technical-indicator "6.1.1"
 
 d3kit@^3.2.0:
   version "3.2.0"
@@ -2572,9 +2444,9 @@ detect-node@^2.0.3:
   version "2.0.3"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/detect-node/-/detect-node-2.0.3.tgz#a2033c09cc8e158d37748fbde7507832bd6ce127"
 
-detect-port-alt@1.1.5:
-  version "1.1.5"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/detect-port-alt/-/detect-port-alt-1.1.5.tgz#a1aa8fc805a4a5df9b905b7ddc7eed036bcce889"
+detect-port-alt@1.1.6:
+  version "1.1.6"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/detect-port-alt/-/detect-port-alt-1.1.6.tgz?dl=https://registry.yarnpkg.com/detect-port-alt/-/detect-port-alt-1.1.6.tgz#24707deabe932d4a3cf621302027c2b266568275"
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
@@ -2621,21 +2493,15 @@ doctrine@^2.0.0, doctrine@^2.0.2, doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-document-register-element@^1.0.10:
-  version "1.7.2"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/document-register-element/-/document-register-element-1.7.2.tgz#f864286516ab7e29c7051d6e1d00b89fa5f94175"
-  dependencies:
-    lightercollective "^0.0.0"
-
 dom-converter@~0.1:
   version "0.1.4"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/dom-converter/-/dom-converter-0.1.4.tgz#a45ef5727b890c9bffe6d7c876e7b19cb0e17f3b"
   dependencies:
     utila "~0.3"
 
-"dom-helpers@^2.4.0 || ^3.0.0", dom-helpers@^3.2.0:
+"dom-helpers@^2.4.0 || ^3.0.0", dom-helpers@^3.2.0, dom-helpers@^3.3.1:
   version "3.3.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/dom-helpers/-/dom-helpers-3.3.1.tgz?dl=https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
 dom-serializer@0:
   version "0.1.0"
@@ -2747,7 +2613,7 @@ encodeurl@~1.0.1:
 
 encoding@^0.1.11:
   version "0.1.12"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/encoding/-/encoding-0.1.12.tgz?dl=https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   dependencies:
     iconv-lite "~0.4.13"
 
@@ -2920,7 +2786,7 @@ eslint-plugin-flowtype@2.39.1:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-import@2.8.0, eslint-plugin-import@~2.8.0:
+eslint-plugin-import@2.8.0:
   version "2.8.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-import/-/eslint-plugin-import-2.8.0.tgz#fa1b6ef31fcb3c501c09859c1b86f1fc5b986894"
   dependencies:
@@ -2932,6 +2798,21 @@ eslint-plugin-import@2.8.0, eslint-plugin-import@~2.8.0:
     eslint-module-utils "^2.1.1"
     has "^1.0.1"
     lodash.cond "^4.3.0"
+    minimatch "^3.0.3"
+    read-pkg-up "^2.0.0"
+
+eslint-plugin-import@~2.9.0:
+  version "2.9.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-import/-/eslint-plugin-import-2.9.0.tgz?dl=https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.9.0.tgz#26002efbfca5989b7288ac047508bd24f217b169"
+  dependencies:
+    builtin-modules "^1.1.1"
+    contains-path "^0.1.0"
+    debug "^2.6.8"
+    doctrine "1.5.0"
+    eslint-import-resolver-node "^0.3.1"
+    eslint-module-utils "^2.1.1"
+    has "^1.0.1"
+    lodash "^4.17.4"
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
@@ -2956,9 +2837,9 @@ eslint-plugin-node@~6.0.0:
     resolve "^1.3.3"
     semver "^5.4.1"
 
-eslint-plugin-promise@~3.6.0:
-  version "3.6.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-promise/-/eslint-plugin-promise-3.6.0.tgz#54b7658c8f454813dc2a870aff8152ec4969ba75"
+eslint-plugin-promise@~3.7.0:
+  version "3.7.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-promise/-/eslint-plugin-promise-3.7.0.tgz?dl=https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.7.0.tgz#f4bde5c2c77cdd69557a8f69a24d1ad3cfc9e67e"
 
 eslint-plugin-react@7.4.0:
   version "7.4.0"
@@ -2969,9 +2850,9 @@ eslint-plugin-react@7.4.0:
     jsx-ast-utils "^2.0.0"
     prop-types "^15.5.10"
 
-eslint-plugin-react@~7.6.1:
-  version "7.6.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-react/-/eslint-plugin-react-7.6.1.tgz#5d0e908be599f0c02fbf4eef0c7ed6f29dff7633"
+eslint-plugin-react@~7.7.0:
+  version "7.7.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/eslint-plugin-react/-/eslint-plugin-react-7.7.0.tgz?dl=https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.7.0.tgz#f606c719dbd8a1a2b3d25c16299813878cca0160"
   dependencies:
     doctrine "^2.0.2"
     has "^1.0.1"
@@ -3332,7 +3213,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.5, fbjs@^0.8.9:
+fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.5:
   version "0.8.16"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -3875,9 +3756,9 @@ he@1.1.x:
   version "1.1.1"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-highcharts@^6.0.7:
-  version "6.0.7"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/highcharts/-/highcharts-6.0.7.tgz#fd5c4f24fdc61a04ae155a5b70830a96c8f70919"
+highcharts@^6.1.0:
+  version "6.1.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/highcharts/-/highcharts-6.1.0.tgz?dl=https://registry.yarnpkg.com/highcharts/-/highcharts-6.1.0.tgz#115a6ee10ad36a53d9913f1030c6d46da16c7cb5"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -4025,7 +3906,13 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-iconv-lite@0.4, iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
+iconv-lite@0.4, iconv-lite@~0.4.13:
+  version "0.4.21"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/iconv-lite/-/iconv-lite-0.4.21.tgz?dl=https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.21.tgz#c47f8733d02171189ebc4a400f3218d348094798"
+  dependencies:
+    safer-buffer "^2.1.0"
+
+iconv-lite@0.4.19, iconv-lite@^0.4.17:
   version "0.4.19"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
@@ -4393,7 +4280,7 @@ is-root@1.0.0:
 
 is-stream@^1.0.0, is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/is-stream/-/is-stream-1.1.0.tgz?dl=https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
 is-svg@^2.0.0:
   version "2.1.0"
@@ -4445,7 +4332,7 @@ isobject@^3.0.0, isobject@^3.0.1:
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz?dl=https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
@@ -4745,7 +4632,7 @@ js-base64@^2.1.9:
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/js-tokens/-/js-tokens-3.0.2.tgz?dl=https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
 js-yaml@^3.4.3, js-yaml@^3.7.0, js-yaml@^3.9.1:
   version "3.11.0"
@@ -4939,10 +4826,6 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lightercollective@^0.0.0:
-  version "0.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/lightercollective/-/lightercollective-0.0.0.tgz#5b85f6755b78c1f94db590e479f954cbfeeb0409"
-
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -5006,7 +4889,7 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.4, lodash-es@^4.17.5, lodash-es@^4.2.1:
+lodash-es@^4.17.4, lodash-es@^4.17.5:
   version "4.17.7"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/lodash-es/-/lodash-es-4.17.7.tgz#db240a3252c3dd8360201ac9feef91ac977ea856"
 
@@ -5047,9 +4930,13 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@~4.17.4:
+"lodash@>=3.5 <5", lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@~4.17.4:
   version "4.17.5"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/lodash/-/lodash-4.17.10.tgz?dl=https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 loglevel@^1.4.1:
   version "1.6.1"
@@ -5061,7 +4948,7 @@ longest@^1.0.1:
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.0, loose-envify@^1.3.1:
   version "1.3.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/loose-envify/-/loose-envify-1.3.1.tgz?dl=https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
     js-tokens "^3.0.0"
 
@@ -5354,7 +5241,7 @@ no-case@^2.2.0:
 
 node-fetch@^1.0.1:
   version "1.7.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/node-fetch/-/node-fetch-1.7.3.tgz?dl=https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
@@ -5498,7 +5385,7 @@ oauth-sign@~0.8.1, oauth-sign@~0.8.2:
 
 object-assign@4.1.1, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/object-assign/-/object-assign-4.1.1.tgz?dl=https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
 object-copy@^0.1.0:
   version "0.1.0"
@@ -6194,7 +6081,7 @@ promise@8.0.1:
 
 promise@^7.1.1:
   version "7.3.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/promise/-/promise-7.3.1.tgz?dl=https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
 
@@ -6323,11 +6210,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react-billboardjs@^1.2.0:
-  version "1.2.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-billboardjs/-/react-billboardjs-1.2.0.tgz#c422c5a98132627eb08c8b9e2a1439d9077521ae"
+  version "1.4.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-billboardjs/-/react-billboardjs-1.4.1.tgz?dl=https://registry.yarnpkg.com/react-billboardjs/-/react-billboardjs-1.4.1.tgz#f1139444d7b022260c7447d01a6a9fa745f93d63"
   dependencies:
-    billboard.js "^1.2.0"
-    prop-types "^15.6.0"
+    billboard.js "^1.3.0"
+    prop-types "^15.6.1"
+    react-parm "^2.3.0"
 
 react-chartist@^0.13.1:
   version "0.13.1"
@@ -6344,15 +6232,15 @@ react-d3kit@^2.0.0:
     d3-scale "^1.0.7"
     prop-types "^15.6.0"
 
-react-dev-utils@^5.0.0:
-  version "5.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-dev-utils/-/react-dev-utils-5.0.0.tgz#425ac7c9c40c2603bc4f7ab8836c1406e96bb473"
+react-dev-utils@^5.0.1:
+  version "5.0.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-dev-utils/-/react-dev-utils-5.0.1.tgz?dl=https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.1.tgz#1f396e161fe44b595db1b186a40067289bf06613"
   dependencies:
     address "1.0.3"
     babel-code-frame "6.26.0"
     chalk "1.1.3"
     cross-spawn "5.1.0"
-    detect-port-alt "1.1.5"
+    detect-port-alt "1.1.6"
     escape-string-regexp "1.0.5"
     filesize "3.5.11"
     global-modules "1.0.0"
@@ -6367,9 +6255,9 @@ react-dev-utils@^5.0.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.2.0:
-  version "16.2.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
+react-dom@^16.3.2:
+  version "16.3.2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-dom/-/react-dom-16.3.2.tgz?dl=https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.2.tgz#cb90f107e09536d683d84ed5d4888e9640e0e4df"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6380,6 +6268,10 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-fast-compare@^1.0.0:
+  version "1.0.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-fast-compare/-/react-fast-compare-1.0.0.tgz?dl=https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-1.0.0.tgz#813a039155e49b43ceffe99528fe5e9d97a6c938"
+
 react-icon-base@2.1.0:
   version "2.1.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-icon-base/-/react-icon-base-2.1.0.tgz?dl=https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.1.0.tgz#a196e33fdf1e7aaa1fda3aefbb68bdad9e82a79d"
@@ -6389,6 +6281,10 @@ react-icons@^2.2.7:
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-icons/-/react-icons-2.2.7.tgz?dl=https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.7.tgz#d7860826b258557510dac10680abea5ca23cf650"
   dependencies:
     react-icon-base "2.1.0"
+
+react-is@^16.3.1:
+  version "16.3.2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-is/-/react-is-16.3.2.tgz?dl=https://registry.yarnpkg.com/react-is/-/react-is-16.3.2.tgz#f4d3d0e2f5fbb6ac46450641eb2e25bf05d36b22"
 
 react-jsx-highcharts@^2.2.1:
   version "2.2.1"
@@ -6406,15 +6302,6 @@ react-measure@^2.0.2:
     prop-types "^15.5.10"
     resize-observer-polyfill "^1.4.2"
 
-react-motion@^0.4.8:
-  version "0.4.8"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-motion/-/react-motion-0.4.8.tgz#23bb2dd27c2d8e00d229e45572d105efcf40a35e"
-  dependencies:
-    create-react-class "^15.5.2"
-    performance-now "^0.2.0"
-    prop-types "^15.5.8"
-    raf "^3.1.0"
-
 react-motion@^0.5.2:
   version "0.5.2"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
@@ -6422,6 +6309,10 @@ react-motion@^0.5.2:
     performance-now "^0.2.0"
     prop-types "^15.5.8"
     raf "^3.1.0"
+
+react-parm@^2.3.0:
+  version "2.5.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-parm/-/react-parm-2.5.0.tgz?dl=https://registry.yarnpkg.com/react-parm/-/react-parm-2.5.0.tgz#ca1eed72716f364e2fe79b24f6b646eaab8b1014"
 
 react-redux@^5.0.7:
   version "5.0.7"
@@ -6440,9 +6331,9 @@ react-resize-detector@1.1.0:
   dependencies:
     prop-types "^15.5.10"
 
-react-scripts@1.1.1:
-  version "1.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-scripts/-/react-scripts-1.1.1.tgz#279d449f7311fed910506987a1ade014027788a8"
+react-scripts@1.1.4:
+  version "1.1.4"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-scripts/-/react-scripts-1.1.4.tgz?dl=https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.1.4.tgz#d5c230e707918d6dd2d06f303b10f5222d017c88"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
@@ -6473,7 +6364,8 @@ react-scripts@1.1.1:
     postcss-loader "2.0.8"
     promise "8.0.1"
     raf "3.4.0"
-    react-dev-utils "^5.0.0"
+    react-dev-utils "^5.0.1"
+    resolve "1.6.0"
     style-loader "0.19.0"
     sw-precache-webpack-plugin "0.11.4"
     url-loader "0.6.2"
@@ -6504,15 +6396,13 @@ react-transition-group@^2.2.1:
     prop-types "^15.5.8"
     warning "^3.0.0"
 
-react-transition-group@^2.3.0:
-  version "2.3.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-transition-group/-/react-transition-group-2.3.0.tgz#8dd1af58f6af284b19fd057f512e74f20438ad31"
+react-transition-group@^2.3.1:
+  version "2.3.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-transition-group/-/react-transition-group-2.3.1.tgz?dl=https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.3.1.tgz#31d611b33e143a5e0f2d94c348e026a0f3b474b6"
   dependencies:
-    chain-function "^1.0.0"
-    dom-helpers "^3.2.0"
+    dom-helpers "^3.3.1"
     loose-envify "^1.3.1"
-    prop-types "^15.5.8"
-    warning "^3.0.0"
+    prop-types "^15.6.1"
 
 react-virtualized@^9.18.5:
   version "9.18.5"
@@ -6524,9 +6414,9 @@ react-virtualized@^9.18.5:
     loose-envify "^1.3.0"
     prop-types "^15.6.0"
 
-react-vis@^1.9.1:
-  version "1.9.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-vis/-/react-vis-1.9.1.tgz#73223fe7b8cccdca43ffc02fff56c98efd759689"
+react-vis@^1.9.2:
+  version "1.9.2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react-vis/-/react-vis-1.9.2.tgz?dl=https://registry.yarnpkg.com/react-vis/-/react-vis-1.9.2.tgz#4dbd5d91ac820fd39fa7ad1c892198495194f6e3"
   dependencies:
     d3-array "^1.2.0"
     d3-collection "^1.0.3"
@@ -6543,11 +6433,11 @@ react-vis@^1.9.1:
     deep-equal "^1.0.1"
     global "^4.3.1"
     prop-types "^15.5.8"
-    react-motion "^0.4.8"
+    react-motion "^0.5.2"
 
-react@^16.2.0:
-  version "16.2.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+react@^16.3.2:
+  version "16.3.2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/react/-/react-16.3.2.tgz?dl=https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6687,14 +6577,12 @@ redux-thunk@^2.2.0:
   version "2.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
 
-redux@^3.7.2:
-  version "3.7.2"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+redux@^4.0.0:
+  version "4.0.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/redux/-/redux-4.0.0.tgz?dl=https://registry.yarnpkg.com/redux/-/redux-4.0.0.tgz#aa698a92b729315d22b34a0553d7e6533555cc03"
   dependencies:
-    lodash "^4.2.1"
-    lodash-es "^4.2.1"
     loose-envify "^1.1.0"
-    symbol-observable "^1.0.3"
+    symbol-observable "^1.2.0"
 
 regenerate@^1.2.1:
   version "1.3.3"
@@ -6910,6 +6798,12 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
+resolve@1.6.0:
+  version "1.6.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/resolve/-/resolve-1.6.0.tgz?dl=https://registry.yarnpkg.com/resolve/-/resolve-1.6.0.tgz#0fbd21278b27b4004481c395349e7aba60a9ff5c"
+  dependencies:
+    path-parse "^1.0.5"
+
 resolve@^1.3.2, resolve@^1.3.3, resolve@^1.5.0:
   version "1.5.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
@@ -6958,7 +6852,7 @@ run-parallel@^1.1.2:
 
 rw@1:
   version "1.3.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/rw/-/rw-1.3.3.tgz#3f862dfa91ab766b14885ef4d01124bfda074fb4"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/rw/-/rw-1.3.3.tgz?dl=https://registry.yarnpkg.com/rw/-/rw-1.3.3.tgz#3f862dfa91ab766b14885ef4d01124bfda074fb4"
 
 rx-lite-aggregates@^4.0.8:
   version "4.0.8"
@@ -6979,6 +6873,10 @@ safe-regex@^1.1.0:
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/safe-regex/-/safe-regex-1.1.0.tgz#40a3669f3b077d1e943d44629e157dd48023bf2e"
   dependencies:
     ret "~0.1.10"
+
+safer-buffer@^2.1.0:
+  version "2.1.2"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/safer-buffer/-/safer-buffer-2.1.2.tgz?dl=https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
 sane@~1.6.0:
   version "1.6.0"
@@ -7103,7 +7001,7 @@ set-value@^2.0.0:
 
 setimmediate@^1.0.4, setimmediate@^1.0.5:
   version "1.0.5"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/setimmediate/-/setimmediate-1.0.5.tgz?dl=https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
 
 setprototypeof@1.0.3:
   version "1.0.3"
@@ -7336,17 +7234,17 @@ standard-engine@~8.0.0:
     minimist "^1.1.0"
     pkg-conf "^2.0.0"
 
-standard@^11.0.0:
-  version "11.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/standard/-/standard-11.0.0.tgz#0ba18c753f68883fbfffedf3e38534a6b9d26dca"
+standard@^11.0.1:
+  version "11.0.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/standard/-/standard-11.0.1.tgz?dl=https://registry.yarnpkg.com/standard/-/standard-11.0.1.tgz#49be40c76f1d564964b22bbf7309929ad0335e29"
   dependencies:
     eslint "~4.18.0"
     eslint-config-standard "11.0.0"
     eslint-config-standard-jsx "5.0.0"
-    eslint-plugin-import "~2.8.0"
+    eslint-plugin-import "~2.9.0"
     eslint-plugin-node "~6.0.0"
-    eslint-plugin-promise "~3.6.0"
-    eslint-plugin-react "~7.6.1"
+    eslint-plugin-promise "~3.7.0"
+    eslint-plugin-react "~7.7.0"
     eslint-plugin-standard "~3.0.1"
     standard-engine "~8.0.0"
 
@@ -7470,9 +7368,9 @@ style-loader@0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@^3.2.5:
-  version "3.2.5"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/styled-components/-/styled-components-3.2.5.tgz?dl=https://registry.yarnpkg.com/styled-components/-/styled-components-3.2.5.tgz#b5d5d7d618ab240ff10602b5ca5886b8db3d0a0d"
+styled-components@^3.2.6:
+  version "3.2.6"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/styled-components/-/styled-components-3.2.6.tgz?dl=https://registry.yarnpkg.com/styled-components/-/styled-components-3.2.6.tgz#99e6e75a746bdedd295a17e03dd1493055a1cc3b"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -7480,6 +7378,7 @@ styled-components@^3.2.5:
     hoist-non-react-statics "^2.5.0"
     is-plain-object "^2.0.1"
     prop-types "^15.5.4"
+    react-is "^16.3.1"
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
@@ -7556,7 +7455,7 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-symbol-observable@^1.0.3, symbol-observable@^1.0.4:
+symbol-observable@^1.0.4, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
@@ -7610,26 +7509,6 @@ tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
-
-taucharts@^2.0.3:
-  version "2.0.3"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/taucharts/-/taucharts-2.0.3.tgz#b98197cdc72c9bd6d371bac6bff04a6084a17592"
-  dependencies:
-    d3-array "^1.2.1"
-    d3-axis "^1.0.8"
-    d3-brush "^1.0.4"
-    d3-color "^1.0.3"
-    d3-format "^1.2.0"
-    d3-geo "^1.9.0"
-    d3-quadtree "^1.0.3"
-    d3-request "^1.0.6"
-    d3-scale "^1.0.6"
-    d3-selection "^1.1.0"
-    d3-shape "^1.2.0"
-    d3-time "^1.0.7"
-    d3-time-format "^2.1.0"
-    d3-transition "^1.1.0"
-    topojson-client "^3.0.0"
 
 term-size@^1.2.0:
   version "1.2.0"
@@ -7717,12 +7596,6 @@ to-regex@^3.0.1:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-topojson-client@^3.0.0:
-  version "3.0.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/topojson-client/-/topojson-client-3.0.0.tgz#1f99293a77ef42a448d032a81aa982b73f360d2f"
-  dependencies:
-    commander "2"
-
 toposort@^1.0.0:
   version "1.0.6"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/toposort/-/toposort-1.0.6.tgz#c31748e55d210effc00fdcdc7d6e68d7d7bb9cec"
@@ -7778,7 +7651,7 @@ typedarray@^0.0.6:
 
 ua-parser-js@^0.7.9:
   version "0.7.17"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/ua-parser-js/-/ua-parser-js-0.7.17.tgz?dl=https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
 uglify-js@3.3.x, uglify-js@^3.0.13:
   version "3.3.14"
@@ -7986,40 +7859,42 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-victory-chart@^25.1.1:
-  version "25.1.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-chart/-/victory-chart-25.1.1.tgz#5b5d9bde802eea774f1105af6fb723d478717532"
+victory-chart@^26.0.0:
+  version "26.0.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-chart/-/victory-chart-26.0.1.tgz?dl=https://registry.yarnpkg.com/victory-chart/-/victory-chart-26.0.1.tgz#d8b50bd601af0e5bd5e9bec2c08f27b4785a331b"
   dependencies:
     d3-voronoi "^1.1.2"
-    lodash "^4.17.4"
-    victory-core "^21.0.4"
+    lodash "^4.17.5"
+    react-fast-compare "^1.0.0"
+    victory-core "^22.0.0"
 
-victory-core@^21.0.2, victory-core@^21.0.4:
-  version "21.0.4"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-core/-/victory-core-21.0.4.tgz#5ac6d495a43e5d95249c56973290b182ec607b4a"
+victory-core@^22.0.0:
+  version "22.0.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-core/-/victory-core-22.0.0.tgz?dl=https://registry.yarnpkg.com/victory-core/-/victory-core-22.0.0.tgz#c251c2063fb484d50be4aca9fc9be6378acc4f11"
   dependencies:
     d3-ease "^1.0.0"
     d3-interpolate "^1.1.1"
     d3-scale "^1.0.0"
     d3-shape "^1.2.0"
     d3-timer "^1.0.0"
-    lodash "^4.17.4"
+    lodash "^4.17.5"
+    react-fast-compare "^1.0.0"
 
-victory-pie@^14.0.1:
-  version "14.0.1"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-pie/-/victory-pie-14.0.1.tgz#53dff9e81696253c3da00f347d908d3ac1241c66"
+victory-pie@^15.0.1:
+  version "15.0.1"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory-pie/-/victory-pie-15.0.1.tgz?dl=https://registry.yarnpkg.com/victory-pie/-/victory-pie-15.0.1.tgz#0161b995c40fc614c55049ca586d3ad9e07cdac7"
   dependencies:
     d3-shape "^1.0.0"
-    lodash "^4.17.4"
-    victory-core "^21.0.2"
+    lodash "^4.17.5"
+    victory-core "^22.0.0"
 
-victory@^0.25.6:
-  version "0.25.6"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory/-/victory-0.25.6.tgz#3b5b0a1d2a773caf75cc916e6ace9ad3d7d75024"
+victory@^0.26.0:
+  version "0.26.0"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/victory/-/victory-0.26.0.tgz?dl=https://registry.yarnpkg.com/victory/-/victory-0.26.0.tgz#03a877f038ddc1ae7df57ca720bb74f05a97b053"
   dependencies:
-    victory-chart "^25.1.1"
-    victory-core "^21.0.4"
-    victory-pie "^14.0.1"
+    victory-chart "^26.0.0"
+    victory-core "^22.0.0"
+    victory-pie "^15.0.1"
 
 vm-browserify@0.0.4:
   version "0.0.4"
@@ -8165,9 +8040,13 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.19"
 
-whatwg-fetch@2.0.3, whatwg-fetch@>=0.10.0:
+whatwg-fetch@2.0.3:
   version "2.0.3"
   resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
+
+whatwg-fetch@>=0.10.0:
+  version "2.0.4"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz?dl=https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
 
 whatwg-url@^4.3.0:
   version "4.8.0"
@@ -8267,7 +8146,7 @@ xml-name-validator@^2.0.1:
 
 xmlhttprequest@1:
   version "1.8.0"
-  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
+  resolved "https://steeleye.jfrog.io/steeleye/api/npm/npm/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz?dl=https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
 
 xtend@^4.0.0, xtend@^4.0.1:
   version "4.0.1"
