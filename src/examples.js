@@ -1,13 +1,12 @@
 import HighchartsExample from './components/examples/highcharts'
 import D3KitExample from './components/examples/d3kit'
-
-// import D3KitHybridExample from './components/examples/d3kit-hybrid'
+import D3KitHybridExample from './components/examples/d3kit-hybrid'
 import RechartsExample from './components/examples/recharts'
 import ReactVisExample from './components/examples/react-vis'
 import VictoryExample from './components/examples/victory'
 import BillboardExample from './components/examples/billboard'
-// import ChartistExample from './components/examples/chartist'
-// import NivoExample from './components/examples/nivo'
+import ChartistExample from './components/examples/chartist'
+import NivoExample from './components/examples/nivo'
 
 export default [
   {
@@ -19,7 +18,7 @@ export default [
   {
     title: 'D3Kit',
     url: 'https://github.com/twitter/d3kit',
-    description: 'A lightweight wrapper for D3 v4 with a React adaptor. Reduces the boilerplate code needed to create a chart using D3. The bars animate to track category position changes.',
+    description: 'A lightweight wrapper from Twitter for D3 v4, used with a React adaptor. Reduces the boilerplate code needed to create a chart using D3. The bars animate to track category position changes.',
     component: D3KitExample
   },
   {
@@ -28,12 +27,12 @@ export default [
     description: 'A lightweight wrapper for D3 v4 with a React adaptor. An alternative to D3Kit.',
     component: BillboardExample
   },
-  // {
-  //   title: 'D3Kit Hybrid',
-  //   url: '',
-  //   description: 'A example of using D3Kit to create a chart that combines SVG and canvas rendering.',
-  //   component: D3KitHybridExample
-  // },
+  {
+    title: 'D3Kit Hybrid',
+    url: 'https://github.com/twitter/d3kit',
+    description: 'A example of using D3Kit to create a chart that combines SVG and canvas rendering.',
+    component: D3KitHybridExample
+  },
   {
     title: 'Recharts',
     url: 'http://recharts.org/',
@@ -51,17 +50,17 @@ export default [
     url: 'http://formidable.com/open-source/victory/',
     description: 'Build using React.',
     component: VictoryExample
+  },
+  {
+    title: 'Chartist',
+    url: 'https://gionkunz.github.io/chartist-js/',
+    description: 'Has a React adaptor. Uses SMIL for animations.',
+    component: ChartistExample
+  },
+  {
+    title: 'Nivo',
+    url: 'http://nivo.rocks/#/',
+    description: 'Built using React and D3.',
+    component: NivoExample
   }
-  // {
-  //   title: 'Chartist',
-  //   url: '',
-  //   description: 'Description to follow.',
-  //   component: ChartistExample
-  // },
-  // {
-  //   title: 'Nivo',
-  //   url: '',
-  //   description: 'Description to follow.',
-  //   component: NivoExample
-  // }
 ]

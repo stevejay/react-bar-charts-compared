@@ -7,9 +7,9 @@ const Section = styled.section`
 `
 
 const Text = styled.p`
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 0 0 1.5em 0;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin: 0 0 1.5rem 0;
 `
 
 const Chart = styled.div`
