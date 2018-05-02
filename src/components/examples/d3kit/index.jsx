@@ -105,7 +105,7 @@ class BarChart extends SvgChart {
 const BarChartComponent = createComponent(BarChart)
 
 const CHART_OPTIONS = {
-  margin: { top: 20, right: 20, bottom: 30, left: 40 },
+  margin: { top: 10, right: 20, bottom: 30, left: 40 },
   offset: { x: 0.5, y: 0.5 }
 }
 

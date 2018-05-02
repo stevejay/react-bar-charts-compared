@@ -8,21 +8,17 @@ import {
   HorizontalGridLines,
   VerticalGridLines,
   VerticalBarSeries,
-  FlexibleWidthXYPlot,
-  Hint
+  FlexibleWidthXYPlot
 } from 'react-vis'
+import 'react-vis/dist/style.css'
+import { withTheme } from 'styled-components'
 
-import ExampleContainer from '../example-container'
-
-const GRID_LINE_STYLE = { stroke: '#6f7890', opacity: 0.5 }
-
-const AXIS_STYLE = {
-  line: { stroke: '#CFD2DA' },
-  text: { stroke: 'none', fill: '#CFD2DA' }
-}
+import Container from './container'
+import Tooltip from './tooltip'
 
 const X_ACCESSOR = d => d.key
 const Y_ACCESSOR = d => d.value
+const SERIES_CLASS_NAME = 'first-series'
 
 class ReactVisExample extends React.PureComponent {
   constructor (props) {
@@ -30,24 +26,29 @@ class ReactVisExample extends React.PureComponent {
     this.state = { hoveredCell: false }
   }
   handleValueMouseOver = d => {
-    console.log('mouse over')
     this.setState({ hoveredCell: d })
   }
   handleValueMouseOut = d => {
-    console.log('mouse out')
     this.setState({ hoveredCell: false })
   }
   render () {
-    const { data } = this.props
+    const { data, theme } = this.props
     const { hoveredCell } = this.state
     const yMax = _.maxBy(data, 'value')
 
     // hint problem: https://github.com/uber/react-vis/issues/518
 
+    const GRID_LINE_STYLE = { stroke: theme.color.darkForeground, opacity: 0.5 }
+
+    const AXIS_STYLE = {
+      line: { stroke: theme.color.foreground },
+      text: { stroke: 'none', fill: theme.color.foreground }
+    }
+
     return (
-      <ExampleContainer title='React Vis'>
+      <Container seriesClassName={SERIES_CLASS_NAME}>
         <FlexibleWidthXYPlot
-          height={300}
+          height={320}
           xType='ordinal'
           yType='linear'
           yDomain={[0, yMax.value * 1.05]}
@@ -60,29 +61,24 @@ class ReactVisExample extends React.PureComponent {
           <XAxis style={AXIS_STYLE} />
           <YAxis style={AXIS_STYLE} />
           <VerticalBarSeries
-            className='first-series'
-            color='#CFD2DA'
+            className={SERIES_CLASS_NAME}
+            color={theme.color.foreground}
             data={data}
             onValueMouseOver={this.handleValueMouseOver}
             onValueMouseOut={this.handleValueMouseOut}
           />
-          {hoveredCell &&
-            <Hint value={hoveredCell}>
-              <aside>
-                <p>{hoveredCell.key}</p>
-                <p>{hoveredCell.value}</p>
-              </aside>
-            </Hint>}
+          {hoveredCell && <Tooltip value={hoveredCell} />}
         </FlexibleWidthXYPlot>
-      </ExampleContainer>
+      </Container>
     )
   }
 }
 
 ReactVisExample.propTypes = {
-  data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired,
+  theme: PropTypes.object.isRequired
 }
 
 export default connect(state => ({ data: state.data.barChart }))(
-  ReactVisExample
+  withTheme(ReactVisExample)
 )

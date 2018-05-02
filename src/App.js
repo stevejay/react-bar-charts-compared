@@ -6,8 +6,7 @@ import 'normalize.css'
 import 'babel-polyfill'
 
 // TODO move these:
-import 'react-vis/dist/style.css'
-import 'taucharts/dist/taucharts.dark.css'
+// import 'taucharts/dist/taucharts.dark.css'
 import 'chartist/dist/chartist.css'
 import 'react-billboardjs/lib/billboard.css'
 
@@ -39,6 +38,7 @@ injectGlobal`
     padding: 8px;
     background: rgba(0, 0, 0, 0.8);
     color: ${theme.color.foreground};
+    font-size: ${theme.font.chartLabelSize};
     border-radius: .2em;
   }
 `

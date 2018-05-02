@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import BillboardChart from 'react-billboardjs'
 
-import ExampleContainer from '../example-container'
-import AutoSizerContainer from '../auto-sizer-container'
+import Container from './container'
 
 class BillboardExample extends React.Component {
   constructor (props) {
@@ -52,25 +51,23 @@ class BillboardExample extends React.Component {
     }
 
     return (
-      <ExampleContainer title='Billboard'>
-        <AutoSizerContainer>
-          <BillboardChart
-            isPure
-            ref={this.handleChartMounted}
-            data={billboardData}
-            axis={axis}
-            legend={{
-              show: false
-            }}
-            padding={{
-              top: 20,
-              right: 20,
-              bottom: 20,
-              left: 60
-            }}
-          />
-        </AutoSizerContainer>
-      </ExampleContainer>
+      <Container>
+        <BillboardChart
+          isPure
+          ref={this.handleChartMounted}
+          data={billboardData}
+          axis={axis}
+          legend={{
+            show: false
+          }}
+          padding={{
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 60
+          }}
+        />
+      </Container>
     )
   }
 }

@@ -14,6 +14,6 @@ export default {
   },
   font: {
     defaultFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-    chartLabelSize: '12px'
+    chartLabelSize: '1rem'
   }
 }
