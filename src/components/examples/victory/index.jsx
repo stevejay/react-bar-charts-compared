@@ -32,7 +32,7 @@ class VictoryBarChart extends React.PureComponent {
       tickLabels: {
         fill: theme.color.foreground,
         fontFamily: 'inherit',
-        fontSize: theme.font.chartLabelSize
+        fontSize: '14px' // has to be px
       }
     }
 
@@ -49,7 +49,7 @@ class VictoryBarChart extends React.PureComponent {
       tickLabels: {
         fill: theme.color.foreground,
         fontFamily: 'inherit',
-        fontSize: theme.font.chartLabelSize
+        fontSize: '14px' // has to be px
       }
     }
 

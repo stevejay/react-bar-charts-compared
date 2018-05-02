@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import BillboardChart from 'react-billboardjs'
+import 'react-billboardjs/lib/billboard.css'
 
 import Container from './container'
 

@@ -5,11 +5,6 @@ import { ThemeProvider, injectGlobal } from 'styled-components'
 import 'normalize.css'
 import 'babel-polyfill'
 
-// TODO move these:
-// import 'taucharts/dist/taucharts.dark.css'
-import 'chartist/dist/chartist.css'
-import 'react-billboardjs/lib/billboard.css'
-
 import Page from './components/page'
 import Card from './components/card'
 import Carousel from './components/carousel'
