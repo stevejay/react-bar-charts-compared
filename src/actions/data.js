@@ -7,8 +7,8 @@ export const types = {
   DATA_UPDATED: 'DATA_UPDATED'
 }
 
-export const barChartDataUpdated = (people: People): Action => ({
-  type: types.DATA_UPDATED,
+export const barChartDataUpdated = (people: People): Action<People> => ({
+  type: 'DATA_UPDATED',
   payload: people
 })
 

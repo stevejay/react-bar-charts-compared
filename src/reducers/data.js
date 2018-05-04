@@ -1,17 +1,20 @@
 // @flow
 
 import { handleActions } from 'redux-actions'
-import type { DataState as State, Action } from '../types'
+import type { People, DataReducerState as ReducerState, Action } from '../types'
 
 import { types as dataActionTypes } from '../actions/data'
 
-const initialState: State = {
+const initialState: ReducerState = {
   people: []
 }
 
 export default handleActions(
   {
-    [dataActionTypes.DATA_UPDATED]: (state: State, action: Action): State => ({
+    [dataActionTypes.DATA_UPDATED]: (
+      state: ReducerState,
+      action: Action<People>
+    ): ReducerState => ({
       ...state,
       people: action.payload
     })
