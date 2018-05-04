@@ -30,10 +30,10 @@ const Link = styled.a`
   }
 `
 
-type Props = {
-  title: string,
-  url: string,
-}
+type Props = {|
+  +title: string,
+  +url: string,
+|}
 
 const Header = ({ title, url }: Props): Element<any> => (
   <HeaderElement>

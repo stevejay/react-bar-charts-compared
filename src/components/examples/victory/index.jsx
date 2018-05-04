@@ -89,10 +89,10 @@ class VictoryBarChart
   }
 }
 
-type Props = {
-  data: People,
-  theme: Theme,
-}
+type Props = {|
+  +data: People,
+  +theme: Theme,
+|}
 
 const VictoryExample = (props: Props): Element<any> => (
   <AutoSizerContainer>

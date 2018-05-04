@@ -11,9 +11,9 @@ const H1 = styled.h1`
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `
 
-type Props = {
-  children: Element<any>,
-}
+type Props = {|
+  +children: Element<any>,
+|}
 
 const Header = ({ children }: Props): Element<any> => (
   <header>

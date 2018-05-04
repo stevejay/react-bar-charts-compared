@@ -44,10 +44,10 @@ const StyledButton = styled.button`
   }
 `
 
-type Props = {
-  children: ElementType,
-  onClick: void => void,
-}
+type Props = {|
+  +children: ElementType,
+  +onClick: void => mixed,
+|}
 
 const Button = ({ children, onClick }: Props): Element<any> => (
   <StyledButton onClick={onClick}>

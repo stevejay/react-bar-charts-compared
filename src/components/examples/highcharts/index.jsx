@@ -16,10 +16,10 @@ import {
 import Container from './container'
 import type { People, State } from '../../../types'
 
-type Props = {
-  data: People,
-  width: number,
-}
+type Props = {|
+  +data: People,
+  +width: number,
+|}
 
 class HighchartsExample extends React.PureComponent<Props> {
   render () {

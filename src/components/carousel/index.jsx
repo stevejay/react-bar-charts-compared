@@ -35,14 +35,14 @@ injectGlobal`
   }
 `
 
-type Props = {
-  currentSlideIndex: number,
-  renderSlide: number => Element<any>,
-}
+type Props = {|
+  +currentSlideIndex: number,
+  +renderSlide: number => Element<any>,
+|}
 
-type State = {
+type State = {|
   style: ?{ height: ?number },
-}
+|}
 
 class Carousel extends React.PureComponent<Props, State> {
   _mounted: boolean

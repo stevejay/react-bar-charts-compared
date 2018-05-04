@@ -7,12 +7,12 @@ import Button from './button'
 import Container from './container'
 import type { UpdateType } from '../../types'
 
-type Props = {
-  totalSlides: number,
-  currentSlideIndex: number,
-  updateData: UpdateType => void,
-  updateSlideIndex: number => void,
-}
+type Props = {|
+  +totalSlides: number,
+  +currentSlideIndex: number,
+  +updateData: UpdateType => mixed,
+  +updateSlideIndex: number => mixed,
+|}
 
 class Toolbar extends React.Component<Props> {
   shouldComponentUpdate () {

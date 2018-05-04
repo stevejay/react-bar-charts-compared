@@ -41,7 +41,7 @@ injectGlobal`
 
 class App
   extends React.Component<
-    { updateData: () => void },
+    { updateData: () => mixed },
     { currentSlideIndex: number }
   > {
   constructor (props) {

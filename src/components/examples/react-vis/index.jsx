@@ -22,10 +22,10 @@ const X_ACCESSOR = d => d.key
 const Y_ACCESSOR = d => d.value
 const SERIES_CLASS_NAME = 'first-series'
 
-type Props = {
-  data: People,
-  theme: Theme,
-}
+type Props = {|
+  +data: People,
+  +theme: Theme,
+|}
 
 class ReactVisExample
   extends React.PureComponent<

@@ -38,10 +38,10 @@ const StyledButton = styled.button`
   }
 `
 
-type Props = {
-  icon: IconType,
-  onClick: void => void,
-}
+type Props = {|
+  +icon: IconType,
+  +onClick: void => mixed,
+|}
 
 const IconButton = ({ icon, onClick }: Props): Element<any> => (
   <StyledButton onClick={onClick}>

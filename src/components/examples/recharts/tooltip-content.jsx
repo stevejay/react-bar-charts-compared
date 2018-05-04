@@ -17,10 +17,10 @@ const Paragraph = styled.p`
   margin: 0;
 `
 
-type Props = {
-  label: string,
-  payload: Array<{ value: any }>,
-}
+type Props = {|
+  +label: string,
+  +payload: Array<{ value: any }>,
+|}
 
 const TooltipContent = ({ payload, label }: Props): Element<any> => (
   <Container>

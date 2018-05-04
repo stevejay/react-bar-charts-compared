@@ -125,9 +125,9 @@ const OPTIONS = {
   offset: { x: 0.5, y: 0.5 }
 }
 
-type Props = {
-  data: People,
-}
+type Props = {|
+  +data: People,
+|}
 
 const D3KitHybridExampleWrapper = ({ data }: Props): Element<any> => (
   <Container>

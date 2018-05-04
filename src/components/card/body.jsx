@@ -20,10 +20,10 @@ const Chart = styled.div`
   overflow: hidden;
 `
 
-type Props = {
-  description: string,
-  children: Element<any>,
-}
+type Props = {|
+  +description: string,
+  +children: Element<any>,
+|}
 
 const Body = ({ description, children }: Props): Element<any> => (
   <Section>

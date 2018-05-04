@@ -10,10 +10,10 @@ import Container from './container'
 import TooltipContent from './tooltip-content'
 import type { People, Theme, State } from '../../../types'
 
-type Props = {
-  data: People,
-  theme: Theme,
-}
+type Props = {|
+  +data: People,
+  +theme: Theme,
+|}
 
 const RechartsExample = ({ data, theme }: Props): Element<any> => (
   <Container width='100%' height='100%'>

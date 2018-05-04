@@ -6,10 +6,10 @@ import _ from 'lodash'
 import Container from './container'
 import Dot from './dot'
 
-type Props = {
-  totalSlides: number,
-  currentSlideIndex: number,
-}
+type Props = {|
+  +totalSlides: number,
+  +currentSlideIndex: number,
+|}
 
 class SlideIndicator extends React.PureComponent<Props> {
   render () {

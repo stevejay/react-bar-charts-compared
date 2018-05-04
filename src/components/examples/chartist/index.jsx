@@ -9,11 +9,11 @@ import 'chartist/dist/chartist.css'
 import Container from './container'
 import type { People, State } from '../../../types'
 
-type ShimProps = {
-  width?: number,
-  height?: number,
-  data: People,
-}
+type ShimProps = {|
+  +width?: number,
+  +height?: number,
+  +data: People,
+|}
 
 const ChartistGraphShim = ({ width, height, data }: ShimProps): Element<
   any
@@ -27,9 +27,9 @@ const ChartistGraphShim = ({ width, height, data }: ShimProps): Element<
   return <ChartistGraph data={mappedData} options={options} type='Bar' />
 }
 
-type Props = {
-  data: People,
-}
+type Props = {|
+  +data: People,
+|}
 
 const ChartistExample = ({ data }: Props): Element<any> => (
   <Container>

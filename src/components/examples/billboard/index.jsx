@@ -8,9 +8,9 @@ import 'react-billboardjs/lib/billboard.css'
 import Container from './container'
 import type { People, State } from '../../../types'
 
-type Props = {
-  data: People,
-}
+type Props = {|
+  +data: People,
+|}
 
 class BillboardExample extends React.Component<Props> {
   _chart: any

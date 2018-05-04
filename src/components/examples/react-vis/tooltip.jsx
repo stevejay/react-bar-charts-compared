@@ -18,9 +18,9 @@ const Paragraph = styled.p`
   margin: 0;
 `
 
-type Props = {
-  value: { key: string, value: number },
-}
+type Props = {|
+  +value: { key: string, value: number },
+|}
 
 const Tooltip = (props: Props): Element<any> => (
   <Hint {...props}>

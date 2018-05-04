@@ -6,12 +6,12 @@ import type { Element } from 'react'
 import Header from './header'
 import Body from './body'
 
-type Props = {
-  title: string,
-  url: string,
-  description: string,
-  children: Element<any>,
-}
+type Props = {|
+  +title: string,
+  +url: string,
+  +description: string,
+  +children: Element<any>,
+|}
 
 const Card = ({ title, url, description, children }: Props): Element<any> => (
   <article>

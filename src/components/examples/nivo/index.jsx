@@ -16,10 +16,10 @@ import type { People, Theme, State } from '../../../types'
 //   fill: #1EE3A1 !important;
 // }
 
-type Props = {
-  data: People,
-  theme: Theme,
-}
+type Props = {|
+  +data: People,
+  +theme: Theme,
+|}
 
 const NivoExample = ({ data, theme }: Props): Element<any> => {
   const defaultTheme = {
