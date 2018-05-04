@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import styled from 'styled-components'
 
 const Section = styled.section`
@@ -18,16 +20,16 @@ const Chart = styled.div`
   overflow: hidden;
 `
 
-const Body = ({ description, children }) => (
+type Props = {
+  description: string,
+  children: Element<any>,
+}
+
+const Body = ({ description, children }: Props): Element<any> => (
   <Section>
     <Text>{description}</Text>
     <Chart>{children}</Chart>
   </Section>
 )
-
-Body.propTypes = {
-  description: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
-}
 
 export default Body

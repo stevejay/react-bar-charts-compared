@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types'
+// @flow
+
 import styled from 'styled-components'
 import CircleIcon from 'react-icons/lib/fa/circle'
 
@@ -13,9 +14,5 @@ const Dot = styled(CircleIcon)`
   will-change: transform, opacity;
   transition: opacity ${props => props.theme.timing.hover} ease-in-out, transform ${props => props.theme.timing.hover} ease-in-out;
 `
-
-Dot.propTypes = {
-  selected: PropTypes.bool.isRequired
-}
 
 export default Dot

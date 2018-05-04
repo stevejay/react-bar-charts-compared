@@ -1,4 +1,6 @@
-export function fluidAttr (attrName, initial, addition) {
+// @flow
+
+export function fluidAttr (attrName: string, initial: string, addition: string) {
   return `
     ${attrName}: ${initial};
 

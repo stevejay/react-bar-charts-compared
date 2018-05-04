@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element, ElementType } from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
@@ -42,15 +44,15 @@ const StyledButton = styled.button`
   }
 `
 
-const Button = ({ children, onClick }) => (
+type Props = {
+  children: ElementType,
+  onClick: void => void,
+}
+
+const Button = ({ children, onClick }: Props): Element<any> => (
   <StyledButton onClick={onClick}>
     {children}
   </StyledButton>
 )
-
-Button.propTypes = {
-  children: PropTypes.any,
-  onClick: PropTypes.func.isRequired
-}
 
 export default Button

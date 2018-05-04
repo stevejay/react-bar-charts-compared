@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import styled from 'styled-components'
 
 const H1 = styled.h1`
@@ -9,14 +11,14 @@ const H1 = styled.h1`
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `
 
-const Header = ({ children }) => (
+type Props = {
+  children: Element<any>,
+}
+
+const Header = ({ children }: Props): Element<any> => (
   <header>
     <H1>{children}</H1>
   </header>
 )
-
-Header.propTypes = {
-  children: PropTypes.node.isRequired
-}
 
 export default Header

@@ -1,21 +1,23 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 
 import Header from './header'
 import Body from './body'
 
-const Card = ({ title, url, description, children }) => (
+type Props = {
+  title: string,
+  url: string,
+  description: string,
+  children: Element<any>,
+}
+
+const Card = ({ title, url, description, children }: Props): Element<any> => (
   <article>
     <Header title={title} url={url} />
     <Body description={description}>{children}</Body>
   </article>
 )
-
-Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
-}
 
 export default Card

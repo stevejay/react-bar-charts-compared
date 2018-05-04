@@ -1,4 +1,5 @@
 // @flow
+
 import HighchartsExample from './components/examples/highcharts'
 import D3KitExample from './components/examples/d3kit'
 import D3KitHybridExample from './components/examples/d3kit-hybrid'
@@ -8,8 +9,9 @@ import VictoryExample from './components/examples/victory'
 import BillboardExample from './components/examples/billboard'
 import ChartistExample from './components/examples/chartist'
 import NivoExample from './components/examples/nivo'
+import type { Example } from './types'
 
-export default [
+const EXAMPLES: Array<Example> = [
   {
     title: 'Highcharts',
     url: 'https://www.highcharts.com/',
@@ -65,3 +67,5 @@ export default [
     component: NivoExample
   }
 ]
+
+export default EXAMPLES

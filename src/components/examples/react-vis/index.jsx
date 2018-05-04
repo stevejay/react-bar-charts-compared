@@ -79,6 +79,6 @@ ReactVisExample.propTypes = {
   theme: PropTypes.object.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }))(
+export default connect(state => ({ data: state.data.people }))(
   withTheme(ReactVisExample)
 )

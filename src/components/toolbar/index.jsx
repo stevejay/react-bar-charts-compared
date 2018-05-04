@@ -1,11 +1,20 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import IconButton from './icon-button'
 import Button from './button'
 import Container from './container'
+import type { UpdateType } from '../../types'
 
-class Toolbar extends React.Component {
+type Props = {
+  totalSlides: number,
+  currentSlideIndex: number,
+  updateData: UpdateType => void,
+  updateSlideIndex: number => void,
+}
+
+class Toolbar extends React.Component<Props> {
   shouldComponentUpdate () {
     return false
   }
@@ -46,13 +55,6 @@ class Toolbar extends React.Component {
       </Container>
     )
   }
-}
-
-Toolbar.propTypes = {
-  totalSlides: PropTypes.number.isRequired,
-  currentSlideIndex: PropTypes.number.isRequired,
-  updateData: PropTypes.func.isRequired,
-  updateSlideIndex: PropTypes.func.isRequired
 }
 
 export default Toolbar

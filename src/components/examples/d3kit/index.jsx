@@ -118,4 +118,4 @@ D3KitExample.propTypes = {
   data: PropTypes.array.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }))(D3KitExample)
+export default connect(state => ({ data: state.data.people }))(D3KitExample)

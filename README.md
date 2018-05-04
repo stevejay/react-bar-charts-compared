@@ -1,12 +1,24 @@
 # react-bar-charts-compared
 
-Implementing a simple bar chart in various React charting solutions, or 
-JavaScript charting solutions that have React adaptors.
+An SPA that demonstrates implementing a simple bar chart using various 
+React.js charting solutions. A live demo is available [here](https://www.perspectivespace.com/react-bar-charts-compared/).
+
+## Introduction
+
+This repo is an exploration of free and paid charting solutions that can be used in a React.js SPA. Some of these are native React.js solutions and others
+are JavaScript libraries that have React.js adaptors. A simple bar chart
+has been implemented in each of the tested charting solutions.
+
+## Implementation
+
+The creation of this SPA served as an excuse to get experience in the following tech:
+- [Styled Components](https://www.styled-components.com/)
+- [Flow](https://flow.org/)
 
 ## Rejected Charting Solutions
 
 - Taucharts
-- [C3](http://c3js.org/), as it is for d3 v3 and billboardjs can be used instead for d3 v4.
+- [C3](http://c3js.org/), as it is for the earlier v3 version of d3.
 
 ## Charting Solutions Still To Look At
 
@@ -23,3 +35,8 @@ JavaScript charting solutions that have React adaptors.
 - https://www.fusioncharts.com/charts/line-area-charts/
 - https://github.com/zingchart/awesome-charting
 - https://www.metricsgraphicsjs.org/
+- f8: https://github.com/fbsamples/f8app/tree/master/js/actions
+
+## License
+
+[MIT](LICENSE)

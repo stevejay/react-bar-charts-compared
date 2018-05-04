@@ -77,6 +77,6 @@ BillboardExample.propTypes = {
   data: PropTypes.array.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }))(
+export default connect(state => ({ data: state.data.people }))(
   BillboardExample
 )

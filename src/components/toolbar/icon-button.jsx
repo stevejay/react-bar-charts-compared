@@ -1,13 +1,14 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import PreviousIcon from 'react-icons/lib/fa/arrow-left'
 import NextIcon from 'react-icons/lib/fa/arrow-right'
 import styled from 'styled-components'
 
 import * as styledUtil from '../../utils/styled'
 
-const ICON_PREVIOUS = 'previous'
-const ICON_NEXT = 'next'
+type IconType = 'previous' | 'next'
 
 const StyledButton = styled.button`
   appearance: none;
@@ -37,15 +38,15 @@ const StyledButton = styled.button`
   }
 `
 
-const IconButton = ({ icon, onClick }) => (
+type Props = {
+  icon: IconType,
+  onClick: void => void,
+}
+
+const IconButton = ({ icon, onClick }: Props): Element<any> => (
   <StyledButton onClick={onClick}>
-    {icon === ICON_PREVIOUS ? <PreviousIcon /> : <NextIcon />}
+    {icon === 'previous' ? <PreviousIcon /> : <NextIcon />}
   </StyledButton>
 )
-
-IconButton.propTypes = {
-  icon: PropTypes.oneOf([ICON_PREVIOUS, ICON_NEXT]).isRequired,
-  onClick: PropTypes.func.isRequired
-}
 
 export default IconButton

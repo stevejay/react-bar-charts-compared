@@ -1,4 +1,5 @@
 // @flow
+
 export default {
   timing: {
     hover: '150ms'

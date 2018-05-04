@@ -94,5 +94,5 @@ const VictoryExample = props => (
 )
 
 export default connect(state => ({
-  data: state.data.barChart
+  data: state.data.people
 }))(withTheme(VictoryExample))

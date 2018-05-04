@@ -41,6 +41,6 @@ HighchartsExample.propTypes = {
 }
 
 export default withHighcharts(
-  connect(state => ({ data: state.data.barChart }))(HighchartsExample),
+  connect(state => ({ data: state.data.people }))(HighchartsExample),
   Highcharts
 )

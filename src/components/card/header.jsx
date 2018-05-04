@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import styled from 'styled-components'
 
 const HeaderElement = styled.header`
@@ -28,7 +30,12 @@ const Link = styled.a`
   }
 `
 
-const Header = ({ title, url }) => (
+type Props = {
+  title: string,
+  url: string,
+}
+
+const Header = ({ title, url }: Props): Element<any> => (
   <HeaderElement>
     <H2>{title}</H2>
     <Link href={url} target='_blank' rel='nofollow'>
@@ -36,10 +43,5 @@ const Header = ({ title, url }) => (
     </Link>
   </HeaderElement>
 )
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
-}
 
 export default Header

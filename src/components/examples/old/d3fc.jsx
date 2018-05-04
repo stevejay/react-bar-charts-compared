@@ -112,4 +112,4 @@ D3FCExample.propTypes = {
   data: PropTypes.array.isRequired
 }
 
-export default connect(state => ({ data: state.data.barChart }))(D3FCExample)
+export default connect(state => ({ data: state.data.people }))(D3FCExample)

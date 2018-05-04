@@ -1,11 +1,17 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import _ from 'lodash'
 
 import Container from './container'
 import Dot from './dot'
 
-class SlideIndicator extends React.PureComponent {
+type Props = {
+  totalSlides: number,
+  currentSlideIndex: number,
+}
+
+class SlideIndicator extends React.PureComponent<Props> {
   render () {
     const { totalSlides, currentSlideIndex } = this.props
 
@@ -17,11 +23,6 @@ class SlideIndicator extends React.PureComponent {
       </Container>
     )
   }
-}
-
-SlideIndicator.propTypes = {
-  totalSlides: PropTypes.number.isRequired,
-  currentSlideIndex: PropTypes.number.isRequired
 }
 
 export default SlideIndicator
