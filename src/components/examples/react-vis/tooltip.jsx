@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import styled from 'styled-components'
 import { Hint } from 'react-vis'
 
@@ -16,7 +18,11 @@ const Paragraph = styled.p`
   margin: 0;
 `
 
-const Tooltip = props => (
+type Props = {
+  value: { key: string, value: number },
+}
+
+const Tooltip = (props: Props): Element<any> => (
   <Hint {...props}>
     <Aside>
       <Paragraph>{props.value.key}</Paragraph>
@@ -24,9 +30,5 @@ const Tooltip = props => (
     </Aside>
   </Hint>
 )
-
-Tooltip.propTypes = {
-  value: PropTypes.object.isRequired
-}
 
 export default Tooltip

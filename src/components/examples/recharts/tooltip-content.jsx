@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -15,15 +17,15 @@ const Paragraph = styled.p`
   margin: 0;
 `
 
-const TooltipContent = ({ payload, label }) => (
+type Props = {
+  label: string,
+  payload: Array<{ value: any }>,
+}
+
+const TooltipContent = ({ payload, label }: Props): Element<any> => (
   <Container>
     <Paragraph>{label}<br />{payload[0] ? payload[0].value : ''}</Paragraph>
   </Container>
 )
-
-TooltipContent.propTypes = {
-  label: PropTypes.string.isRequired,
-  payload: PropTypes.array
-}
 
 export default TooltipContent

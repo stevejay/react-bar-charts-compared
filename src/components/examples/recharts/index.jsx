@@ -1,13 +1,21 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import { connect } from 'react-redux'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar } from 'recharts'
 import { withTheme } from 'styled-components'
 
 import Container from './container'
 import TooltipContent from './tooltip-content'
+import type { People, Theme, State } from '../../../types'
 
-const RechartsExample = ({ data, theme }) => (
+type Props = {
+  data: People,
+  theme: Theme,
+}
+
+const RechartsExample = ({ data, theme }: Props): Element<any> => (
   <Container width='100%' height='100%'>
     <BarChart data={data}>
       <CartesianGrid stroke={theme.color.darkForeground} opacity={0.5} />
@@ -23,11 +31,6 @@ const RechartsExample = ({ data, theme }) => (
   </Container>
 )
 
-RechartsExample.propTypes = {
-  data: PropTypes.array.isRequired,
-  theme: PropTypes.object.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(
+export default connect((state: State) => ({ data: state.data.people }))(
   withTheme(RechartsExample)
 )

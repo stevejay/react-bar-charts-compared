@@ -1,16 +1,24 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import { connect } from 'react-redux'
 import { VictoryBar, VictoryChart, VictoryTooltip, VictoryAxis } from 'victory'
 import { withTheme } from 'styled-components'
 
 import AutoSizerContainer from '../../auto-sizer-container'
+import type { People, Theme, State } from '../../../types'
 
 // It seems harder than it should be to create a chart with a fixed height and
 // a responsive width. Also, even with the 'standalone={false}' approach,
 // the bar chart doesn't behave well at narrow widths.
 
-class VictoryBarChart extends React.PureComponent {
+class VictoryBarChart
+  extends React.PureComponent<{
+    width?: number,
+    data: People,
+    theme: Theme,
+  }> {
   render () {
     const { width, data, theme } = this.props
 
@@ -55,7 +63,7 @@ class VictoryBarChart extends React.PureComponent {
 
     return (
       <svg
-        viewBox={'0 0 ' + width + ' 320'}
+        viewBox={'0 0 ' + (width || 0) + ' 320'}
         preserveAspectRatio='none'
         width={width}
         height={320}
@@ -81,18 +89,17 @@ class VictoryBarChart extends React.PureComponent {
   }
 }
 
-VictoryBarChart.propTypes = {
-  width: PropTypes.number,
-  data: PropTypes.array.isRequired,
-  theme: PropTypes.object.isRequired
+type Props = {
+  data: People,
+  theme: Theme,
 }
 
-const VictoryExample = props => (
+const VictoryExample = (props: Props): Element<any> => (
   <AutoSizerContainer>
     <VictoryBarChart {...props} />
   </AutoSizerContainer>
 )
 
-export default connect(state => ({
+export default connect((state: State) => ({
   data: state.data.people
 }))(withTheme(VictoryExample))

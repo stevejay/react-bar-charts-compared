@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import {
@@ -15,21 +16,31 @@ import { withTheme } from 'styled-components'
 
 import Container from './container'
 import Tooltip from './tooltip'
+import type { People, Theme, State } from '../../../types'
 
 const X_ACCESSOR = d => d.key
 const Y_ACCESSOR = d => d.value
 const SERIES_CLASS_NAME = 'first-series'
 
-class ReactVisExample extends React.PureComponent {
+type Props = {
+  data: People,
+  theme: Theme,
+}
+
+class ReactVisExample
+  extends React.PureComponent<
+    Props,
+    {| hoveredCell: ?{ key: string, value: number } |}
+  > {
   constructor (props) {
     super(props)
-    this.state = { hoveredCell: false }
+    this.state = { hoveredCell: null }
   }
   handleValueMouseOver = d => {
     this.setState({ hoveredCell: d })
   }
   handleValueMouseOut = d => {
-    this.setState({ hoveredCell: false })
+    this.setState({ hoveredCell: null })
   }
   render () {
     const { data, theme } = this.props
@@ -67,18 +78,13 @@ class ReactVisExample extends React.PureComponent {
             onValueMouseOver={this.handleValueMouseOver}
             onValueMouseOut={this.handleValueMouseOut}
           />
-          {hoveredCell && <Tooltip value={hoveredCell} />}
+          {!!hoveredCell && <Tooltip value={hoveredCell} />}
         </FlexibleWidthXYPlot>
       </Container>
     )
   }
 }
 
-ReactVisExample.propTypes = {
-  data: PropTypes.array.isRequired,
-  theme: PropTypes.object.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(
+export default connect((state: State) => ({ data: state.data.people }))(
   withTheme(ReactVisExample)
 )

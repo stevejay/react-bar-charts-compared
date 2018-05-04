@@ -13,6 +13,10 @@ export type DataState = {|
   +people: People,
 |}
 
+export type State = {|
+  +data: DataState,
+|}
+
 export type UpdateType = 'values' | 'categories'
 
 export type Action = {|
@@ -24,7 +28,7 @@ export type Dispatch = (
   action: Action | ThunkAction | PromiseAction | Array<Action>
 ) => any
 
-export type GetState = () => Object
+export type GetState = () => State
 
 export type ThunkAction = (
   dispatch: Dispatch,
@@ -38,4 +42,10 @@ export type Example = {|
   +url: string,
   +description: string,
   +component: any, // TODO replace
+|}
+
+export type Theme = {|
+  timing: any,
+  color: any,
+  font: any,
 |}

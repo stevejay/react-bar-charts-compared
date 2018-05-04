@@ -5,7 +5,7 @@ import type { Element } from 'react'
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer'
 
 type Props = {
-  className: string,
+  className?: string,
   children: Element<any>,
 }
 

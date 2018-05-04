@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import { connect } from 'react-redux'
 import { HybridChart } from 'd3kit'
 import { createComponent } from 'react-d3kit'
@@ -8,6 +10,7 @@ import * as d3 from 'd3'
 import { extentLinear } from 'd3fc-extent'
 
 import Container from './container'
+import type { People, State } from '../../../types'
 
 class HybridBarChart extends HybridChart {
   constructor (selector, options) {
@@ -122,16 +125,16 @@ const OPTIONS = {
   offset: { x: 0.5, y: 0.5 }
 }
 
-const D3KitHybridExampleWrapper = ({ data }) => (
+type Props = {
+  data: People,
+}
+
+const D3KitHybridExampleWrapper = ({ data }: Props): Element<any> => (
   <Container>
     <ReactHybridBarChart data={data} options={OPTIONS} watch={false} />
   </Container>
 )
 
-D3KitHybridExampleWrapper.propTypes = {
-  data: PropTypes.array.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(
+export default connect((state: State) => ({ data: state.data.people }))(
   D3KitHybridExampleWrapper
 )

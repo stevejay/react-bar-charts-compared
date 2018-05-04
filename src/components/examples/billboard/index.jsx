@@ -1,16 +1,19 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import BillboardChart from 'react-billboardjs'
 import 'react-billboardjs/lib/billboard.css'
 
 import Container from './container'
+import type { People, State } from '../../../types'
 
-class BillboardExample extends React.Component {
-  constructor (props) {
-    super(props)
-    this.handleChartMounted = this.handleChartMounted.bind(this)
-  }
+type Props = {
+  data: People,
+}
+
+class BillboardExample extends React.Component<Props> {
+  _chart: any
   componentWillReceiveProps (nextProps) {
     // TODO strange that I have to do it this way. What's the point of the adapter?
 
@@ -30,7 +33,7 @@ class BillboardExample extends React.Component {
   shouldComponentUpdate () {
     return false
   }
-  handleChartMounted (ref) {
+  handleChartMounted = ref => {
     this._chart = ref
   }
   render () {
@@ -73,10 +76,6 @@ class BillboardExample extends React.Component {
   }
 }
 
-BillboardExample.propTypes = {
-  data: PropTypes.array.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(
+export default connect((state: State): Props => ({ data: state.data.people }))(
   BillboardExample
 )

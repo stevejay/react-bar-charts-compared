@@ -1,8 +1,12 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import { connect } from 'react-redux'
 import { ResponsiveBar } from '@nivo/bar'
 import { withTheme } from 'styled-components'
+
+import type { People, Theme, State } from '../../../types'
 
 // .nivo rect {
 //   transition: fill .15s ease-in-out;
@@ -12,7 +16,12 @@ import { withTheme } from 'styled-components'
 //   fill: #1EE3A1 !important;
 // }
 
-const NivoExample = ({ data, theme }) => {
+type Props = {
+  data: People,
+  theme: Theme,
+}
+
+const NivoExample = ({ data, theme }: Props): Element<any> => {
   const defaultTheme = {
     axis: {
       textColor: theme.color.foreground,
@@ -98,11 +107,6 @@ const NivoExample = ({ data, theme }) => {
   )
 }
 
-NivoExample.propTypes = {
-  data: PropTypes.array.isRequired,
-  theme: PropTypes.object.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(
+export default connect((state: State) => ({ data: state.data.people }))(
   withTheme(NivoExample)
 )

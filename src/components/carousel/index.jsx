@@ -41,7 +41,7 @@ type Props = {
 }
 
 type State = {
-  style: any,
+  style: ?{ height: ?number },
 }
 
 class Carousel extends React.PureComponent<Props, State> {

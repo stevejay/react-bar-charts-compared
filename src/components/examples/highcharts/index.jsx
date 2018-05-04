@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Highcharts from 'highcharts'
 import {
@@ -13,8 +14,14 @@ import {
 } from 'react-jsx-highcharts'
 
 import Container from './container'
+import type { People, State } from '../../../types'
 
-class HighchartsExample extends React.PureComponent {
+type Props = {
+  data: People,
+  width: number,
+}
+
+class HighchartsExample extends React.PureComponent<Props> {
   render () {
     const { data, width } = this.props
 
@@ -36,11 +43,7 @@ class HighchartsExample extends React.PureComponent {
   }
 }
 
-HighchartsExample.propTypes = {
-  data: PropTypes.array.isRequired
-}
-
 export default withHighcharts(
-  connect(state => ({ data: state.data.people }))(HighchartsExample),
+  connect((state: State) => ({ data: state.data.people }))(HighchartsExample),
   Highcharts
 )

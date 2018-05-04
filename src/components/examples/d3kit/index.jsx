@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
+import type { Element } from 'react'
 import { connect } from 'react-redux'
 import { SvgChart } from 'd3kit'
 import { createComponent } from 'react-d3kit'
@@ -8,6 +10,7 @@ import d3Tip from 'd3-tip'
 import { extentLinear } from 'd3fc-extent'
 
 import Container from './container'
+import type { People, State } from '../../../types'
 
 class BarChart extends SvgChart {
   constructor (selector, options) {
@@ -108,14 +111,16 @@ const CHART_OPTIONS = {
   offset: { x: 0.5, y: 0.5 }
 }
 
-const D3KitExample = ({ data }) => (
+type Props = {
+  data: People,
+}
+
+const D3KitExample = ({ data }: Props): Element<any> => (
   <Container>
     <BarChartComponent data={data} options={CHART_OPTIONS} watch={false} />
   </Container>
 )
 
-D3KitExample.propTypes = {
-  data: PropTypes.array.isRequired
-}
-
-export default connect(state => ({ data: state.data.people }))(D3KitExample)
+export default connect((state: State) => ({ data: state.data.people }))(
+  D3KitExample
+)
