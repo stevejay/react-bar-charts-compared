@@ -20,10 +20,7 @@ const X_ACCESSOR = d => d.key;
 const Y_ACCESSOR = d => d.value;
 const SERIES_CLASS_NAME = "first-series";
 
-class ReactVisExample extends React.PureComponent<
-  Props,
-  {| hoveredCell: ?{ key: string, value: number } |}
-> {
+class ReactVisExample extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { hoveredCell: null };
