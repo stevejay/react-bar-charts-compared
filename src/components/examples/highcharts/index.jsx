@@ -1,8 +1,7 @@
-// @flow
-
-import React from 'react'
-import { connect } from 'react-redux'
-import Highcharts from 'highcharts'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import Highcharts from "highcharts";
 import {
   withHighcharts,
   HighchartsChart,
@@ -11,39 +10,38 @@ import {
   YAxis,
   ColumnSeries,
   Tooltip
-} from 'react-jsx-highcharts'
+} from "react-jsx-highcharts";
 
-import Container from './container'
-import type { People, State } from '../../../types'
+import Container from "./container";
 
-type Props = {|
-  +data: People,
-  +width: number,
-|}
-
-class HighchartsExample extends React.PureComponent<Props> {
-  render () {
-    const { data, width } = this.props
+class HighchartsExample extends React.PureComponent {
+  render() {
+    const { data, width } = this.props;
 
     return (
       <Container>
         <HighchartsChart>
           <Chart width={width} height={320} />
-          <XAxis categories={data.map(datum => datum.key)} type='category' />
-          <YAxis id='number'>
+          <XAxis categories={data.map(datum => datum.key)} type="category" />
+          <YAxis id="number">
             <ColumnSeries
-              id='installation'
+              id="installation"
               data={data.map(datum => datum.value)}
             />
           </YAxis>
           <Tooltip />
         </HighchartsChart>
       </Container>
-    )
+    );
   }
 }
 
+HighchartsExample.propTypes = {
+  data: PropTypes.array.isRequired,
+  width: PropTypes.number
+};
+
 export default withHighcharts(
-  connect((state: State) => ({ data: state.data.people }))(HighchartsExample),
+  connect(state => ({ data: state.data.people }))(HighchartsExample),
   Highcharts
-)
+);

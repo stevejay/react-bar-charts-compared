@@ -1,15 +1,13 @@
-// @flow
+import React from "react";
+import PropTypes from "prop-types";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { injectGlobal } from "styled-components";
+import window from "global/window";
 
-import React from 'react'
-import type { Element } from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { injectGlobal } from 'styled-components'
-import window from 'global/window'
+import Container from "./container";
 
-import Container from './container'
-
-const FADE_TIMEOUT_MS = 400
-const FADE_CLASSNAME = 'carousel-fade'
+const FADE_TIMEOUT_MS = 400;
+const FADE_CLASSNAME = "carousel-fade";
 
 injectGlobal`
   .${FADE_CLASSNAME}-enter {
@@ -33,54 +31,45 @@ injectGlobal`
     opacity: 0.01;
     transition: opacity ${FADE_TIMEOUT_MS}ms ease-in-out;
   }
-`
+`;
 
-type Props = {|
-  +currentSlideIndex: number,
-  +renderSlide: number => Element<any>,
-|}
-
-type State = {|
-  style: ?{ height: ?number },
-|}
-
-class Carousel extends React.PureComponent<Props, State> {
-  _mounted: boolean
-  _contentContainer: HTMLElement
-  constructor (props: Props) {
-    super(props)
-    this._mounted = true
-    this.state = { style: null }
+class Carousel extends React.PureComponent {
+  _mounted: boolean;
+  _contentContainer: HTMLElement;
+  constructor(props: Props) {
+    super(props);
+    this._mounted = true;
+    this.state = { style: null };
   }
   handleContainerMounted = (ref: any) => {
-    this._contentContainer = ref
-  }
-  componentWillReceiveProps (nextProps: Props) {
+    this._contentContainer = ref;
+  };
+  componentWillReceiveProps(nextProps: Props) {
     if (nextProps.currentSlideIndex !== this.props.currentSlideIndex) {
       this._contentContainer.style.height =
-        this._contentContainer.scrollHeight + 'px'
+        this._contentContainer.scrollHeight + "px";
 
       // flush the above change to the DOM:
       // eslint-disable-next-line
-      this._contentContainer.scrollHeight
+      this._contentContainer.scrollHeight;
     }
   }
-  componentWillUnmount () {
-    this._mounted = false
+  componentWillUnmount() {
+    this._mounted = false;
   }
   handleSlideEnter = (node: any) => {
-    this._mounted && this.setState({ style: { height: node.scrollHeight } })
-  }
+    this._mounted && this.setState({ style: { height: node.scrollHeight } });
+  };
   handleSlideEntered = (node: any) => {
     // setTimeout works; raf didn't work:
     // Maybe raf failed because it needs the double raf hack in certain browsers?
     window.setTimeout(() => {
-      this._mounted && this.setState({ style: { height: null } })
-    }, 0)
-  }
-  render () {
-    const { currentSlideIndex } = this.props
-    const { style } = this.state
+      this._mounted && this.setState({ style: { height: null } });
+    }, 0);
+  };
+  render() {
+    const { currentSlideIndex } = this.props;
+    const { style } = this.state;
 
     return (
       <Container
@@ -100,8 +89,13 @@ class Carousel extends React.PureComponent<Props, State> {
           </CSSTransition>
         </TransitionGroup>
       </Container>
-    )
+    );
   }
 }
 
-export default Carousel
+Carousel.propTypes = {
+  currentSlideIndex: PropTypes.number.isRequired,
+  renderSlide: PropTypes.func.isRequired
+};
+
+export default Carousel;

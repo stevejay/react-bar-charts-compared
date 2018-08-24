@@ -1,20 +1,12 @@
-// @flow
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import BillboardChart from "react-billboardjs";
+import "react-billboardjs/lib/billboard.css";
+import Container from "./container";
 
-import React from 'react'
-import { connect } from 'react-redux'
-import BillboardChart from 'react-billboardjs'
-import 'react-billboardjs/lib/billboard.css'
-
-import Container from './container'
-import type { People, State } from '../../../types'
-
-type Props = {|
-  +data: People,
-|}
-
-class BillboardExample extends React.Component<Props> {
-  _chart: any
-  componentWillReceiveProps (nextProps) {
+class BillboardExample extends React.Component {
+  componentWillReceiveProps(nextProps) {
     // TODO strange that I have to do it this way. What's the point of the adapter?
 
     if (nextProps.data !== this.props.data) {
@@ -22,37 +14,37 @@ class BillboardExample extends React.Component<Props> {
         this._chart.loadData({
           json: nextProps.data,
           keys: {
-            x: 'key',
-            value: ['value']
+            x: "key",
+            value: ["value"]
           },
-          type: 'bar'
-        })
+          type: "bar"
+        });
       }
     }
   }
-  shouldComponentUpdate () {
-    return false
+  shouldComponentUpdate() {
+    return false;
   }
   handleChartMounted = ref => {
-    this._chart = ref
-  }
-  render () {
-    const { data } = this.props
+    this._chart = ref;
+  };
+  render() {
+    const { data } = this.props;
 
     const axis = {
       x: {
-        type: 'category'
+        type: "category"
       }
-    }
+    };
 
     const billboardData = {
       json: data,
       keys: {
-        x: 'key',
-        value: ['value']
+        x: "key",
+        value: ["value"]
       },
-      type: 'bar'
-    }
+      type: "bar"
+    };
 
     return (
       <Container>
@@ -70,12 +62,21 @@ class BillboardExample extends React.Component<Props> {
             bottom: 20,
             left: 60
           }}
+          grid={{
+            y: {
+              show: true
+            }
+          }}
         />
       </Container>
-    )
+    );
   }
 }
 
-export default connect((state: State): Props => ({ data: state.data.people }))(
+BillboardExample.propTypes = {
+  data: PropTypes.array.isRequired
+};
+
+export default connect(state => ({ data: state.data.people }))(
   BillboardExample
-)
+);

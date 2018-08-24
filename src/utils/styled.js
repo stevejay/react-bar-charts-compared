@@ -1,6 +1,4 @@
-// @flow
-
-export function fluidAttr (attrName: string, initial: string, addition: string) {
+export function fluidAttr(attrName, initial, addition) {
   return `
     ${attrName}: ${initial};
 
@@ -11,5 +9,5 @@ export function fluidAttr (attrName: string, initial: string, addition: string) 
     @media (min-width: 80rem) {
       ${attrName}: calc(${initial} + addition);
     }
-  `
+  `;
 }

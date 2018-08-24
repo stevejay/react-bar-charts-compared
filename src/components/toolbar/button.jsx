@@ -1,12 +1,10 @@
-// @flow
-
-import React from 'react'
-import type { Element, ElementType } from 'react'
-import styled from 'styled-components'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const StyledButton = styled.button`
   text-decoration: none;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   text-transform: none;
   letter-spacing: normal;
   display: inline-block;
@@ -19,9 +17,9 @@ const StyledButton = styled.button`
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   line-height: 1.5;
-  border-radius: .25em;
+  border-radius: 0.25em;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -31,7 +29,8 @@ const StyledButton = styled.button`
   text-shadow: none;
   color: ${props => props.theme.color.primary};
   border-color: ${props => props.theme.color.primary};
-  transition: background-color ${props => props.theme.timing.hover}, color ${props => props.theme.timing.hover};
+  transition: background-color ${props => props.theme.timing.hover},
+    color ${props => props.theme.timing.hover};
 
   &:last-of-type {
     margin-right: 0;
@@ -42,17 +41,15 @@ const StyledButton = styled.button`
     background-color: ${props => props.theme.color.primary};
     box-shadow: none;
   }
-`
+`;
 
-type Props = {|
-  +children: ElementType,
-  +onClick: void => mixed,
-|}
+const Button = ({ children, onClick }) => (
+  <StyledButton onClick={onClick}>{children}</StyledButton>
+);
 
-const Button = ({ children, onClick }: Props): Element<any> => (
-  <StyledButton onClick={onClick}>
-    {children}
-  </StyledButton>
-)
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired
+};
 
-export default Button
+export default Button;

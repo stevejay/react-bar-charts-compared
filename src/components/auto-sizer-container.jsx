@@ -1,26 +1,18 @@
-// @flow
+import React from "react";
+import PropTypes from "prop-types";
+import AutoSizer from "react-virtualized/dist/commonjs/AutoSizer";
 
-import React from 'react'
-import type { Element } from 'react'
-import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer'
-
-type Props = {|
-  +className?: string,
-  +children: Element<any>,
-|}
-
-type RenderProps = {|
-  +width: number,
-  +height: number,
-|}
-
-const AutoSizerContainer = ({ className, children }: Props): Element<any> => (
+const AutoSizerContainer = ({ className, children }) => (
   <AutoSizer className={className}>
-    {({ width, height }: RenderProps) =>
-      (!width || !height
-        ? null
-        : React.cloneElement(children, { width, height }))}
+    {({ width, height }) =>
+      !width || !height ? null : React.cloneElement(children, { width, height })
+    }
   </AutoSizer>
-)
+);
 
-export default AutoSizerContainer
+AutoSizerContainer.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+};
+
+export default AutoSizerContainer;

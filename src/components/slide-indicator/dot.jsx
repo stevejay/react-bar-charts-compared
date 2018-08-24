@@ -1,7 +1,5 @@
-// @flow
-
-import styled from 'styled-components'
-import CircleIcon from 'react-icons/lib/fa/circle'
+import styled from "styled-components";
+import { FaCircle as CircleIcon } from "react-icons/fa";
 
 const Dot = styled(CircleIcon)`
   color: ${props => props.theme.color.brightForeground};
@@ -12,7 +10,8 @@ const Dot = styled(CircleIcon)`
   margin: 0 3px;
   transform: scale(${props => (props.selected ? 1.15 : 1)});
   will-change: transform, opacity;
-  transition: opacity ${props => props.theme.timing.hover} ease-in-out, transform ${props => props.theme.timing.hover} ease-in-out;
-`
+  transition: opacity ${props => props.theme.timing.hover} ease-in-out,
+    transform ${props => props.theme.timing.hover} ease-in-out;
+`;
 
-export default Dot
+export default Dot;

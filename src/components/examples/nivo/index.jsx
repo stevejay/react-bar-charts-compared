@@ -1,12 +1,8 @@
-// @flow
-
-import React from 'react'
-import type { Element } from 'react'
-import { connect } from 'react-redux'
-import { ResponsiveBar } from '@nivo/bar'
-import { withTheme } from 'styled-components'
-
-import type { People, Theme, State } from '../../../types'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { ResponsiveBar } from "@nivo/bar";
+import { withTheme } from "styled-components";
 
 // .nivo rect {
 //   transition: fill .15s ease-in-out;
@@ -16,52 +12,47 @@ import type { People, Theme, State } from '../../../types'
 //   fill: #1EE3A1 !important;
 // }
 
-type Props = {|
-  +data: People,
-  +theme: Theme,
-|}
-
-const NivoExample = ({ data, theme }: Props): Element<any> => {
+const NivoExample = ({ data, theme }) => {
   const defaultTheme = {
     axis: {
       textColor: theme.color.foreground,
       fontSize: theme.font.chartLabelSize,
       tickColor: theme.color.darkForeground,
-      legendColor: '#000',
+      legendColor: "#000",
       legendFontSize: theme.font.chartLabelSize
     },
     grid: {
       stroke: theme.color.darkForeground,
       strokeWidth: 1,
-      strokeDasharray: ''
+      strokeDasharray: ""
     },
     markers: {
-      lineColor: '#000',
+      lineColor: "#000",
       lineStrokeWidth: 1,
-      textColor: '#000',
+      textColor: "#000",
       fontSize: theme.font.chartLabelSize
     },
     dots: {
-      textColor: '#000',
+      textColor: "#000",
       fontSize: theme.font.chartLabelSize
     },
     tooltip: {
       container: {
         background: theme.color.brightForeground,
         color: theme.color.darkBackground,
-        fontSize: 'inherit',
-        borderRadius: '2px',
-        boxShadow: '0 1px 2px rgba(0, 0, 0, 0.25)',
-        padding: '5px 9px'
+        fontSize: "inherit",
+        borderRadius: "2px",
+        boxShadow: "0 1px 2px rgba(0, 0, 0, 0.25)",
+        padding: "5px 9px"
       },
       basic: {
-        whiteSpace: 'pre',
-        display: 'flex',
-        alignItems: 'center'
+        whiteSpace: "pre",
+        display: "flex",
+        alignItems: "center"
       },
       table: {},
       tableCell: {
-        padding: '3px 5px'
+        padding: "3px 5px"
       }
     },
     labels: {
@@ -70,12 +61,12 @@ const NivoExample = ({ data, theme }: Props): Element<any> => {
     sankey: {
       label: {}
     }
-  }
+  };
 
   return (
     <ResponsiveBar
       data={data}
-      indexBy='key'
+      indexBy="key"
       theme={defaultTheme}
       margin={{
         top: 20,
@@ -86,13 +77,13 @@ const NivoExample = ({ data, theme }: Props): Element<any> => {
       colors={theme.color.foreground}
       padding={0.3}
       axisBottom={{
-        orient: 'bottom',
+        orient: "bottom",
         tickSize: 0,
         tickPadding: 5,
         tickRotation: 0
       }}
       axisLeft={{
-        orient: 'left',
+        orient: "left",
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0
@@ -102,11 +93,16 @@ const NivoExample = ({ data, theme }: Props): Element<any> => {
       motionStiffness={300}
       motionDamping={40}
       isInteractive
-      borderColor='inherit:darker(1.6)'
+      borderColor="inherit:darker(1.6)"
     />
-  )
-}
+  );
+};
 
-export default connect((state: State) => ({ data: state.data.people }))(
+NivoExample.propTypes = {
+  data: PropTypes.array.isRequired,
+  theme: PropTypes.object.isRequired
+};
+
+export default connect(state => ({ data: state.data.people }))(
   withTheme(NivoExample)
-)
+);

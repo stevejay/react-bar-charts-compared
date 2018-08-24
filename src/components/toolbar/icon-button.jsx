@@ -1,14 +1,12 @@
-// @flow
+import React from "react";
+import PropTypes from "prop-types";
+import {
+  FaArrowLeft as PreviousIcon,
+  FaArrowRight as NextIcon
+} from "react-icons/fa";
+import styled from "styled-components";
 
-import React from 'react'
-import type { Element } from 'react'
-import PreviousIcon from 'react-icons/lib/fa/arrow-left'
-import NextIcon from 'react-icons/lib/fa/arrow-right'
-import styled from 'styled-components'
-
-import * as styledUtil from '../../utils/styled'
-
-type IconType = 'previous' | 'next'
+import * as styledUtil from "../../utils/styled";
 
 const StyledButton = styled.button`
   appearance: none;
@@ -16,12 +14,13 @@ const StyledButton = styled.button`
   border: none;
   background-color: transparent;
   padding: 0;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   color: ${props => props.theme.color.brightForeground};
   cursor: pointer;
   opacity: 0.66;
   will-change: transform, opacity;
-  transition: opacity ${props => props.theme.timing.hover} ease-in-out, transform ${props => props.theme.timing.hover} ease-in-out;
+  transition: opacity ${props => props.theme.timing.hover} ease-in-out,
+    transform ${props => props.theme.timing.hover} ease-in-out;
 
   &:hover {
     opacity: 1;
@@ -33,20 +32,23 @@ const StyledButton = styled.button`
   }
 
   svg {
-    ${styledUtil.fluidAttr('width', '2rem', '.5')}
-    ${styledUtil.fluidAttr('height', '2rem', '.5')}
+    ${styledUtil.fluidAttr("width", "2rem", ".5")} ${styledUtil.fluidAttr(
+      "height",
+      "2rem",
+      ".5"
+    )};
   }
-`
+`;
 
-type Props = {|
-  +icon: IconType,
-  +onClick: void => mixed,
-|}
-
-const IconButton = ({ icon, onClick }: Props): Element<any> => (
+const IconButton = ({ icon, onClick }) => (
   <StyledButton onClick={onClick}>
-    {icon === 'previous' ? <PreviousIcon /> : <NextIcon />}
+    {icon === "previous" ? <PreviousIcon /> : <NextIcon />}
   </StyledButton>
-)
+);
 
-export default IconButton
+IconButton.propTypes = {
+  icon: PropTypes.oneOf(["previous", "next"]).isRequired,
+  onClick: PropTypes.func.isRequired
+};
+
+export default IconButton;
