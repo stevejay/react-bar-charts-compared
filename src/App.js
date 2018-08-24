@@ -1,18 +1,18 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { ThemeProvider, injectGlobal } from 'styled-components'
-import 'normalize.css'
-import 'babel-polyfill'
+import React from "react";
+import { connect } from "react-redux";
+import { ThemeProvider, injectGlobal } from "styled-components";
+import "normalize.css";
+import "babel-polyfill";
 
-import Page from './components/page'
-import Card from './components/card'
-import Carousel from './components/carousel'
-import Toolbar from './components/toolbar'
-import SlideIndicator from './components/slide-indicator'
-import { updateBarChartData } from './actions/data'
-import theme from './theme'
-import examples from './examples'
-import * as styledUtil from './utils/styled'
+import Page from "./components/page";
+import Card from "./components/card";
+import Carousel from "./components/carousel";
+import Toolbar from "./components/toolbar";
+import SlideIndicator from "./components/slide-indicator";
+import { updateBarChartData } from "./actions/data";
+import theme from "./theme";
+import examples from "./examples";
+import * as styledUtil from "./utils/styled";
 
 injectGlobal`
   body {
@@ -22,8 +22,8 @@ injectGlobal`
     background-color: ${theme.color.background};
     color: ${theme.color.foreground};
     font-family: ${theme.font.defaultFamily};
-    ${styledUtil.fluidAttr('font-size', '.875rem', '.5')}
-    ${styledUtil.fluidAttr('padding', '.875rem', '1.75')}
+    ${styledUtil.fluidAttr("font-size", ".875rem", ".5")}
+    ${styledUtil.fluidAttr("padding", ".875rem", "1.75")}
   }
 
   .d3-tip {
@@ -35,29 +35,25 @@ injectGlobal`
     font-size: ${theme.font.chartLabelSize};
     border-radius: .2em;
   }
-`
+`;
 
-class App
-  extends React.Component<
-    { updateData: () => mixed },
-    { currentSlideIndex: number }
-  > {
-  constructor (props) {
-    super(props)
-    this.state = { currentSlideIndex: 0 }
-    this.props.updateData()
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { currentSlideIndex: 0 };
+    this.props.updateData();
   }
   renderSlide = index => (
     <Card {...examples[index]}>
       {React.createElement(examples[index].component)}
     </Card>
-  )
+  );
   updateSlideIndex = index => {
-    this.setState({ currentSlideIndex: index })
-  }
-  render () {
-    const { updateData } = this.props
-    const { currentSlideIndex } = this.state
+    this.setState({ currentSlideIndex: index });
+  };
+  render() {
+    const { updateData } = this.props;
+    const { currentSlideIndex } = this.state;
 
     return (
       <ThemeProvider theme={theme}>
@@ -81,8 +77,11 @@ class App
           </Page.Main>
         </Page>
       </ThemeProvider>
-    )
+    );
   }
 }
 
-export default connect(null, { updateData: updateBarChartData })(App)
+export default connect(
+  null,
+  { updateData: updateBarChartData }
+)(App);

@@ -27,12 +27,12 @@ class BarChart extends SvgChart {
       .offset([10, 0])
       .html(d => d.value);
 
+    this.barLocalVar = d3.local();
+
     this.content.call(this.tip);
 
     this.on("resize.default", this.visualize);
     this.on("data.default", this.visualize);
-
-    this.barLocalVar = d3.local();
   }
 
   visualize = () => {

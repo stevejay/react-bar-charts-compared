@@ -67,6 +67,9 @@ class BillboardExample extends React.Component {
               show: true
             }
           }}
+          transition={{
+            duration: 500
+          }}
         />
       </Container>
     );

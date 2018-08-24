@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import AutoSizerContainer from '../../auto-sizer-container'
+import AutoSizerContainer from "../../auto-sizer-container";
 
 export default styled(AutoSizerContainer)`
   & .d3kit-chart-root {
@@ -44,4 +44,4 @@ export default styled(AutoSizerContainer)`
   & .d3kit-chart-root text {
     line-height: 1.4;
   }
-`
+`;
