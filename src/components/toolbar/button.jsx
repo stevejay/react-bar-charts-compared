@@ -41,6 +41,11 @@ const StyledButton = styled.button`
     background-color: ${props => props.theme.color.primary};
     box-shadow: none;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 10px ${props => props.theme.color.primary};
+  }
 `;
 
 const Button = ({ children, onClick }) => (

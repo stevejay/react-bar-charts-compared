@@ -19,12 +19,6 @@ export default styled(AutoSizerContainer)`
     transition: fill ${props => props.theme.timing.hover} ease-in-out;
   }
 
-  & .bb .bb-bar._expanded_ {
-    fill-opacity: 1;
-    fill: ${props =>
-      props.theme.color.secondary} !important; /* important needed */
-  }
-
   & .bb .bb-ygrid {
     stroke: ${props => props.theme.color.darkForeground};
     stroke-dasharray: none;

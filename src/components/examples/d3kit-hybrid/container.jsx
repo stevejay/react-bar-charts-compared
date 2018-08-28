@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import AutoSizerContainer from '../../auto-sizer-container'
+import AutoSizerContainer from "../../auto-sizer-container";
 
 export default styled(AutoSizerContainer)`
   & .d3kit-chart-root {
     overflow: hidden !important;
+  }
+
+  & .d3kit-chart-root canvas {
+    z-index: 1;
+    pointer-events: none;
   }
 
   & .d3kit-chart-root svg {
@@ -44,4 +49,4 @@ export default styled(AutoSizerContainer)`
   & .d3kit-chart-root text {
     line-height: 1.4;
   }
-`
+`;

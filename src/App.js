@@ -34,6 +34,7 @@ injectGlobal`
     color: ${theme.color.foreground};
     font-size: ${theme.font.chartLabelSize};
     border-radius: .2em;
+    z-index: 1000;
   }
 `;
 

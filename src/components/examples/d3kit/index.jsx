@@ -34,7 +34,10 @@ class BarChart extends SvgChart {
     this.on("resize.default", this.visualize);
     this.on("data.default", this.visualize);
   }
-
+  destroy() {
+    super.destroy();
+    this.tip.hide();
+  }
   visualize = () => {
     if (!this.hasData()) {
       return;

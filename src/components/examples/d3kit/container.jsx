@@ -19,10 +19,6 @@ export default styled(AutoSizerContainer)`
     transition: fill ${props => props.theme.timing.hover} ease-in-out;
   }
 
-  & .d3kit-chart-root .content-layer .bar:hover {
-    fill: ${props => props.theme.color.secondary};
-  }
-
   & .d3kit-chart-root g[class*="axis-layer"] .domain,
   & .d3kit-chart-root g[class*="axis-layer"] .tick line {
     stroke: ${props => props.theme.color.foreground};
