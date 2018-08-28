@@ -34,37 +34,37 @@ const EXAMPLES = [
     title: "Billboard",
     url: "https://naver.github.io/billboard.js/",
     description:
-      "A lightweight wrapper for d3 v4, used with the react-billboardjs adaptor. An alternative to D3Kit.",
+      "A set of pre-built charts created using d3 v4, and used with the react-billboardjs adaptor.",
     component: BillboardExample
   },
   {
     title: "Recharts",
     url: "http://recharts.org/",
-    description: "Built using React.",
+    description: "Built using React.js.",
     component: RechartsExample
   },
   {
     title: "React Vis",
     url: "https://uber.github.io/react-vis/",
-    description: "Build using React by Uber.",
+    description: "Build using React.js by Uber.",
     component: ReactVisExample
   },
   {
     title: "Victory",
     url: "http://formidable.com/open-source/victory/",
-    description: "Build using React.",
+    description: "Build using React.js.",
     component: VictoryExample
   },
   {
     title: "Chartist",
     url: "https://gionkunz.github.io/chartist-js/",
-    description: "Has a React adaptor. Uses SMIL for animations.",
+    description: "Has a React.js adaptor. Uses SMIL for animations.",
     component: ChartistExample
   },
   {
     title: "Nivo",
     url: "http://nivo.rocks/#/",
-    description: "Built using React and d3.",
+    description: "Built using React.js and d3.",
     component: NivoExample
   }
 ];
