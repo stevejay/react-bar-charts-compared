@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export default styled.div`
   & .highcharts-background {
@@ -19,11 +19,13 @@ export default styled.div`
   & .highcharts-column-series rect {
     fill: ${props => props.theme.color.foreground};
     stroke: ${props => props.theme.color.foreground};
-    transition: fill ${props => props.theme.timing.hover} ease-in-out, stroke ${props => props.theme.timing.hover} ease-in-out;
+    transition: fill ${props =>
+      props.theme.timing.hover} ease-in-out, stroke ${props =>
+  props.theme.timing.hover} ease-in-out;
   }
 
-  & .highcharts-column-series rect.highcharts-point-hover {
+  /* & .highcharts-column-series rect.highcharts-point-hover {
     fill: ${props => props.theme.color.secondary};
     stroke: ${props => props.theme.color.secondary};
-  }
-`
+  } */
+`;

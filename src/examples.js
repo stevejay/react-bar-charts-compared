@@ -1,4 +1,4 @@
-// import HighchartsExample from './components/examples/highcharts'
+import HighchartsExample from "./components/examples/highcharts";
 import D3KitExample from "./components/examples/d3kit";
 import D3KitHybridExample from "./components/examples/d3kit-hybrid";
 import RechartsExample from "./components/examples/recharts";
@@ -9,18 +9,26 @@ import ChartistExample from "./components/examples/chartist";
 import NivoExample from "./components/examples/nivo";
 
 const EXAMPLES = [
-  // {
-  //   title: 'Highcharts',
-  //   url: 'https://www.highcharts.com/',
-  //   description: 'A mature JS charting solution with a React adaptor. Not free for commercial use. Makes great use of the available screen space.',
-  //   component: HighchartsExample
-  // },
+  {
+    title: "Highcharts",
+    url: "https://www.highcharts.com/",
+    description:
+      "A mature JavaScript charting solution that has various React.js adaptors; the one used here is react-jsx-highcharts. Not free for commercial use. Makes great use of the available screen space.",
+    component: HighchartsExample
+  },
   {
     title: "D3Kit",
     url: "https://github.com/twitter/d3kit",
     description:
-      "A lightweight wrapper from Twitter for d3 v4, used with a React adaptor. Reduces the boilerplate code needed to create a chart using d3. The bars animate to track category position changes.",
+      "A lightweight wrapper from Twitter for d3 v4, used with a React.js adaptor package. Reduces the boilerplate code needed to create a chart using d3. Notice that the bars move to track category position changes.",
     component: D3KitExample
+  },
+  {
+    title: "D3Kit Hybrid",
+    url: "https://github.com/twitter/d3kit",
+    description:
+      "A example of using D3Kit to create a chart that renders the bars to a canvas element and the rest of the chart to an SVG element.",
+    component: D3KitHybridExample
   },
   {
     title: "Billboard",
@@ -28,13 +36,6 @@ const EXAMPLES = [
     description:
       "A lightweight wrapper for d3 v4, used with the react-billboardjs adaptor. An alternative to D3Kit.",
     component: BillboardExample
-  },
-  {
-    title: "D3Kit Hybrid",
-    url: "https://github.com/twitter/d3kit",
-    description:
-      "A example of using D3Kit to create a chart that combines SVG and canvas rendering.",
-    component: D3KitHybridExample
   },
   {
     title: "Recharts",

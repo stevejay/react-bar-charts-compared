@@ -10,7 +10,7 @@ import { extentLinear } from "d3fc-extent";
 
 import Container from "./container";
 
-const duration = 500;
+const duration = 750;
 const ease = d3.easeCubic;
 
 class HybridBarChart extends HybridChart {

@@ -21,7 +21,7 @@ class HighchartsExample extends React.PureComponent {
     return (
       <Container>
         <HighchartsChart>
-          <Chart width={width} height={320} />
+          <Chart width={width} height={320} spacingTop={20} />
           <XAxis categories={data.map(datum => datum.key)} type="category" />
           <YAxis id="number">
             <ColumnSeries
