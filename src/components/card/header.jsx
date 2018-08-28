@@ -23,19 +23,14 @@ const H2 = styled.h2`
 `;
 
 const Link = styled.a`
-  color: ${props => props.theme.color.foreground};
-  opacity: 0.66;
+  color: ${props => props.theme.color.primary};
   transition: opacity ${props => props.theme.timing.hover} ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 const Header = ({ title, url }) => (
   <HeaderElement>
     <H2>{title}</H2>
-    <Link href={url} target="_blank" rel="nofollow">
+    <Link href={url} target="_blank" rel="nofollow noopener noreferrer">
       Info
     </Link>
   </HeaderElement>

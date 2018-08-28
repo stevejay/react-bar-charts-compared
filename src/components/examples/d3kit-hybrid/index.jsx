@@ -10,8 +10,8 @@ import { extentLinear } from "d3fc-extent";
 
 import Container from "./container";
 
-const duration = 750;
-const ease = d3.easeCubic;
+const DURATION_MS = 750;
+const EASE = d3.easeCubic;
 
 class HybridBarChart extends HybridChart {
   constructor(selector, options) {
@@ -20,8 +20,6 @@ class HybridBarChart extends HybridChart {
     this.layers.create(["grid", "content", "x-axis", "y-axis"]);
     this.grid = this.layers.get("grid");
     this.content = this.layers.get("content");
-    this.xAxis = this.layers.get("x-axis");
-    this.yAxis = this.layers.get("y-axis");
 
     this.x = d3.scaleBand().padding(0.2);
     this.y = d3.scaleLinear();
@@ -48,7 +46,7 @@ class HybridBarChart extends HybridChart {
     }
 
     const data = this.data();
-    const transition = this.svg.transition().duration(duration);
+    const transition = this.svg.transition().duration(DURATION_MS);
 
     this.x.range([0, this.getInnerWidth()]);
     this.y.range([this.getInnerHeight(), 0]);
@@ -110,7 +108,7 @@ class HybridBarChart extends HybridChart {
     this.timer = d3.timer(elapsed => {
       try {
         // compute how far through the animation we are (0 to 1)
-        const t = Math.min(1, ease(elapsed / duration));
+        const t = Math.min(1, EASE(elapsed / DURATION_MS));
 
         this.bars.forEach(bar => {
           bar.current.x = bar.current.x * (1 - t) + bar.target.x * t;
@@ -153,12 +151,16 @@ class HybridBarChart extends HybridChart {
       .attr("width", this.x.bandwidth())
       .attr("height", d => this.getInnerHeight() - this.y(d.value));
 
-    this.xAxis
+    this.layers
+      .get("x-axis")
       .attr("transform", "translate(0," + this.getInnerHeight() + ")")
       .transition(transition)
       .call(d3.axisBottom(this.x));
 
-    this.yAxis.transition(transition).call(d3.axisLeft(this.y).ticks(5));
+    this.layers
+      .get("y-axis")
+      .transition(transition)
+      .call(d3.axisLeft(this.y).ticks(5));
   };
   calculateBarDim = (datum, entering) => {
     const y = entering ? this.getInnerHeight() : this.y(datum.value);
