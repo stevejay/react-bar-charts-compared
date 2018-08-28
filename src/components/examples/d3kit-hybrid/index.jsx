@@ -146,11 +146,11 @@ class HybridBarChart extends HybridChart {
       .style("opacity", 0)
       .attr("x", 0)
       .attr("y", 0)
-      .attr("width", this.x.bandwidth())
       .on("mouseover", this.tip.show)
       .on("mouseout", this.tip.hide)
       .merge(selection)
       .attr("transform", d => `translate(${this.x(d.key)},${this.y(d.value)})`)
+      .attr("width", this.x.bandwidth())
       .attr("height", d => this.getInnerHeight() - this.y(d.value));
 
     this.xAxis
