@@ -16,9 +16,7 @@ const EASE = d3.easeCubic;
 class HybridBarChart extends HybridChart {
   constructor(selector, options) {
     super(selector, options);
-
-    console.log("options", JSON.stringify(options));
-
+    this.theme = options.theme;
     this.layers.create(["grid", "content", "x-axis", "y-axis"]);
     this.x = d3.scaleBand().padding(0.2);
     this.y = d3.scaleLinear();
@@ -27,8 +25,8 @@ class HybridBarChart extends HybridChart {
       .attr("class", "d3-tip")
       .offset([10, 0])
       .html(d => d.value);
-    this.layers.get("content").call(this._tip);
 
+    this.layers.get("content").call(this._tip);
     this.on("resize.default", this.visualize);
     this.on("data.default", this.visualize);
     this._bars = new CanvasBarSet();
@@ -93,7 +91,7 @@ class HybridBarChart extends HybridChart {
         this._bars.updateCurrent(t);
         this.clear();
         const context = this.getContext2d();
-        context.fillStyle = "#CFD2DA"; // how to fix this?
+        context.fillStyle = this.theme.color.foreground;
         this._bars.draw(context);
         if (t === 1) {
           this._timer.stop();
@@ -132,36 +130,36 @@ class HybridBarChart extends HybridChart {
 
 const ReactHybridBarChart = createComponent(HybridBarChart);
 
-const OPTIONS = {
-  margin: { top: 10, right: 10, bottom: 30, left: 40 },
-  offset: { x: 0.5, y: 0.5 }
-  // colors: {
-  //   foo: "red"
-  // }
-};
-
-const D3KitHybridExampleWrapper = ({ data }) => {
-  // console.log("THEME", JSON.stringify(theme), {
-  //   margin: OPTIONS.margin,
-  //   offset: OPTIONS.offset,
-  //   color: theme.color
-  // });
-  const foo = {
-    margin: OPTIONS.margin,
-    offset: OPTIONS.offset
-    // color: "red" // theme.color
-  };
-  return (
-    <Container>
-      <ReactHybridBarChart data={data} options={foo} watch={false} />
-    </Container>
-  );
-};
+class D3KitHybridExampleWrapper extends React.Component {
+  state = {};
+  static getDerivedStateFromProps(props, state) {
+    if (state.theme === props.theme) {
+      return null;
+    } else {
+      return {
+        margin: { top: 10, right: 10, bottom: 30, left: 40 },
+        offset: { x: 0.5, y: 0.5 },
+        theme: props.theme
+      };
+    }
+  }
+  render() {
+    return (
+      <Container>
+        <ReactHybridBarChart
+          data={this.props.data}
+          options={this.state}
+          watch={false}
+        />
+      </Container>
+    );
+  }
+}
 
 D3KitHybridExampleWrapper.propTypes = {
   data: PropTypes.array.isRequired
 };
 
 export default connect(state => ({ data: state.data.people }))(
-  D3KitHybridExampleWrapper
+  withTheme(D3KitHybridExampleWrapper)
 );

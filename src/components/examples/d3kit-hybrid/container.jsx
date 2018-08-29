@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import AutoSizerContainer from "../../auto-sizer-container";
 
 export default styled(AutoSizerContainer)`
