@@ -1,7 +1,7 @@
 # react-bar-charts-compared
 
 An SPA that demonstrates implementing a simple bar chart using various 
-React.js charting solutions. A live demo is available [here](https://www.perspectivespace.com/react-bar-charts-compared/).
+React.js charting solutions. A live demo is available [here](https://stevejay.github.io/react-bar-charts-compared/).
 
 ## Introduction
 
